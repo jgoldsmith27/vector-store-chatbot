@@ -1,10 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import axios from "axios";
+import "../styles/Chat.css";
 
 function Chat() {
     const [input, setInput] = useState("");
     const [messages, setMessages] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
+    const messagesEndRef = useRef(null);
+
+    /**
+     * Scroll to the bottom of the chat when a new message is added.
+     */
+    useEffect(() => {
+        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    }, [messages]);
 
     /**
      * Handles form submission, sends message to the backend, and waits for a response.
@@ -48,7 +57,8 @@ function Chat() {
                     </p>
                 ))}
                 {/* Display a loading message when waiting for a response */}
-                {isLoading && <p className="loading-message">Loading...</p>}
+                {isLoading && <p className="loading-message"></p>}
+                <div ref={messagesEndRef} />
             </div>
             <form onSubmit={handleSubmit} className="chat-form">
                 <input

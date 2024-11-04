@@ -1,0 +1,37 @@
+Project Structure Documentation for react and node web app.
+
+backend/
+|
+|── server.js                  # Main server file that initializes the Express server
+|
+|── routes/
+|   └── chatRoutes.js          # Defines API endpoints for chat functionality
+|
+|── controllers/
+|   └── chatController.js      # Contains controller logic for handling chat requests
+|
+|── package.json               # Backend dependencies and scripts
+
+frontend/
+|
+|── src/
+|   ├── components/            # Holds individual React components
+|   │   ├── App.js             # Main component managing authentication and conditional rendering
+|   │   ├── Chat.js            # Chat interface component for displaying and sending messages
+|   │   ├── Login.js           # Login form component for user authentication
+|   │   └── Notification.js    # Notification component for displaying success/error messages
+|   |
+|   ├── styles/                # Stylesheets for each component to maintain modular design
+|   │   ├── App.css            # Styles for the main App component
+|   │   ├── Chat.css           # Styles for the Chat interface, including message layout and animations
+|   │   ├── Login.css          # Styles for the Login page, with card layout and hover effects
+|   │   └── Notification.css   # Styles for Notification component, including success and error styles
+|   |
+|   ├── utils/                 # Utility functions that may be reused across components
+|   │   └── auth.js            # Utility functions for managing authentication logic
+|   |
+|   ├── services/              # External service handlers for handling API calls and backend integration
+|   │   └── authService.js     # Authentication logic for verifying user password
+|   |
+|   ├── index.js               # Entry point for the React application, renders the App componentx
+

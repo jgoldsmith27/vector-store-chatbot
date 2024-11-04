@@ -4,6 +4,7 @@ import axios from "axios";
 function Chat() {
     const [input, setInput] = useState("");
     const [messages, setMessages] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
 
     /**
      * Handles form submission, sends message to the backend, and waits for a response.
@@ -14,6 +15,7 @@ function Chat() {
 
         const userMessage = { role: "user", content: input };
         setMessages((prevMessages) => [...prevMessages, userMessage]);
+        setIsLoading(true);  // Set loading state to true
 
         try {
             // Send the user's message to the backend
@@ -26,7 +28,10 @@ function Chat() {
             setMessages((prevMessages) => [...prevMessages, botMessage]);
         } catch (error) {
             console.error("Error communicating with backend:", error);
+            const errorMessage = { role: "assistant", content: "There was an error processing your message." };
+            setMessages((prevMessages) => [...prevMessages, errorMessage]);
         } finally {
+            setIsLoading(false);  // Set loading state to false
             setInput("");
         }
     };
@@ -42,6 +47,8 @@ function Chat() {
                         {msg.content}
                     </p>
                 ))}
+                {/* Display a loading message when waiting for a response */}
+                {isLoading && <p className="loading-message">Loading...</p>}
             </div>
             <form onSubmit={handleSubmit} className="chat-form">
                 <input
@@ -50,8 +57,19 @@ function Chat() {
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     className="chat-input"
+                    disabled={isLoading} // Disable input when loading
                 />
-                <button type="submit" className="chat-submit">Send</button>
+                <button
+                    type="submit"
+                    className="chat-submit"
+                    style={{
+                        backgroundColor: isLoading ? "#ddd" : "#007BFF",
+                        cursor: isLoading ? "not-allowed" : "pointer"
+                    }}
+                    disabled={isLoading} // Disable button when loading
+                >
+                    {isLoading ? "Sending..." : "Send"}
+                </button>
             </form>
         </div>
     );

@@ -8,55 +8,57 @@ function Chat() {
     const [isLoading, setIsLoading] = useState(false);
     const messagesEndRef = useRef(null);
 
-    /**
-     * Scroll to the bottom of the chat when a new message is added.
-     */
     useEffect(() => {
         messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
     }, [messages]);
 
-    /**
-     * Handles form submission, sends message to the backend, and waits for a response.
-     * @param {Event} e - form submission event.
-     */
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+    
         const userMessage = { role: "user", content: input };
         setMessages((prevMessages) => [...prevMessages, userMessage]);
-        setIsLoading(true);  // Set loading state to true
-
+        setIsLoading(true);
+    
         try {
-            // Send the user's message to the backend
             const response = await axios.post("http://localhost:5000/api/chat", {
-                message: input
+                message: input,
             });
-
-            // Display the backend's response
-            const botMessage = { role: "assistant", content: response.data.response };
+    
+            let assistantMessageContent = response.data.response[0]?.text?.value || "There was an error processing the message content.";
+    
+            // Loop to remove all occurrences of 【...】
+            while (assistantMessageContent.includes("【")) {
+                assistantMessageContent = assistantMessageContent.replace(/【[^】]*】/, '');
+            }
+    
+            // Trim any extra whitespace that might be left after removing patterns
+            assistantMessageContent = assistantMessageContent.trim();
+    
+            const botMessage = { role: "assistant", content: assistantMessageContent };
             setMessages((prevMessages) => [...prevMessages, botMessage]);
         } catch (error) {
             console.error("Error communicating with backend:", error);
             const errorMessage = { role: "assistant", content: "There was an error processing your message." };
             setMessages((prevMessages) => [...prevMessages, errorMessage]);
         } finally {
-            setIsLoading(false);  // Set loading state to false
+            setIsLoading(false);
             setInput("");
         }
     };
+    
+    
+    
+    
 
     return (
         <div className="chat-container">
             <div className="chat-messages">
                 {messages.map((msg, index) => (
-                    <p
-                        key={index}
-                        className={`chat-message ${msg.role}`}
-                    >
-                        {msg.content}
-                    </p>
+                <p key={index} className={`chat-message ${msg.role}`}>
+                    {typeof msg.content === "string" ? msg.content : JSON.stringify(msg.content)}
+                </p>
                 ))}
-                {/* Display a loading message when waiting for a response */}
+
                 {isLoading && <p className="loading-message"></p>}
                 <div ref={messagesEndRef} />
             </div>
@@ -67,16 +69,12 @@ function Chat() {
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     className="chat-input"
-                    disabled={isLoading} // Disable input when loading
+                    disabled={isLoading}
                 />
                 <button
                     type="submit"
                     className="chat-submit"
-                    style={{
-                        backgroundColor: isLoading ? "#ddd" : "#007BFF",
-                        cursor: isLoading ? "not-allowed" : "pointer"
-                    }}
-                    disabled={isLoading} // Disable button when loading
+                    disabled={isLoading}
                 >
                     {isLoading ? "Sending..." : "Send"}
                 </button>

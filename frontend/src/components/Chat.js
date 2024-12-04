@@ -45,10 +45,6 @@ function Chat() {
             setInput("");
         }
     };
-    
-    
-    
-    
 
     return (
         <div className="chat-container">

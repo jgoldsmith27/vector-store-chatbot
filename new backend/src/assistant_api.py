@@ -9,7 +9,7 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 
-class Assistant_API:
+class AssistantAPI:
     def __init__(self, API_KEY:str) -> None:
         """
         Instantiantes an assistant api object
@@ -58,6 +58,10 @@ class Assistant_API:
             prompt:
                 The prompt to the assistant of the user
         """
+        # can also handle this case on the front end -> don't allow user to send the prompt unless the prompt is non-empty
+        if prompt == "":
+            logging.info("User sent empty prompt")
+            return "Empty prompt received. Please enter a valid prompt.", []
         try:
             # Adds a new message object to the current thread for the given prompt
             self.client.beta.threads.messages.create(

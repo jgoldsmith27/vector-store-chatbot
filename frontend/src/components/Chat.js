@@ -20,11 +20,11 @@ function Chat() {
         setIsLoading(true);
     
         try {
-            const response = await axios.post("http://localhost:5000/api/chat", {
-                message: input,
+            const response = await axios.get("http://localhost:8080/get_response", {
+                params: { prompt: input },
             });
     
-            let assistantMessageContent = response.data.response[0]?.text?.value || "There was an error processing the message content.";
+            let assistantMessageContent = response.data[0]?.text || "There was an error processing the message content.";
     
             // Loop to remove all occurrences of 【...】
             while (assistantMessageContent.includes("【")) {
@@ -50,9 +50,9 @@ function Chat() {
         <div className="chat-container">
             <div className="chat-messages">
                 {messages.map((msg, index) => (
-                <p key={index} className={`chat-message ${msg.role}`}>
-                    {typeof msg.content === "string" ? msg.content : JSON.stringify(msg.content)}
-                </p>
+                    <p key={index} className={`chat-message ${msg.role}`}>
+                        {typeof msg.content === "string" ? msg.content : JSON.stringify(msg.content)}
+                    </p>
                 ))}
 
                 {isLoading && <p className="loading-message"></p>}

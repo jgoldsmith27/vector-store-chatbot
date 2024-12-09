@@ -50,7 +50,7 @@ class AssistantAPI:
         except Exception as e:
             logging.error(f"Unable to delete thread {self.thread.id}: {e}")
 
-    def prompt_assistant(self, prompt:str) -> tuple(str, list):
+    def prompt_assistant(self, prompt:str) -> tuple[str, list]:
         """
         Runs the assistant on the given thread, returning the assistant response of the inputted prompt
 

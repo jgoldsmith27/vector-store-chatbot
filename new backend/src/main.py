@@ -2,7 +2,6 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 from assistant_api import AssistantAPI
-from box_client_api import BoxClient
 
 app = FastAPI()
 
@@ -15,8 +14,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# need to pass in keys -- do you still want your config json file?
-box_client = BoxClient()
 assistant = AssistantAPI()
 
 @app.get('/get_new_thread')

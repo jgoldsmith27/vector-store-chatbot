@@ -14,7 +14,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-assistant = AssistantAPI()
+api_key = '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'
+assistant = AssistantAPI(api_key=api_key)
 
 @app.get('/get_new_thread')
 def get_new_thread():

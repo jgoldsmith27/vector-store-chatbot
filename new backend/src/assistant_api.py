@@ -1,105 +1,120 @@
-from openai import OpenAI
 import logging
-
-# Setup logging
-logging.basicConfig(
-    filename='box_client.log',
-    filemode='w',
-    level=logging.DEBUG,
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
+from openai import OpenAI
 
 class AssistantAPI:
-    def __init__(self, API_KEY: str) -> None:
-        """
-        Instantiates an assistant API object.
+    def __init__(self, api_key, assistant_id, vector_store_id):
+        self.api_key = api_key
+        self.assistant_id = assistant_id
+        self.vector_store_id = vector_store_id
+        self.client = OpenAI(api_key=api_key)
+        self.thread = None
 
-        Args:
-            API_KEY: The API key for the OpenAI client.
-        """
-        self.client = OpenAI(api_key=API_KEY)
-        self.assistant_id = 'asst_dJJXxlCA2nIBhqXw6uPgPmhM'
-        self.thread = None  # Initially, no thread is created.
+        # Configure logging
+        logging.basicConfig(
+            level=logging.INFO,
+            format='%(asctime)s - %(levelname)s - %(message)s',
+            handlers=[
+                logging.FileHandler("assistant_api.log"),
+                logging.StreamHandler()
+            ]
+        )
 
-    def create_thread(self) -> str:
-        """
-        Creates a new thread for the user's session and returns the thread ID.
-        """
+    def create_thread(self):
         try:
             self.thread = self.client.beta.threads.create(messages=[])
-            logging.info(f"Thread created with ID: {self.thread.id}")
+            logging.info(f"Thread successfully created with ID: {self.thread.id}")
             return self.thread.id
         except Exception as e:
-            logging.error(f"Unable to create thread: {e}")
+            logging.error(f"Failed to create thread: {e}")
             raise
 
-    def delete_thread(self) -> None:
-        """
-        Deletes the current thread.
-        """
-        if not self.thread:
-            logging.warning("No thread to delete.")
-            return
 
+    def delete_thread(self):
         try:
-            self.client.beta.threads.delete(self.thread.id)
-            logging.info(f"Thread deleted with ID: {self.thread.id}")
-            self.thread = None
+            if self.thread:
+                response = self.client.beta.threads.delete(self.thread.id)
+                logging.info("Thread successfully deleted.")
+                return response
+            else:
+                logging.warning("No active thread to delete.")
         except Exception as e:
-            logging.error(f"Unable to delete thread {self.thread.id}: {e}")
+            logging.error(f"Failed to delete thread: {e}")
+            raise
 
-    def prompt_assistant(self, prompt: str, thread_id: str) -> tuple[str, list]:
-        """
-        Runs the assistant on the given thread and returns the assistant response of the inputted prompt.
-
-        Args:
-            prompt: The prompt for the assistant.
-            thread_id: The ID of the thread for this session.
-
-        Returns:
-            A tuple containing the response content and a list of citations.
-        """
-        if prompt == "":
-            logging.info("User sent an empty prompt.")
-            return "Empty prompt received. Please enter a valid prompt.", []
-
+    def ask_question(self, question):
         try:
-            # Attach the thread ID to the session
-            self.thread = self.client.beta.threads.retrieve(thread_id=thread_id)
+            if not self.thread:
+                raise ValueError("No thread exists. Create a thread first.")
 
-            # Add the user's message to the thread
+            # Add message to thread
             self.client.beta.threads.messages.create(
                 thread_id=self.thread.id,
                 role="user",
-                content=prompt,
+                content=question,
             )
-            logging.info(f"Message added to thread {self.thread.id} with prompt: {prompt}")
+            logging.info("Question added to thread.")
 
-            # Generate a response
+            # Process the response
             run = self.client.beta.threads.runs.create_and_poll(
-                thread_id=self.thread.id,
-                assistant_id=self.assistant_id
+                thread_id=self.thread.id, assistant_id=self.assistant_id
             )
-            logging.info("Run instance successfully created and executed.")
+            message_list = list(self.client.beta.threads.messages.list(thread_id=self.thread.id, run_id=run.id))
+            message = message_list[-1]
+            response_content = message.content[0].text
 
-            # Retrieve the most recent response
-            message = list(self.client.beta.threads.messages.list(thread_id=self.thread.id, run_id=run.id))[-1]
-            message_content = message.content[0].text
-            annotations = message_content.annotations
+            # Extract citations if available
             citations = []
-
-            # Process annotations and citations
-            for annotation in annotations:
-                message_content = message_content.replace(annotation.text, '')
-                if file_citation := getattr(annotation, "file_citation", None):
-                    cited_file = self.client.files.retrieve(file_citation.file_id)
-                    logging.info(f"Cited file ID: {file_citation.file_id}")
-                    if cited_file.filename not in citations:
+            if hasattr(message.content[0], "annotations"):
+                for annotation in message.content[0].annotations:
+                    response_content = response_content.replace(annotation.text, '')
+                    if file_citation := getattr(annotation, "file_citation", None):
+                        cited_file = self.client.files.retrieve(file_citation.file_id)
                         citations.append(cited_file.filename)
+            else:
+                logging.warning("No annotations found in the response.")
 
-            logging.info(f"Assistant response: {message_content}")
-            logging.info(f"Citations: {citations}")
-            return message_content.strip(), citations
+            return response_content, citations
+
+        except ValueError as e:
+            logging.error(f"Thread error: {e}")
+            raise HTTPException(status_code=400, detail=str(e))
         except Exception as e:
-            logging.error(f"Error prompting assistant: {e}")
-            return "Error: Failed to prompt the assistant.", []
+            logging.error(f"Failed to process question: {e}")
+            raise
+
+
+if __name__ == "__main__":
+    # API key and assistant details
+    API_KEY = "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"
+    ASSISTANT_ID = "asst_dJJXxlCA2nIBhqXw6uPgPmhM"
+    VECTOR_STORE_ID = "vs_ax9QXMrGoYaHz6drqWnvuORr"
+
+    api = AssistantAPI(API_KEY, ASSISTANT_ID, VECTOR_STORE_ID)
+
+    try:
+        print("Using Assistant...")
+        print("Creating new thread...")
+        api.create_thread()
+        print("Thread created.")
+
+        while True:
+            init = input("Do you want to ask a question? (y|n): ").lower()
+            if init == 'n':
+                print("Deleting thread...")
+                api.delete_thread()
+                print("Thread deleted. Have a good day!")
+                break
+            else:
+                question = input("Enter your question for the assistant: ")
+                print("Processing your question...")
+
+                response, citations = api.ask_question(question)
+
+                print("Response:")
+                print(response)
+                print("\nCitations:")
+                for citation in citations:
+                    print(citation)
+
+    except Exception as e:
+        logging.error(f"An error occurred: {e}")

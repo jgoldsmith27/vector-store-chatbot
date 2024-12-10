@@ -1,0 +1,18 @@
+2024-12-09 15:15:38,513 - DEBUG - Using selector: KqueueSelector
+2024-12-09 15:15:50,455 - INFO - Assistant API initialized with CSV file for threads.
+2024-12-09 15:15:50,479 - DEBUG - Using selector: KqueueSelector
+2024-12-09 15:15:50,505 - INFO - Assistant API initialized with CSV file for threads.
+2024-12-09 15:16:16,598 - INFO - Assistant API initialized with CSV file for threads.
+2024-12-09 18:13:42,513 - ERROR - Failed to create thread: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_api*****here. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2024-12-09 18:13:42,514 - ERROR - An error occurred: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_api*****here. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2024-12-09 18:14:24,307 - INFO - Thread successfully created.
+2024-12-09 18:14:36,030 - INFO - Question added to thread.
+2024-12-09 18:14:46,827 - ERROR - Failed to process question: 'TextContentBlock' object has no attribute 'annotations'
+2024-12-09 18:14:46,829 - ERROR - An error occurred: 'TextContentBlock' object has no attribute 'annotations'
+2024-12-09 18:15:44,633 - INFO - Thread successfully created.
+2024-12-09 18:15:51,823 - ERROR - An error occurred: 'AssistantAPI' object has no attribute 'ask_question'
+2024-12-09 18:16:20,529 - INFO - Thread successfully created.
+2024-12-09 18:16:28,102 - INFO - Question added to thread.
+2024-12-09 18:16:39,366 - INFO - Response received successfully.
+2024-12-09 18:16:39,367 - WARNING - No annotations found in the response.
+2024-12-09 18:20:50,466 - INFO - Thread successfully deleted.

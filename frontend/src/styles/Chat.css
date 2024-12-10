@@ -37,6 +37,13 @@
     align-self: flex-start;
 }
 
+.loading-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
 .loading-message {
     display: inline-block;
     width: 24px;
@@ -90,4 +97,33 @@
 
 .chat-submit:hover:enabled {
     background-color: #0056b3;
+}
+
+/* New Chat Button */
+.new-chat-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.new-chat-button:hover {
+    background-color: #218838;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
+}
+
+.new-chat-button:disabled {
+    background-color: #c0c0c0;
+    cursor: not-allowed;
+    box-shadow: none;
 }

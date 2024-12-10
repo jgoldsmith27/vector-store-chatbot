@@ -1,0 +1,156 @@
+2024-12-09 15:25:01,551 - INFO - Assistant API initialized.
+2024-12-09 15:25:01,553 - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2024-12-09 15:25:22,138 - INFO - Assistant API initialized.
+2024-12-09 15:25:57,949 - INFO - Assistant API initialized.
+2024-12-09 15:25:58,610 - INFO - Assistant API initialized.
+2024-12-09 15:25:58,616 - DEBUG - Using selector: KqueueSelector
+2024-12-09 15:25:58,701 - INFO - Assistant API initialized.
+2024-12-09 15:26:12,790 - DEBUG - Request options: {'method': 'post', 'url': '/threads', 'headers': {'OpenAI-Beta': 'assistants=v2'}, 'files': None, 'json_data': {'messages': []}}
+2024-12-09 15:26:12,825 - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/threads
+2024-12-09 15:26:13,675 - DEBUG - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2024-12-09 15:26:13,675 - DEBUG - HTTP Response: POST https://api.openai.com/v1/threads "200 OK" Headers([('date', 'Mon, 09 Dec 2024 20:26:13 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('openai-version', '2020-10-01'), ('openai-organization', 'user-ilrovnd2wa5ysfsf6efwzsb4'), ('x-request-id', 'req_a55617e35e4b9a2b70f44e56b952f5a2'), ('openai-processing-ms', '264'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=ndpuCr2aaJgdTPTqUCQSVzyux2ajGm.fja8TapHAnL8-1733775973-1.0.1.1-Pioy6SfsrI6Cy3Egcd1c4jlT9GXLd7TfRmFKMD8cIT6Yb1rQ.tdsX0X1MIvH1t1_rsHPAsX2zO.KiLZjKZT4ow; path=/; expires=Mon, 09-Dec-24 20:56:13 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=c6HimTS7iSrQvnfFGvgve7lFGld2GREvRNF9Y3A3XjI-1733775973612-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '8ef7ba988fc341a1-EWR'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+2024-12-09 15:26:13,675 - DEBUG - request_id: req_a55617e35e4b9a2b70f44e56b952f5a2
+2024-12-09 15:26:13,681 - INFO - Thread ID saved to CSV: thread_wUCABhLcwbEz5cJa9slQRIWI
+2024-12-09 15:26:13,681 - INFO - Thread created with ID: thread_wUCABhLcwbEz5cJa9slQRIWI
+2024-12-09 15:26:27,418 - DEBUG - Request options: {'method': 'post', 'url': '/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/messages', 'headers': {'OpenAI-Beta': 'assistants=v2'}, 'files': None, 'json_data': {'content': 'what do you know about the tang museum?', 'role': 'user'}}
+2024-12-09 15:26:27,422 - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/messages
+2024-12-09 15:26:27,964 - DEBUG - HTTP Request: POST https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/messages "HTTP/1.1 200 OK"
+2024-12-09 15:26:27,965 - DEBUG - HTTP Response: POST https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/messages "200 OK" Headers({'date': 'Mon, 09 Dec 2024 20:26:27 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'openai-version': '2020-10-01', 'openai-organization': 'user-ilrovnd2wa5ysfsf6efwzsb4', 'x-request-id': 'req_210037c8f0be9a1f60dd035f09ff1a7d', 'openai-processing-ms': '289', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'cf-cache-status': 'DYNAMIC', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '8ef7baf23803de92-EWR', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2024-12-09 15:26:27,965 - DEBUG - request_id: req_210037c8f0be9a1f60dd035f09ff1a7d
+2024-12-09 15:26:27,982 - DEBUG - Request options: {'method': 'post', 'url': '/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs', 'params': {}, 'headers': {'OpenAI-Beta': 'assistants=v2'}, 'files': None, 'json_data': {'assistant_id': 'asst_dJJXxlCA2nIBhqXw6uPgPmhM', 'stream': False}}
+2024-12-09 15:26:27,983 - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs
+2024-12-09 15:26:28,832 - DEBUG - HTTP Request: POST https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs "HTTP/1.1 200 OK"
+2024-12-09 15:26:28,833 - DEBUG - HTTP Response: POST https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs "200 OK" Headers({'date': 'Mon, 09 Dec 2024 20:26:28 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'openai-version': '2020-10-01', 'openai-organization': 'user-ilrovnd2wa5ysfsf6efwzsb4', 'x-request-id': 'req_0e6d700aa7374ad35c9e3b4d6af83532', 'openai-processing-ms': '646', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'cf-cache-status': 'DYNAMIC', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '8ef7baf53dadde92-EWR', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2024-12-09 15:26:28,833 - DEBUG - request_id: req_0e6d700aa7374ad35c9e3b4d6af83532
+2024-12-09 15:26:28,880 - DEBUG - Request options: {'method': 'get', 'url': '/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2', 'headers': {'OpenAI-Beta': 'assistants=v2', 'X-Stainless-Poll-Helper': 'true', 'X-Stainless-Raw-Response': 'true'}}
+2024-12-09 15:26:28,880 - DEBUG - Sending HTTP Request: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2
+2024-12-09 15:26:29,360 - DEBUG - HTTP Request: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2 "HTTP/1.1 200 OK"
+2024-12-09 15:26:29,361 - DEBUG - HTTP Response: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2 "200 OK" Headers({'date': 'Mon, 09 Dec 2024 20:26:29 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'openai-version': '2020-10-01', 'openai-organization': 'user-ilrovnd2wa5ysfsf6efwzsb4', 'x-request-id': 'req_b4ba0271fb4a0f51eba676a8c752cf06', 'openai-processing-ms': '316', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'cf-cache-status': 'DYNAMIC', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '8ef7bafabc3cde92-EWR', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2024-12-09 15:26:29,361 - DEBUG - request_id: req_b4ba0271fb4a0f51eba676a8c752cf06
+2024-12-09 15:26:30,368 - DEBUG - Request options: {'method': 'get', 'url': '/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2', 'headers': {'OpenAI-Beta': 'assistants=v2', 'X-Stainless-Poll-Helper': 'true', 'X-Stainless-Raw-Response': 'true'}}
+2024-12-09 15:26:30,370 - DEBUG - Sending HTTP Request: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2
+2024-12-09 15:26:31,011 - DEBUG - HTTP Request: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2 "HTTP/1.1 200 OK"
+2024-12-09 15:26:31,012 - DEBUG - HTTP Response: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2 "200 OK" Headers({'date': 'Mon, 09 Dec 2024 20:26:30 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'openai-version': '2020-10-01', 'openai-organization': 'user-ilrovnd2wa5ysfsf6efwzsb4', 'x-request-id': 'req_1e75888a17e4b5de6181173359189b1d', 'openai-processing-ms': '360', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'cf-cache-status': 'DYNAMIC', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '8ef7bb041dfbde92-EWR', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2024-12-09 15:26:31,012 - DEBUG - request_id: req_1e75888a17e4b5de6181173359189b1d
+2024-12-09 15:26:32,018 - DEBUG - Request options: {'method': 'get', 'url': '/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2', 'headers': {'OpenAI-Beta': 'assistants=v2', 'X-Stainless-Poll-Helper': 'true', 'X-Stainless-Raw-Response': 'true'}}
+2024-12-09 15:26:32,020 - DEBUG - Sending HTTP Request: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2
+2024-12-09 15:26:32,317 - DEBUG - HTTP Request: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2 "HTTP/1.1 200 OK"
+2024-12-09 15:26:32,318 - DEBUG - HTTP Response: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2 "200 OK" Headers({'date': 'Mon, 09 Dec 2024 20:26:32 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'openai-version': '2020-10-01', 'openai-organization': 'user-ilrovnd2wa5ysfsf6efwzsb4', 'x-request-id': 'req_15d2d13ee6b4d2a0c6decddccbd2be9a', 'openai-processing-ms': '130', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'cf-cache-status': 'DYNAMIC', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '8ef7bb0e5d4fde92-EWR', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2024-12-09 15:26:32,318 - DEBUG - request_id: req_15d2d13ee6b4d2a0c6decddccbd2be9a
+2024-12-09 15:26:33,324 - DEBUG - Request options: {'method': 'get', 'url': '/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2', 'headers': {'OpenAI-Beta': 'assistants=v2', 'X-Stainless-Poll-Helper': 'true', 'X-Stainless-Raw-Response': 'true'}}
+2024-12-09 15:26:33,325 - DEBUG - Sending HTTP Request: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2
+2024-12-09 15:26:34,030 - DEBUG - HTTP Request: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2 "HTTP/1.1 200 OK"
+2024-12-09 15:26:34,031 - DEBUG - HTTP Response: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2 "200 OK" Headers({'date': 'Mon, 09 Dec 2024 20:26:33 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'openai-version': '2020-10-01', 'openai-organization': 'user-ilrovnd2wa5ysfsf6efwzsb4', 'x-request-id': 'req_3ad545ec5d8d343503a42415d131a83a', 'openai-processing-ms': '388', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'cf-cache-status': 'DYNAMIC', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '8ef7bb16fb63de92-EWR', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2024-12-09 15:26:34,032 - DEBUG - request_id: req_3ad545ec5d8d343503a42415d131a83a
+2024-12-09 15:26:35,035 - DEBUG - Request options: {'method': 'get', 'url': '/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2', 'headers': {'OpenAI-Beta': 'assistants=v2', 'X-Stainless-Poll-Helper': 'true', 'X-Stainless-Raw-Response': 'true'}}
+2024-12-09 15:26:35,037 - DEBUG - Sending HTTP Request: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2
+2024-12-09 15:26:35,435 - DEBUG - HTTP Request: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2 "HTTP/1.1 200 OK"
+2024-12-09 15:26:35,436 - DEBUG - HTTP Response: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2 "200 OK" Headers({'date': 'Mon, 09 Dec 2024 20:26:35 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'openai-version': '2020-10-01', 'openai-organization': 'user-ilrovnd2wa5ysfsf6efwzsb4', 'x-request-id': 'req_191ec10b4c910e5ad46730f9c794aec8', 'openai-processing-ms': '140', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'cf-cache-status': 'DYNAMIC', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '8ef7bb2178c5de92-EWR', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2024-12-09 15:26:35,436 - DEBUG - request_id: req_191ec10b4c910e5ad46730f9c794aec8
+2024-12-09 15:26:36,442 - DEBUG - Request options: {'method': 'get', 'url': '/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2', 'headers': {'OpenAI-Beta': 'assistants=v2', 'X-Stainless-Poll-Helper': 'true', 'X-Stainless-Raw-Response': 'true'}}
+2024-12-09 15:26:36,444 - DEBUG - Sending HTTP Request: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2
+2024-12-09 15:26:36,746 - DEBUG - HTTP Request: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2 "HTTP/1.1 200 OK"
+2024-12-09 15:26:36,747 - DEBUG - HTTP Response: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2 "200 OK" Headers({'date': 'Mon, 09 Dec 2024 20:26:36 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'openai-version': '2020-10-01', 'openai-organization': 'user-ilrovnd2wa5ysfsf6efwzsb4', 'x-request-id': 'req_57fa4c91e679f3b95bb94babefe9daf7', 'openai-processing-ms': '187', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'cf-cache-status': 'DYNAMIC', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '8ef7bb29fd45de92-EWR', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2024-12-09 15:26:36,747 - DEBUG - request_id: req_57fa4c91e679f3b95bb94babefe9daf7
+2024-12-09 15:26:37,752 - DEBUG - Request options: {'method': 'get', 'url': '/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2', 'headers': {'OpenAI-Beta': 'assistants=v2', 'X-Stainless-Poll-Helper': 'true', 'X-Stainless-Raw-Response': 'true'}}
+2024-12-09 15:26:37,754 - DEBUG - Sending HTTP Request: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2
+2024-12-09 15:26:38,549 - DEBUG - HTTP Request: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2 "HTTP/1.1 200 OK"
+2024-12-09 15:26:38,550 - DEBUG - HTTP Response: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2 "200 OK" Headers({'date': 'Mon, 09 Dec 2024 20:26:38 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'openai-version': '2020-10-01', 'openai-organization': 'user-ilrovnd2wa5ysfsf6efwzsb4', 'x-request-id': 'req_a1f8f5de857304281daaeac5ff902254', 'openai-processing-ms': '573', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'cf-cache-status': 'DYNAMIC', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '8ef7bb32483bde92-EWR', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2024-12-09 15:26:38,550 - DEBUG - request_id: req_a1f8f5de857304281daaeac5ff902254
+2024-12-09 15:26:39,555 - DEBUG - Request options: {'method': 'get', 'url': '/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2', 'headers': {'OpenAI-Beta': 'assistants=v2', 'X-Stainless-Poll-Helper': 'true', 'X-Stainless-Raw-Response': 'true'}}
+2024-12-09 15:26:39,556 - DEBUG - Sending HTTP Request: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2
+2024-12-09 15:26:39,898 - DEBUG - HTTP Request: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2 "HTTP/1.1 200 OK"
+2024-12-09 15:26:39,899 - DEBUG - HTTP Response: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2 "200 OK" Headers({'date': 'Mon, 09 Dec 2024 20:26:39 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'openai-version': '2020-10-01', 'openai-organization': 'user-ilrovnd2wa5ysfsf6efwzsb4', 'x-request-id': 'req_2a0f8fba5d562434ca2f5ed66a9badda', 'openai-processing-ms': '138', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'cf-cache-status': 'DYNAMIC', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '8ef7bb3d5b55de92-EWR', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2024-12-09 15:26:39,899 - DEBUG - request_id: req_2a0f8fba5d562434ca2f5ed66a9badda
+2024-12-09 15:26:40,905 - DEBUG - Request options: {'method': 'get', 'url': '/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2', 'headers': {'OpenAI-Beta': 'assistants=v2', 'X-Stainless-Poll-Helper': 'true', 'X-Stainless-Raw-Response': 'true'}}
+2024-12-09 15:26:40,906 - DEBUG - Sending HTTP Request: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2
+2024-12-09 15:26:41,129 - DEBUG - HTTP Request: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2 "HTTP/1.1 200 OK"
+2024-12-09 15:26:41,130 - DEBUG - HTTP Response: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2 "200 OK" Headers({'date': 'Mon, 09 Dec 2024 20:26:41 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'openai-version': '2020-10-01', 'openai-organization': 'user-ilrovnd2wa5ysfsf6efwzsb4', 'x-request-id': 'req_6ac0bc74ca461f2a3af4a8321d51fc11', 'openai-processing-ms': '92', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'cf-cache-status': 'DYNAMIC', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '8ef7bb45eb0dde92-EWR', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2024-12-09 15:26:41,130 - DEBUG - request_id: req_6ac0bc74ca461f2a3af4a8321d51fc11
+2024-12-09 15:26:42,133 - DEBUG - Request options: {'method': 'get', 'url': '/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2', 'headers': {'OpenAI-Beta': 'assistants=v2', 'X-Stainless-Poll-Helper': 'true', 'X-Stainless-Raw-Response': 'true'}}
+2024-12-09 15:26:42,134 - DEBUG - Sending HTTP Request: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2
+2024-12-09 15:26:42,451 - DEBUG - HTTP Request: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2 "HTTP/1.1 200 OK"
+2024-12-09 15:26:42,454 - DEBUG - HTTP Response: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2 "200 OK" Headers({'date': 'Mon, 09 Dec 2024 20:26:42 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'openai-version': '2020-10-01', 'openai-organization': 'user-ilrovnd2wa5ysfsf6efwzsb4', 'x-request-id': 'req_70371a1cda4c2e327447e8c90eea32b3', 'openai-processing-ms': '128', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'cf-cache-status': 'DYNAMIC', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '8ef7bb4def7ede92-EWR', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2024-12-09 15:26:42,454 - DEBUG - request_id: req_70371a1cda4c2e327447e8c90eea32b3
+2024-12-09 15:26:43,463 - DEBUG - Request options: {'method': 'get', 'url': '/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2', 'headers': {'OpenAI-Beta': 'assistants=v2', 'X-Stainless-Poll-Helper': 'true', 'X-Stainless-Raw-Response': 'true'}}
+2024-12-09 15:26:43,464 - DEBUG - Sending HTTP Request: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2
+2024-12-09 15:26:43,680 - DEBUG - HTTP Request: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2 "HTTP/1.1 200 OK"
+2024-12-09 15:26:43,680 - DEBUG - HTTP Response: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2 "200 OK" Headers({'date': 'Mon, 09 Dec 2024 20:26:43 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'openai-version': '2020-10-01', 'openai-organization': 'user-ilrovnd2wa5ysfsf6efwzsb4', 'x-request-id': 'req_110cf8a798e572fa7d63b3a525b86bca', 'openai-processing-ms': '87', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'cf-cache-status': 'DYNAMIC', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '8ef7bb55caa5de92-EWR', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2024-12-09 15:26:43,680 - DEBUG - request_id: req_110cf8a798e572fa7d63b3a525b86bca
+2024-12-09 15:26:44,687 - DEBUG - Request options: {'method': 'get', 'url': '/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2', 'headers': {'OpenAI-Beta': 'assistants=v2', 'X-Stainless-Poll-Helper': 'true', 'X-Stainless-Raw-Response': 'true'}}
+2024-12-09 15:26:44,689 - DEBUG - Sending HTTP Request: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2
+2024-12-09 15:26:44,936 - DEBUG - HTTP Request: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2 "HTTP/1.1 200 OK"
+2024-12-09 15:26:44,936 - DEBUG - HTTP Response: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/runs/run_qEZbKEMMe8fXqSKIXacsRNR2 "200 OK" Headers({'date': 'Mon, 09 Dec 2024 20:26:44 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'openai-version': '2020-10-01', 'openai-organization': 'user-ilrovnd2wa5ysfsf6efwzsb4', 'x-request-id': 'req_84d8a02c62d27571c5cab44a1c0a43bb', 'openai-processing-ms': '111', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'cf-cache-status': 'DYNAMIC', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '8ef7bb5d7d16de92-EWR', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2024-12-09 15:26:44,937 - DEBUG - request_id: req_84d8a02c62d27571c5cab44a1c0a43bb
+2024-12-09 15:26:44,942 - DEBUG - Request options: {'method': 'get', 'url': '/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/messages', 'params': {}, 'headers': {'OpenAI-Beta': 'assistants=v2'}, 'json_data': None, 'post_parser': <function SyncAPIClient._request_api_list.<locals>._parser at 0x1042f3420>}
+2024-12-09 15:26:44,943 - DEBUG - Sending HTTP Request: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/messages
+2024-12-09 15:26:45,287 - DEBUG - HTTP Request: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/messages "HTTP/1.1 200 OK"
+2024-12-09 15:26:45,288 - DEBUG - HTTP Response: GET https://api.openai.com/v1/threads/thread_wUCABhLcwbEz5cJa9slQRIWI/messages "200 OK" Headers({'date': 'Mon, 09 Dec 2024 20:26:45 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'openai-version': '2020-10-01', 'openai-organization': 'user-ilrovnd2wa5ysfsf6efwzsb4', 'x-request-id': 'req_6033116fd8324b4c1ae154eed558513d', 'openai-processing-ms': '225', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'cf-cache-status': 'DYNAMIC', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '8ef7bb5f2c3cde92-EWR', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2024-12-09 15:26:45,288 - DEBUG - request_id: req_6033116fd8324b4c1ae154eed558513d
+2024-12-09 15:26:45,291 - ERROR - Error adding message: 'SyncCursorPage[Message]' object is not subscriptable
+2024-12-09 15:37:35,874 - INFO - Assistant API initialized.
+2024-12-09 18:24:36,914 - INFO - Starting server on port 8080...
+2024-12-09 18:25:08,787 - ERROR - Failed to create thread: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_api*****here. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2024-12-09 18:25:08,787 - ERROR - Error creating thread: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_api*****here. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2024-12-09 18:25:48,943 - ERROR - Failed to create thread: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_api*****here. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2024-12-09 18:25:48,944 - ERROR - Error creating thread: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_api*****here. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2024-12-09 18:27:11,613 - INFO - Thread successfully created.
+2024-12-09 18:27:11,615 - INFO - Thread created successfully.
+2024-12-09 18:27:25,316 - INFO - Thread successfully created.
+2024-12-09 18:27:25,317 - INFO - Thread created successfully.
+2024-12-09 18:29:48,123 - INFO - Thread successfully created.
+2024-12-09 18:29:48,125 - INFO - Thread created successfully.
+2024-12-09 18:32:18,224 - INFO - Starting server on port 8080...
+2024-12-09 18:32:33,758 - INFO - Thread successfully created with ID: thread_OJnGlnuIdo8OqHkFOAXhAtoi
+2024-12-09 18:36:55,937 - INFO - Starting server on port 8080...
+2024-12-09 18:37:09,517 - INFO - Thread successfully created with ID: thread_OmWVpuLzeqarDCuiA5iC4vE0
+2024-12-09 18:37:26,114 - INFO - Received payload: thread_id='thread_OmWVpuLzeqarDCuiA5iC4vE0' question='what do you know about the tang?'
+2024-12-09 18:37:26,731 - INFO - Question added to thread.
+2024-12-09 18:37:38,265 - WARNING - No annotations found in the response.
+2024-12-09 18:39:12,297 - INFO - Thread successfully created with ID: thread_69nqtwBbGJo2iT59gmD5VJf5
+2024-12-09 18:39:21,337 - INFO - Received payload: thread_id='thread_69nqtwBbGJo2iT59gmD5VJf5' question='What do you know about the tang?'
+2024-12-09 18:39:22,128 - INFO - Question added to thread.
+2024-12-09 18:39:39,428 - WARNING - No annotations found in the response.
+2024-12-09 18:46:10,911 - INFO - Thread successfully created with ID: thread_zW2elbFw3LI5nyZDHgt4RQfU
+2024-12-09 18:46:26,309 - INFO - Received payload: thread_id='thread_zW2elbFw3LI5nyZDHgt4RQfU' question='What do you know about the tang?'
+2024-12-09 18:46:26,671 - INFO - Question added to thread.
+2024-12-09 18:46:41,143 - WARNING - No annotations found in the response.
+2024-12-09 18:51:36,646 - INFO - Received payload: thread_id='thread_zW2elbFw3LI5nyZDHgt4RQfU' question='what else do you know?'
+2024-12-09 18:51:36,648 - ERROR - Error processing question: 'NoneType' object has no attribute 'id'
+2024-12-09 18:51:55,397 - INFO - Thread successfully created with ID: thread_9T3Y6qtaPD8ywbs1CEzEXAB2
+2024-12-09 18:52:03,379 - INFO - Received payload: thread_id='thread_9T3Y6qtaPD8ywbs1CEzEXAB2' question='What do you know about the tang?'
+2024-12-09 18:52:09,594 - INFO - Question added to thread.
+2024-12-09 18:52:21,880 - ERROR - Failed to process question: expected string or bytes-like object, got 'Text'
+2024-12-09 18:52:21,882 - ERROR - Error processing question: expected string or bytes-like object, got 'Text'
+2024-12-09 18:52:41,991 - INFO - Thread successfully created with ID: thread_5NNtqUANc7UgNgbf5harHtUG
+2024-12-09 18:52:55,953 - INFO - Received payload: thread_id='thread_5NNtqUANc7UgNgbf5harHtUG' question='What do you know about the tang?'
+2024-12-09 18:52:56,635 - INFO - Question added to thread.
+2024-12-09 18:53:06,249 - WARNING - No annotations found in the response.
+2024-12-09 18:55:08,108 - INFO - Thread successfully created with ID: thread_FYaxYCH0Hpp27T4npW2GTBdI
+2024-12-09 18:55:20,011 - INFO - Received payload: thread_id='thread_FYaxYCH0Hpp27T4npW2GTBdI' question='What do you know about the tang?'
+2024-12-09 18:55:20,397 - INFO - Question added to thread.
+2024-12-09 18:55:28,592 - WARNING - No annotations found in the response.
+2024-12-09 18:55:49,016 - INFO - Received payload: thread_id='thread_FYaxYCH0Hpp27T4npW2GTBdI' question='summarize the meeting minutes'
+2024-12-09 18:55:49,726 - INFO - Question added to thread.
+2024-12-09 18:56:00,631 - WARNING - No annotations found in the response.
+2024-12-09 18:56:18,317 - INFO - Received payload: thread_id='thread_FYaxYCH0Hpp27T4npW2GTBdI' question='How is this related to the tang?'
+2024-12-09 18:56:18,708 - INFO - Question added to thread.
+2024-12-09 18:56:28,696 - WARNING - No annotations found in the response.
+2024-12-09 18:56:47,097 - INFO - Received payload: thread_id='thread_FYaxYCH0Hpp27T4npW2GTBdI' question='How many files mention the Tang? What are there names?'
+2024-12-09 18:56:47,535 - INFO - Question added to thread.
+2024-12-09 18:56:56,749 - WARNING - No annotations found in the response.
+2024-12-09 18:57:51,485 - INFO - Thread successfully created with ID: thread_BQnktiqtayKN4C8nNGnP7VxY
+2024-12-09 18:57:59,373 - INFO - Received payload: thread_id='thread_BQnktiqtayKN4C8nNGnP7VxY' question='hi'
+2024-12-09 18:57:59,705 - INFO - Question added to thread.
+2024-12-09 18:58:02,488 - WARNING - No annotations found in the response.
+2024-12-09 19:01:15,454 - INFO - Received payload: thread_id='thread_BQnktiqtayKN4C8nNGnP7VxY' question='what do you know about the tang?'
+2024-12-09 19:01:15,455 - ERROR - Error processing question: 'NoneType' object has no attribute 'id'
+2024-12-09 19:01:23,624 - INFO - Thread successfully created with ID: thread_ocNFV6zT0GcrYB81vxUtdny9
+2024-12-09 19:01:30,840 - INFO - Received payload: thread_id='thread_ocNFV6zT0GcrYB81vxUtdny9' question='What do you know about the tang?'
+2024-12-09 19:01:31,179 - INFO - Question added to thread.
+2024-12-09 19:01:49,313 - WARNING - No annotations found in the response.
+2024-12-09 19:02:14,197 - INFO - Thread successfully created with ID: thread_18EmHk424h5RVgVgBDRzLNs4

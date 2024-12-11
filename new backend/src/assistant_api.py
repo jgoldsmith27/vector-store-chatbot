@@ -1,11 +1,12 @@
 import logging
 from openai import OpenAI
+from dotenv import load_dotenv
+import os
 
 class AssistantAPI:
-    def __init__(self, api_key, assistant_id, vector_store_id):
+    def __init__(self, api_key, assistant_id):
         self.api_key = api_key
         self.assistant_id = assistant_id
-        self.vector_store_id = vector_store_id
         self.client = OpenAI(api_key=api_key)
         self.thread = None
 
@@ -84,12 +85,12 @@ class AssistantAPI:
 
 
 if __name__ == "__main__":
+    load_dotenv()
     # API key and assistant details
-    API_KEY = "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"
-    ASSISTANT_ID = "asst_dJJXxlCA2nIBhqXw6uPgPmhM"
-    VECTOR_STORE_ID = "vs_ax9QXMrGoYaHz6drqWnvuORr"
+    API_KEY = os.getenv("API_KEY")
+    ASSISTANT_ID = os.getenv("ASSISTANT_ID")
 
-    api = AssistantAPI(API_KEY, ASSISTANT_ID, VECTOR_STORE_ID)
+    api = AssistantAPI(API_KEY, ASSISTANT_ID)
 
     try:
         print("Using Assistant...")

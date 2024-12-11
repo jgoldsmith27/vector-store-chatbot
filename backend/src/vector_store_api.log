@@ -1,0 +1,6 @@
+2024-12-11 18:18:28,747 - INFO - OpenAI client initialized.
+2024-12-11 18:18:28,747 - INFO - Loaded VECTOR_STORE_ID: vs_ax9QXMrGoYaHz6drqWnvuORr
+2024-12-11 18:18:28,748 - INFO - Starting API usage example.
+2024-12-11 18:18:28,748 - INFO - Fetching file IDs from vector store.
+2024-12-11 18:18:29,512 - ERROR - Failed to fetch file IDs: 'SyncCursorPage[VectorStoreFile]' object has no attribute 'get'
+2024-12-11 18:18:29,513 - ERROR - An error occurred during API usage: 'SyncCursorPage[VectorStoreFile]' object has no attribute 'get'

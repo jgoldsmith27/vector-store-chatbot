@@ -69,7 +69,7 @@ def test_box_api(api, folder_id):
 
 if __name__ == "__main__":
     # Initialize the BoxAPI
-    api = BoxClient(config_path='/Users/jacob/Desktop/vector-store-chatbot/new backend/168895_g0v9h4sy_config.json')
+    api = BoxClient(config_path='/Users/jacob/Desktop/vector-store-chatbot/backend/168895_g0v9h4sy_config.json')
 
     # Folder ID for testing
     folder_id = '0'

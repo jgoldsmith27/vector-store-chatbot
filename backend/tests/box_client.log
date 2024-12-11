@@ -1,6 +1,7 @@
-2024-12-02 15:18:35,328 - INFO - Authenticated successfully.
-2024-12-02 15:18:35,329 - DEBUG - Refreshing tokens.
-2024-12-02 15:18:35,335 - INFO - [36mPOST https://api.box.com/oauth2/token {'data': {'assertion': 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImcwdjloNHN5IiwidHlwIjoiSldUIn0.eyJpc3MiOiJkYW9rdmtmcGRkb25sMWl6d3k5ZGs3b3ptcTFtYmNyNyIsInN1YiI6IjE2ODg5NSIsImJveF9zdWJfdHlwZSI6ImVudGVycHJpc2UiLCJhdWQiOiJodHRwczovL2FwaS5ib3guY29tL29hdXRoMi90b2tlbiIsImp0aSI6IjBYZmVSNTV3dEd4QXI5ZWNzOUp1bDBJclVQRWh2djJYclZJM1RKejc5SjJ1djFFQWJoYSIsImV4cCI6MTczMzE3MDc0NX0.BkpW9TcsyPH0xLgtLPgPIWdcnLBtbhq5S0FlrqlRc3oI0Jwfx3tWRxSbBwSAw1FbmDgyw-UuDmLjPANNzzzz0M1kqehPPzzzjm8S0z7UynV2OwsAFC0neMG0G1rlRmZphZYO1NTpO6kB7R8dLWffnK42G6cHwQePRPZbXY1juZMlT6gqjmzmCnOA6xBpMaC30ozfHV8Vx-aVZjOa0k64HKhlKyxVqDTHrnhMc_iSFP5NKPAEwH2D_wdKk9XTOo7AYsNuK36sg8bQiepXVSC_45Oo9vfa0gsWo_KxceDIokm4KBVCVdlg1j6MADsZnWQNXDip2W7-TF5q6yTPhET9Hw',
+2024-12-11 18:01:19,895 - INFO - Authenticated successfully.
+2024-12-11 18:01:19,895 - WARNING - File records JSON is empty. Initializing new records.
+2024-12-11 18:01:19,895 - DEBUG - Refreshing tokens.
+2024-12-11 18:01:19,901 - INFO - [36mPOST https://api.box.com/oauth2/token {'data': {'assertion': 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImcwdjloNHN5IiwidHlwIjoiSldUIn0.eyJpc3MiOiJkYW9rdmtmcGRkb25sMWl6d3k5ZGs3b3ptcTFtYmNyNyIsInN1YiI6IjE2ODg5NSIsImJveF9zdWJfdHlwZSI6ImVudGVycHJpc2UiLCJhdWQiOiJodHRwczovL2FwaS5ib3guY29tL29hdXRoMi90b2tlbiIsImp0aSI6IkNIbEhuQ3NXZHZjZjF4Nm8wWjdMb2xjMFprdVVTc0twU0VOU2EzRG55TzZQVEoxdEVKbzJONG4zd2VjQ0thVFR3dlRqR29YbGpycFpTUncyMjFlU1l3TDVUTE00T1FDVjgxM3Qxc1hSeiIsImV4cCI6MTczMzk1ODEwOX0.fulp6Ti8LR3218L9Ae1jQqbSugUFi2_BwvQCUweUdJvWBSPlYVbkNWD68J3euWR0W11WTpCIIf46YjR3EkX5ehbICje6fqThUhoW0Kkg5kEOEheEdkewgVvKJyZ6xgQ09DxkoY406onXpqgrmGmD6utJVHX39EMiTbtKW-yzXZ7Rak1utBaGUgG0RwDnCSMOLZUnmkOH5LzJ5XOEzkGJQeTg-wYrYGnIwiZCqt3irqfIATFaJuvfkb2Zl1J17d9cMEMKIg9d_haT032G2q3t2lRg7gqNiv9ocdssHY83TZV36ynTSf_j_3Dt2f1mCC7hLLqo5oL7C86kKgILGj31zw',
           'box_device_id': '0',
           'client_id': '---bcr7',
           'client_secret': '---GFRb',
@@ -8,33 +9,33 @@
  'headers': {'User-Agent': 'box-python-sdk-3.13.0',
              'X-Box-UA': 'agent=box-python-sdk/3.13.0; env=python/3.11.7',
              'content-type': 'application/x-www-form-urlencoded'}}[0m
-2024-12-02 15:18:35,354 - DEBUG - Starting new HTTPS connection (1): api.box.com:443
-2024-12-02 15:18:35,798 - DEBUG - https://api.box.com:443 "POST /oauth2/token HTTP/1.1" 200 464
-2024-12-02 15:18:35,801 - INFO - [32m"POST https://api.box.com/oauth2/token" 200 464
-{'date': 'Mon, 02 Dec 2024 20:18:35 GMT', 'content-type': 'application/json', 'Content-Length': '464', 'strict-transport-security': 'max-age=31536000', 'set-cookie': 'box_visitor_id=674e161b869f52.44798281; expires=Tue, 02-Dec-2025 20:18:35 GMT; Max-Age=31536000; path=/; domain=.box.com; secure; SameSite=None, bv=ISF-16640; expires=Mon, 09-Dec-2024 20:18:35 GMT; Max-Age=604800; path=/; domain=.app.box.com; secure, cn=16; expires=Tue, 02-Dec-2025 20:18:35 GMT; Max-Age=31536000; path=/; domain=.app.box.com; secure, site_preference=desktop; path=/; domain=.box.com; secure', 'cache-control': 'no-store', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
-{'access_token': '---oGA.',
- 'expires_in': 4054,
+2024-12-11 18:01:19,936 - DEBUG - Starting new HTTPS connection (1): api.box.com:443
+2024-12-11 18:01:20,314 - DEBUG - https://api.box.com:443 "POST /oauth2/token HTTP/1.1" 200 464
+2024-12-11 18:01:20,317 - INFO - [32m"POST https://api.box.com/oauth2/token" 200 464
+{'date': 'Wed, 11 Dec 2024 23:01:20 GMT', 'content-type': 'application/json', 'Content-Length': '464', 'strict-transport-security': 'max-age=31536000', 'set-cookie': 'box_visitor_id=675a19c0096a37.59975328; expires=Thu, 11 Dec 2025 23:01:20 GMT; Max-Age=31536000; path=/; domain=.box.com; secure; SameSite=None, bv=MONO-7444; expires=Wed, 18 Dec 2024 23:01:20 GMT; Max-Age=604800; path=/; domain=.app.box.com; secure, cn=3; expires=Thu, 11 Dec 2025 23:01:20 GMT; Max-Age=31536000; path=/; domain=.app.box.com; secure, site_preference=desktop; path=/; domain=.box.com; secure', 'cache-control': 'no-store', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
+{'access_token': '---gP8.',
+ 'expires_in': 4190,
  'restricted_to': [],
  'token_type': 'bearer'}
 [0m
-2024-12-02 15:18:35,802 - INFO - [36mGET https://api.box.com/2.0/folders/0/items {'headers': {'Authorization': '---oGA.',
+2024-12-11 18:01:20,318 - INFO - [36mGET https://api.box.com/2.0/folders/0/items {'headers': {'Authorization': '---gP8.',
              'User-Agent': 'box-python-sdk-3.13.0',
              'X-Box-UA': 'agent=box-python-sdk/3.13.0; env=python/3.11.7'},
  'params': {'offset': 0}}[0m
-2024-12-02 15:18:35,806 - DEBUG - Starting new HTTPS connection (1): api.box.com:443
-2024-12-02 15:18:36,159 - DEBUG - https://api.box.com:443 "GET /2.0/folders/0/items?offset=0 HTTP/1.1" 200 None
-2024-12-02 15:18:36,161 - INFO - [32m"GET https://api.box.com/2.0/folders/0/items?offset=0" 200 463
-{'date': 'Mon, 02 Dec 2024 20:18:36 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '191', 'box-request-id': '05e0b0d0281156bc1d1796219037f99d', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+2024-12-11 18:01:20,322 - DEBUG - Starting new HTTPS connection (1): api.box.com:443
+2024-12-11 18:01:20,677 - DEBUG - https://api.box.com:443 "GET /2.0/folders/0/items?offset=0 HTTP/1.1" 200 None
+2024-12-11 18:01:20,678 - INFO - [32m"GET https://api.box.com/2.0/folders/0/items?offset=0" 200 463
+{'date': 'Wed, 11 Dec 2024 23:01:20 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '224', 'box-request-id': '0d5dba1bcc76614faa31f66b4ce7b7f78', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
 {'entries': [{'etag': '0',
               'id': '292829099684',
               'name': 'BoxGPTShare',
               'sequence_id': '0',
               'type': 'folder'},
              {'etag': '0',
-              'file_version': {'id': '1888113702327',
+              'file_version': {'id': '1897243787258',
                                'sha1': '26d82f1931cbdbd83c2a6871b2cecd5cbcc8c26b',
                                'type': 'file_version'},
-              'id': '1714931060727',
+              'id': '1722878984858',
               'name': 'test_file.txt',
               'sequence_id': '0',
               'sha1': '26d82f1931cbdbd83c2a6871b2cecd5cbcc8c26b',
@@ -45,22 +46,22 @@
            {'by': 'name', 'direction': 'ASC'}],
  'total_count': 2}
 [0m
-2024-12-02 15:18:36,163 - INFO - [36mDELETE https://api.box.com/2.0/files/1714931060727 {'headers': {'Authorization': '---oGA.',
+2024-12-11 18:01:20,678 - INFO - [36mDELETE https://api.box.com/2.0/files/1722878984858 {'headers': {'Authorization': '---gP8.',
              'User-Agent': 'box-python-sdk-3.13.0',
              'X-Box-UA': 'agent=box-python-sdk/3.13.0; env=python/3.11.7'},
  'params': {}}[0m
-2024-12-02 15:18:36,923 - DEBUG - https://api.box.com:443 "DELETE /2.0/files/1714931060727 HTTP/1.1" 204 0
-2024-12-02 15:18:36,924 - INFO - [32m"DELETE https://api.box.com/2.0/files/1714931060727" 204 ?
-{'date': 'Mon, 02 Dec 2024 20:18:36 GMT', 'x-envoy-upstream-service-time': '672', 'content-location': 'https://webapp.localhost/api/2.0/files/1714931060727/trash', 'box-request-id': '032402f69abca7c544cbd9751b285cd11', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
+2024-12-11 18:01:21,420 - DEBUG - https://api.box.com:443 "DELETE /2.0/files/1722878984858 HTTP/1.1" 204 0
+2024-12-11 18:01:21,420 - INFO - [32m"DELETE https://api.box.com/2.0/files/1722878984858" 204 ?
+{'date': 'Wed, 11 Dec 2024 23:01:21 GMT', 'x-envoy-upstream-service-time': '654', 'content-location': 'https://webapp.localhost/api/2.0/files/1722878984858/trash', 'box-request-id': '168df92e0c0d43223cbe5c371d01bf383', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
 <No content or content unavailable for logging>
 [0m
-2024-12-02 15:18:36,925 - INFO - [36mGET https://api.box.com/2.0/folders/0 {'headers': {'Authorization': '---oGA.',
+2024-12-11 18:01:21,421 - INFO - [36mGET https://api.box.com/2.0/folders/0 {'headers': {'Authorization': '---gP8.',
              'User-Agent': 'box-python-sdk-3.13.0',
              'X-Box-UA': 'agent=box-python-sdk/3.13.0; env=python/3.11.7'},
  'params': None}[0m
-2024-12-02 15:18:37,188 - DEBUG - https://api.box.com:443 "GET /2.0/folders/0 HTTP/1.1" 200 None
-2024-12-02 15:18:37,191 - INFO - [32m"GET https://api.box.com/2.0/folders/0" 200 947
-{'date': 'Mon, 02 Dec 2024 20:18:37 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '156', 'box-request-id': '0d4a807e00b3d7ca45e4cca6e6750c3e7', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+2024-12-11 18:01:21,670 - DEBUG - https://api.box.com:443 "GET /2.0/folders/0 HTTP/1.1" 200 None
+2024-12-11 18:01:21,673 - INFO - [32m"GET https://api.box.com/2.0/folders/0" 200 947
+{'date': 'Wed, 11 Dec 2024 23:01:21 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '161', 'box-request-id': '1574cf95c430e9a7e8d6736a2b200e752', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
 {'content_created_at': None,
  'content_modified_at': None,
  'created_at': None,
@@ -95,18 +96,18 @@
  'purged_at': None,
  'sequence_id': None,
  'shared_link': None,
- 'size': 325610042,
+ 'size': 325610062,
  'trashed_at': None,
  'type': 'folder'}
 [0m
-2024-12-02 15:18:37,191 - INFO - Accessed folder with ID: 0
-2024-12-02 15:18:37,192 - INFO - [36mGET https://api.box.com/2.0/folders/0/items {'headers': {'Authorization': '---oGA.',
+2024-12-11 18:01:21,674 - INFO - Accessed folder with ID: 0
+2024-12-11 18:01:21,674 - INFO - [36mGET https://api.box.com/2.0/folders/0/items {'headers': {'Authorization': '---gP8.',
              'User-Agent': 'box-python-sdk-3.13.0',
              'X-Box-UA': 'agent=box-python-sdk/3.13.0; env=python/3.11.7'},
  'params': {'offset': 0}}[0m
-2024-12-02 15:18:37,490 - DEBUG - https://api.box.com:443 "GET /2.0/folders/0/items?offset=0 HTTP/1.1" 200 None
-2024-12-02 15:18:37,491 - INFO - [32m"GET https://api.box.com/2.0/folders/0/items?offset=0" 200 214
-{'date': 'Mon, 02 Dec 2024 20:18:37 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '177', 'box-request-id': '024225e1a83ec857958dfefa9ff681ad8', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+2024-12-11 18:01:21,924 - DEBUG - https://api.box.com:443 "GET /2.0/folders/0/items?offset=0 HTTP/1.1" 200 None
+2024-12-11 18:01:21,925 - INFO - [32m"GET https://api.box.com/2.0/folders/0/items?offset=0" 200 214
+{'date': 'Wed, 11 Dec 2024 23:01:21 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '161', 'box-request-id': '0729406c8bcb485080cd7eaea9c25f986', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
 {'entries': [{'etag': '0',
               'id': '292829099684',
               'name': 'BoxGPTShare',
@@ -118,27 +119,27 @@
            {'by': 'name', 'direction': 'ASC'}],
  'total_count': 1}
 [0m
-2024-12-02 15:18:37,493 - INFO - File records saved.
-2024-12-02 15:18:37,495 - INFO - [36mPOST https://upload.box.com/api/2.0/files/content {'data': <MultipartEncoder: OrderedDict([('attributes', '{"name": "test_file.txt", "parent": {"id": "0"}, "description": null, "content_created_at": null, "content_modified_at": null}'), ('file', ('unused', <_io.BufferedReader name='test_file.txt'>))])>,
- 'headers': {'Authorization': '---oGA.',
+2024-12-11 18:01:21,926 - INFO - File records saved.
+2024-12-11 18:01:21,928 - INFO - [36mPOST https://upload.box.com/api/2.0/files/content {'data': <MultipartEncoder: OrderedDict([('attributes', '{"name": "test_file.txt", "parent": {"id": "0"}, "description": null, "content_created_at": null, "content_modified_at": null}'), ('file', ('unused', <_io.BufferedReader name='test_file.txt'>))])>,
+ 'headers': {'Authorization': '---gP8.',
              'Content-Type': 'multipart/form-data; '
-                             'boundary=cf12aca830dc4368a0803a498a65f2d9',
+                             'boundary=f175b3ba264b420a8735dbd1aa27a910',
              'User-Agent': 'box-python-sdk-3.13.0',
              'X-Box-UA': 'agent=box-python-sdk/3.13.0; env=python/3.11.7'}}[0m
-2024-12-02 15:18:37,509 - DEBUG - Starting new HTTPS connection (1): upload.box.com:443
-2024-12-02 15:18:38,824 - DEBUG - https://upload.box.com:443 "POST /api/2.0/files/content HTTP/1.1" 201 1209
-2024-12-02 15:18:38,825 - INFO - [32m"POST https://upload.box.com/api/2.0/files/content" 201 1209
-{'server': 'nginx', 'date': 'Mon, 02 Dec 2024 20:18:38 GMT', 'content-type': 'application/json', 'Content-Length': '1209', 'cache-control': 'no-cache, no-store', 'x-envoy-upstream-service-time': '1134', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
+2024-12-11 18:01:21,958 - DEBUG - Starting new HTTPS connection (1): upload.box.com:443
+2024-12-11 18:01:23,244 - DEBUG - https://upload.box.com:443 "POST /api/2.0/files/content HTTP/1.1" 201 1209
+2024-12-11 18:01:23,245 - INFO - [32m"POST https://upload.box.com/api/2.0/files/content" 201 1209
+{'server': 'nginx', 'date': 'Wed, 11 Dec 2024 23:01:23 GMT', 'content-type': 'application/json', 'Content-Length': '1209', 'cache-control': 'no-cache, no-store', 'x-envoy-upstream-service-time': '1130', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
 <No content or content unavailable for logging>
 [0m
-2024-12-02 15:18:38,826 - INFO - File uploaded: test_file.txt
-2024-12-02 15:18:38,827 - INFO - [36mGET https://api.box.com/2.0/folders/0 {'headers': {'Authorization': '---oGA.',
+2024-12-11 18:01:23,246 - INFO - File uploaded: test_file.txt
+2024-12-11 18:01:23,247 - INFO - [36mGET https://api.box.com/2.0/folders/0 {'headers': {'Authorization': '---gP8.',
              'User-Agent': 'box-python-sdk-3.13.0',
              'X-Box-UA': 'agent=box-python-sdk/3.13.0; env=python/3.11.7'},
  'params': None}[0m
-2024-12-02 15:18:39,220 - DEBUG - https://api.box.com:443 "GET /2.0/folders/0 HTTP/1.1" 200 None
-2024-12-02 15:18:39,223 - INFO - [32m"GET https://api.box.com/2.0/folders/0" 200 1196
-{'date': 'Mon, 02 Dec 2024 20:18:39 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '195', 'box-request-id': '0cea71804dc752303adb215a70152ab1a', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+2024-12-11 18:01:23,669 - DEBUG - https://api.box.com:443 "GET /2.0/folders/0 HTTP/1.1" 200 None
+2024-12-11 18:01:23,671 - INFO - [32m"GET https://api.box.com/2.0/folders/0" 200 1196
+{'date': 'Wed, 11 Dec 2024 23:01:23 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '329', 'box-request-id': '063f7a876eef973834da36ea3a7f5b427', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
 {'content_created_at': None,
  'content_modified_at': None,
  'created_at': None,
@@ -153,10 +154,10 @@
                                   'sequence_id': '0',
                                   'type': 'folder'},
                                  {'etag': '0',
-                                  'file_version': {'id': '1888125441013',
+                                  'file_version': {'id': '1897256219166',
                                                    'sha1': '26d82f1931cbdbd83c2a6871b2cecd5cbcc8c26b',
                                                    'type': 'file_version'},
-                                  'id': '1714941637813',
+                                  'id': '1722889213566',
                                   'name': 'test_file.txt',
                                   'sequence_id': '0',
                                   'sha1': '26d82f1931cbdbd83c2a6871b2cecd5cbcc8c26b',
@@ -186,24 +187,24 @@
  'trashed_at': None,
  'type': 'folder'}
 [0m
-2024-12-02 15:18:39,223 - INFO - Accessed folder with ID: 0
-2024-12-02 15:18:39,224 - INFO - [36mGET https://api.box.com/2.0/folders/0/items {'headers': {'Authorization': '---oGA.',
+2024-12-11 18:01:23,671 - INFO - Accessed folder with ID: 0
+2024-12-11 18:01:23,671 - INFO - [36mGET https://api.box.com/2.0/folders/0/items {'headers': {'Authorization': '---gP8.',
              'User-Agent': 'box-python-sdk-3.13.0',
              'X-Box-UA': 'agent=box-python-sdk/3.13.0; env=python/3.11.7'},
  'params': {'offset': 0}}[0m
-2024-12-02 15:18:39,520 - DEBUG - https://api.box.com:443 "GET /2.0/folders/0/items?offset=0 HTTP/1.1" 200 None
-2024-12-02 15:18:39,522 - INFO - [32m"GET https://api.box.com/2.0/folders/0/items?offset=0" 200 463
-{'date': 'Mon, 02 Dec 2024 20:18:39 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '194', 'box-request-id': '159b32e7a7ca6fcc77d389db1e6125242', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+2024-12-11 18:01:23,957 - DEBUG - https://api.box.com:443 "GET /2.0/folders/0/items?offset=0 HTTP/1.1" 200 None
+2024-12-11 18:01:23,959 - INFO - [32m"GET https://api.box.com/2.0/folders/0/items?offset=0" 200 463
+{'date': 'Wed, 11 Dec 2024 23:01:23 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '186', 'box-request-id': '0d93b8c0c247f10c7d12d13571627243a', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
 {'entries': [{'etag': '0',
               'id': '292829099684',
               'name': 'BoxGPTShare',
               'sequence_id': '0',
               'type': 'folder'},
              {'etag': '0',
-              'file_version': {'id': '1888125441013',
+              'file_version': {'id': '1897256219166',
                                'sha1': '26d82f1931cbdbd83c2a6871b2cecd5cbcc8c26b',
                                'type': 'file_version'},
-              'id': '1714941637813',
+              'id': '1722889213566',
               'name': 'test_file.txt',
               'sequence_id': '0',
               'sha1': '26d82f1931cbdbd83c2a6871b2cecd5cbcc8c26b',
@@ -214,28 +215,28 @@
            {'by': 'name', 'direction': 'ASC'}],
  'total_count': 2}
 [0m
-2024-12-02 15:18:39,523 - INFO - [36mGET https://api.box.com/2.0/files/1714941637813 {'headers': {'Authorization': '---oGA.',
+2024-12-11 18:01:23,960 - INFO - [36mGET https://api.box.com/2.0/files/1722889213566 {'headers': {'Authorization': '---gP8.',
              'User-Agent': 'box-python-sdk-3.13.0',
              'X-Box-UA': 'agent=box-python-sdk/3.13.0; env=python/3.11.7'},
  'params': None}[0m
-2024-12-02 15:18:39,782 - DEBUG - https://api.box.com:443 "GET /2.0/files/1714941637813 HTTP/1.1" 200 None
-2024-12-02 15:18:39,785 - INFO - [32m"GET https://api.box.com/2.0/files/1714941637813" 200 1179
-{'date': 'Mon, 02 Dec 2024 20:18:39 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '172', 'etag': '"0"', 'box-request-id': '0a2f070e6ddf8094f288afb112b2f7f76', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
-{'content_created_at': '2024-12-02T12:18:38-08:00',
- 'content_modified_at': '2024-12-02T12:18:38-08:00',
- 'created_at': '2024-12-02T12:18:38-08:00',
+2024-12-11 18:01:24,217 - DEBUG - https://api.box.com:443 "GET /2.0/files/1722889213566 HTTP/1.1" 200 None
+2024-12-11 18:01:24,220 - INFO - [32m"GET https://api.box.com/2.0/files/1722889213566" 200 1179
+{'date': 'Wed, 11 Dec 2024 23:01:24 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '160', 'etag': '"0"', 'box-request-id': '0dfe895916227c332dbab111e2a6b7d36', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'content_created_at': '2024-12-11T15:01:22-08:00',
+ 'content_modified_at': '2024-12-11T15:01:22-08:00',
+ 'created_at': '2024-12-11T15:01:22-08:00',
  'created_by': {'id': '37708208807',
                 'login': 'AutomationUser_2305439_qoqO7W1n2M@boxdevedition.com',
                 'name': 'Skidmore_MiddleStates_JWT',
                 'type': 'user'},
  'description': '',
  'etag': '0',
- 'file_version': {'id': '1888125441013',
+ 'file_version': {'id': '1897256219166',
                   'sha1': '26d82f1931cbdbd83c2a6871b2cecd5cbcc8c26b',
                   'type': 'file_version'},
- 'id': '1714941637813',
+ 'id': '1722889213566',
  'item_status': 'active',
- 'modified_at': '2024-12-02T12:18:38-08:00',
+ 'modified_at': '2024-12-11T15:01:22-08:00',
  'modified_by': {'id': '37708208807',
                  'login': 'AutomationUser_2305439_qoqO7W1n2M@boxdevedition.com',
                  'name': 'Skidmore_MiddleStates_JWT',
@@ -264,24 +265,24 @@
  'trashed_at': None,
  'type': 'file'}
 [0m
-2024-12-02 15:18:39,787 - INFO - File records saved.
-2024-12-02 15:18:39,787 - INFO - [36mGET https://api.box.com/2.0/folders/0/items {'headers': {'Authorization': '---oGA.',
+2024-12-11 18:01:24,222 - INFO - File records saved.
+2024-12-11 18:01:24,222 - INFO - [36mGET https://api.box.com/2.0/folders/0/items {'headers': {'Authorization': '---gP8.',
              'User-Agent': 'box-python-sdk-3.13.0',
              'X-Box-UA': 'agent=box-python-sdk/3.13.0; env=python/3.11.7'},
  'params': {'offset': 0}}[0m
-2024-12-02 15:18:40,060 - DEBUG - https://api.box.com:443 "GET /2.0/folders/0/items?offset=0 HTTP/1.1" 200 None
-2024-12-02 15:18:40,063 - INFO - [32m"GET https://api.box.com/2.0/folders/0/items?offset=0" 200 463
-{'date': 'Mon, 02 Dec 2024 20:18:40 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '186', 'box-request-id': '0a17dba3f8533c9be3c105f35ae248278', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+2024-12-11 18:01:24,486 - DEBUG - https://api.box.com:443 "GET /2.0/folders/0/items?offset=0 HTTP/1.1" 200 None
+2024-12-11 18:01:24,488 - INFO - [32m"GET https://api.box.com/2.0/folders/0/items?offset=0" 200 463
+{'date': 'Wed, 11 Dec 2024 23:01:24 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '172', 'box-request-id': '0e98b4b39a968feae1414f6290a47c', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
 {'entries': [{'etag': '0',
               'id': '292829099684',
               'name': 'BoxGPTShare',
               'sequence_id': '0',
               'type': 'folder'},
              {'etag': '0',
-              'file_version': {'id': '1888125441013',
+              'file_version': {'id': '1897256219166',
                                'sha1': '26d82f1931cbdbd83c2a6871b2cecd5cbcc8c26b',
                                'type': 'file_version'},
-              'id': '1714941637813',
+              'id': '1722889213566',
               'name': 'test_file.txt',
               'sequence_id': '0',
               'sha1': '26d82f1931cbdbd83c2a6871b2cecd5cbcc8c26b',
@@ -292,35 +293,35 @@
            {'by': 'name', 'direction': 'ASC'}],
  'total_count': 2}
 [0m
-2024-12-02 15:18:40,064 - INFO - [36mDELETE https://api.box.com/2.0/files/1714941637813 {'headers': {'Authorization': '---oGA.',
+2024-12-11 18:01:24,488 - INFO - [36mDELETE https://api.box.com/2.0/files/1722889213566 {'headers': {'Authorization': '---gP8.',
              'User-Agent': 'box-python-sdk-3.13.0',
              'X-Box-UA': 'agent=box-python-sdk/3.13.0; env=python/3.11.7'},
  'params': {}}[0m
-2024-12-02 15:18:40,773 - DEBUG - https://api.box.com:443 "DELETE /2.0/files/1714941637813 HTTP/1.1" 204 0
-2024-12-02 15:18:40,774 - INFO - [32m"DELETE https://api.box.com/2.0/files/1714941637813" 204 ?
-{'date': 'Mon, 02 Dec 2024 20:18:40 GMT', 'x-envoy-upstream-service-time': '571', 'content-location': 'https://webapp.localhost/api/2.0/files/1714941637813/trash', 'box-request-id': '0f40d5fcb4000baf58dac65258b1459fb', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
+2024-12-11 18:01:25,290 - DEBUG - https://api.box.com:443 "DELETE /2.0/files/1722889213566 HTTP/1.1" 204 0
+2024-12-11 18:01:25,291 - INFO - [32m"DELETE https://api.box.com/2.0/files/1722889213566" 204 ?
+{'date': 'Wed, 11 Dec 2024 23:01:25 GMT', 'x-envoy-upstream-service-time': '642', 'content-location': 'https://webapp.localhost/api/2.0/files/1722889213566/trash', 'box-request-id': '06c9d9d199d769c4f99e1be5c60af7ab1', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
 <No content or content unavailable for logging>
 [0m
-2024-12-02 15:18:40,774 - INFO - File deleted from Box: test_file.txt
-2024-12-02 15:18:40,776 - INFO - [36mPOST https://upload.box.com/api/2.0/files/content {'data': <MultipartEncoder: OrderedDict([('attributes', '{"name": "test_file.txt", "parent": {"id": "0"}, "description": null, "content_created_at": null, "content_modified_at": null}'), ('file', ('unused', <_io.BufferedReader name='test_file.txt'>))])>,
- 'headers': {'Authorization': '---oGA.',
+2024-12-11 18:01:25,291 - INFO - File deleted from Box: test_file.txt
+2024-12-11 18:01:25,292 - INFO - [36mPOST https://upload.box.com/api/2.0/files/content {'data': <MultipartEncoder: OrderedDict([('attributes', '{"name": "test_file.txt", "parent": {"id": "0"}, "description": null, "content_created_at": null, "content_modified_at": null}'), ('file', ('unused', <_io.BufferedReader name='test_file.txt'>))])>,
+ 'headers': {'Authorization': '---gP8.',
              'Content-Type': 'multipart/form-data; '
-                             'boundary=a2cee2fc47a44c7e992374f7d05a17f6',
+                             'boundary=22558d27d9df43a9ba03596bb8503690',
              'User-Agent': 'box-python-sdk-3.13.0',
              'X-Box-UA': 'agent=box-python-sdk/3.13.0; env=python/3.11.7'}}[0m
-2024-12-02 15:18:41,822 - DEBUG - https://upload.box.com:443 "POST /api/2.0/files/content HTTP/1.1" 201 1209
-2024-12-02 15:18:41,823 - INFO - [32m"POST https://upload.box.com/api/2.0/files/content" 201 1209
-{'server': 'nginx', 'date': 'Mon, 02 Dec 2024 20:18:41 GMT', 'content-type': 'application/json', 'Content-Length': '1209', 'cache-control': 'no-cache, no-store', 'x-envoy-upstream-service-time': '977', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
+2024-12-11 18:01:26,547 - DEBUG - https://upload.box.com:443 "POST /api/2.0/files/content HTTP/1.1" 201 1209
+2024-12-11 18:01:26,549 - INFO - [32m"POST https://upload.box.com/api/2.0/files/content" 201 1209
+{'server': 'nginx', 'date': 'Wed, 11 Dec 2024 23:01:26 GMT', 'content-type': 'application/json', 'Content-Length': '1209', 'cache-control': 'no-cache, no-store', 'x-envoy-upstream-service-time': '1205', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}
 <No content or content unavailable for logging>
 [0m
-2024-12-02 15:18:41,825 - INFO - File uploaded: test_file.txt
-2024-12-02 15:18:41,825 - INFO - [36mGET https://api.box.com/2.0/folders/0 {'headers': {'Authorization': '---oGA.',
+2024-12-11 18:01:26,550 - INFO - File uploaded: test_file.txt
+2024-12-11 18:01:26,550 - INFO - [36mGET https://api.box.com/2.0/folders/0 {'headers': {'Authorization': '---gP8.',
              'User-Agent': 'box-python-sdk-3.13.0',
              'X-Box-UA': 'agent=box-python-sdk/3.13.0; env=python/3.11.7'},
  'params': None}[0m
-2024-12-02 15:18:42,105 - DEBUG - https://api.box.com:443 "GET /2.0/folders/0 HTTP/1.1" 200 None
-2024-12-02 15:18:42,108 - INFO - [32m"GET https://api.box.com/2.0/folders/0" 200 1196
-{'date': 'Mon, 02 Dec 2024 20:18:42 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '189', 'box-request-id': '01417006e2d589f40661914a334fa38eb', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+2024-12-11 18:01:26,827 - DEBUG - https://api.box.com:443 "GET /2.0/folders/0 HTTP/1.1" 200 None
+2024-12-11 18:01:26,827 - INFO - [32m"GET https://api.box.com/2.0/folders/0" 200 1196
+{'date': 'Wed, 11 Dec 2024 23:01:26 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '187', 'box-request-id': '07fa43e22994c61823d5c04514194377c', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
 {'content_created_at': None,
  'content_modified_at': None,
  'created_at': None,
@@ -335,10 +336,10 @@
                                   'sequence_id': '0',
                                   'type': 'folder'},
                                  {'etag': '0',
-                                  'file_version': {'id': '1888122962225',
+                                  'file_version': {'id': '1897255002680',
                                                    'sha1': '26d82f1931cbdbd83c2a6871b2cecd5cbcc8c26b',
                                                    'type': 'file_version'},
-                                  'id': '1714938808625',
+                                  'id': '1722888045080',
                                   'name': 'test_file.txt',
                                   'sequence_id': '0',
                                   'sha1': '26d82f1931cbdbd83c2a6871b2cecd5cbcc8c26b',
@@ -368,24 +369,24 @@
  'trashed_at': None,
  'type': 'folder'}
 [0m
-2024-12-02 15:18:42,109 - INFO - Accessed folder with ID: 0
-2024-12-02 15:18:42,109 - INFO - [36mGET https://api.box.com/2.0/folders/0/items {'headers': {'Authorization': '---oGA.',
+2024-12-11 18:01:26,828 - INFO - Accessed folder with ID: 0
+2024-12-11 18:01:26,828 - INFO - [36mGET https://api.box.com/2.0/folders/0/items {'headers': {'Authorization': '---gP8.',
              'User-Agent': 'box-python-sdk-3.13.0',
              'X-Box-UA': 'agent=box-python-sdk/3.13.0; env=python/3.11.7'},
  'params': {'offset': 0}}[0m
-2024-12-02 15:18:42,357 - DEBUG - https://api.box.com:443 "GET /2.0/folders/0/items?offset=0 HTTP/1.1" 200 None
-2024-12-02 15:18:42,360 - INFO - [32m"GET https://api.box.com/2.0/folders/0/items?offset=0" 200 463
-{'date': 'Mon, 02 Dec 2024 20:18:42 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '159', 'box-request-id': '0eecc01d5450cca33083be2d79dec3571', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+2024-12-11 18:01:27,234 - DEBUG - https://api.box.com:443 "GET /2.0/folders/0/items?offset=0 HTTP/1.1" 200 None
+2024-12-11 18:01:27,236 - INFO - [32m"GET https://api.box.com/2.0/folders/0/items?offset=0" 200 463
+{'date': 'Wed, 11 Dec 2024 23:01:27 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '226', 'box-request-id': '03efddcbc32c2be141c1fa019ca975edd', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
 {'entries': [{'etag': '0',
               'id': '292829099684',
               'name': 'BoxGPTShare',
               'sequence_id': '0',
               'type': 'folder'},
              {'etag': '0',
-              'file_version': {'id': '1888122962225',
+              'file_version': {'id': '1897255002680',
                                'sha1': '26d82f1931cbdbd83c2a6871b2cecd5cbcc8c26b',
                                'type': 'file_version'},
-              'id': '1714938808625',
+              'id': '1722888045080',
               'name': 'test_file.txt',
               'sequence_id': '0',
               'sha1': '26d82f1931cbdbd83c2a6871b2cecd5cbcc8c26b',
@@ -396,28 +397,28 @@
            {'by': 'name', 'direction': 'ASC'}],
  'total_count': 2}
 [0m
-2024-12-02 15:18:42,360 - INFO - [36mGET https://api.box.com/2.0/files/1714938808625 {'headers': {'Authorization': '---oGA.',
+2024-12-11 18:01:27,237 - INFO - [36mGET https://api.box.com/2.0/files/1722888045080 {'headers': {'Authorization': '---gP8.',
              'User-Agent': 'box-python-sdk-3.13.0',
              'X-Box-UA': 'agent=box-python-sdk/3.13.0; env=python/3.11.7'},
  'params': None}[0m
-2024-12-02 15:18:42,632 - DEBUG - https://api.box.com:443 "GET /2.0/files/1714938808625 HTTP/1.1" 200 None
-2024-12-02 15:18:42,635 - INFO - [32m"GET https://api.box.com/2.0/files/1714938808625" 200 1179
-{'date': 'Mon, 02 Dec 2024 20:18:42 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '179', 'etag': '"0"', 'box-request-id': '0d0ccf9a7c3a890650ec2d5961d537874', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
-{'content_created_at': '2024-12-02T12:18:41-08:00',
- 'content_modified_at': '2024-12-02T12:18:41-08:00',
- 'created_at': '2024-12-02T12:18:41-08:00',
+2024-12-11 18:01:27,514 - DEBUG - https://api.box.com:443 "GET /2.0/files/1722888045080 HTTP/1.1" 200 None
+2024-12-11 18:01:27,517 - INFO - [32m"GET https://api.box.com/2.0/files/1722888045080" 200 1179
+{'date': 'Wed, 11 Dec 2024 23:01:27 GMT', 'content-type': 'application/json', 'x-envoy-upstream-service-time': '189', 'etag': '"0"', 'box-request-id': '076b8ae6f5e583f051cbe543b6b941e35', 'cache-control': 'no-cache, no-store', 'strict-transport-security': 'max-age=31536000', 'via': '1.1 google', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'}
+{'content_created_at': '2024-12-11T15:01:26-08:00',
+ 'content_modified_at': '2024-12-11T15:01:26-08:00',
+ 'created_at': '2024-12-11T15:01:26-08:00',
  'created_by': {'id': '37708208807',
                 'login': 'AutomationUser_2305439_qoqO7W1n2M@boxdevedition.com',
                 'name': 'Skidmore_MiddleStates_JWT',
                 'type': 'user'},
  'description': '',
  'etag': '0',
- 'file_version': {'id': '1888122962225',
+ 'file_version': {'id': '1897255002680',
                   'sha1': '26d82f1931cbdbd83c2a6871b2cecd5cbcc8c26b',
                   'type': 'file_version'},
- 'id': '1714938808625',
+ 'id': '1722888045080',
  'item_status': 'active',
- 'modified_at': '2024-12-02T12:18:41-08:00',
+ 'modified_at': '2024-12-11T15:01:26-08:00',
  'modified_by': {'id': '37708208807',
                  'login': 'AutomationUser_2305439_qoqO7W1n2M@boxdevedition.com',
                  'name': 'Skidmore_MiddleStates_JWT',
@@ -446,4 +447,4 @@
  'trashed_at': None,
  'type': 'file'}
 [0m
-2024-12-02 15:18:42,636 - INFO - File records saved.
+2024-12-11 18:01:27,518 - INFO - File records saved.

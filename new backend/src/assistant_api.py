@@ -65,16 +65,15 @@ class AssistantAPI:
 
             # Extract citations if available
             citations = []
-            if hasattr(message.content[0], "annotations"):
-                for annotation in message.content[0].annotations:
-                    response_content = response_content.replace(annotation.text, '')
-                    if file_citation := getattr(annotation, "file_citation", None):
-                        cited_file = self.client.files.retrieve(file_citation.file_id)
+            annotations = response_content.annotations
+            for annotation in annotations:
+                response_content.value = response_content.value.replace(annotation.text, '')
+                if file_citation := getattr(annotation, "file_citation", None):
+                    cited_file = self.client.files.retrieve(file_citation.file_id)
+                    if cited_file.filename not in citations:
                         citations.append(cited_file.filename)
-            else:
-                logging.warning("No annotations found in the response.")
 
-            return response_content, citations
+            return response_content.value, citations
 
         except ValueError as e:
             logging.error(f"Thread error: {e}")

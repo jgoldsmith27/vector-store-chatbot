@@ -16,6 +16,7 @@
   white-space: pre-wrap;
 }
 
+
 .chat-message.user {
   text-align: right;
   color: #ffffff;
@@ -23,6 +24,7 @@
   padding: 10px 15px;
   border-radius: 15px 15px 0 15px;
   margin: 8px 0;
+  margin-left: 100px; /* shift right */
   max-width: 75%;
   align-self: flex-end;
 }
@@ -34,9 +36,11 @@
   padding: 10px 15px;
   border-radius: 15px 15px 15px 0;
   margin: 8px 0;
+  margin-left: 100px; /* shift right */
   max-width: 75%;
   align-self: flex-start;
 }
+
 
 .loading-indicator {
   display: flex;
@@ -104,7 +108,7 @@
 .new-chat-button {
   position: absolute;
   top: 10px;
-  right: 10px;
+  left: 10px;
   padding: 10px 20px;
   font-size: 14px;
   font-weight: bold;

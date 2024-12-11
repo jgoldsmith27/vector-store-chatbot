@@ -134,6 +134,12 @@ function Chat() {
           placeholder="Type a message..."
           value={input}
           onChange={(e) => setInput(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" && !loading) {
+              e.preventDefault();
+              sendMessage();
+            }
+          }}
           disabled={loading}
         />
         <button

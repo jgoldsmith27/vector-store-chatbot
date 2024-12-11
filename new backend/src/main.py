@@ -32,9 +32,8 @@ app.add_middleware(
 # Initialize the Assistant API
 API_KEY = os.getenv("API_KEY")
 ASSISTANT_ID = os.getenv("ASSISTANT_ID")
-VECTOR_STORE_ID = os.getenv("VECTOR_STORE_ID")
 
-assistant_api = AssistantAPI(API_KEY, ASSISTANT_ID, VECTOR_STORE_ID)
+assistant_api = AssistantAPI(API_KEY, ASSISTANT_ID)
 
 # Define request models
 class QuestionRequest(BaseModel):

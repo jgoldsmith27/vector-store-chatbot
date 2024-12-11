@@ -21,7 +21,10 @@ function Chat() {
       setLoading(false);
     } catch (error) {
       console.error("Error creating thread:", error);
-      showNotification("Failed to create a new thread. Please try again.", "error");
+      showNotification(
+        "Failed to create a new thread. Please try again.",
+        "error"
+      );
       setLoading(false);
     }
   };
@@ -50,17 +53,28 @@ function Chat() {
       });
 
       let assistantContent = response.data.response;
+
       if (typeof assistantContent === "object" && assistantContent.value) {
         assistantContent = assistantContent.value;
       }
 
-      const assistantMessage = { role: "assistant", content: assistantContent };
+      // Get citations if available
+      const citations = response.data.citations || [];
+
+      const assistantMessage = {
+        role: "assistant",
+        content: assistantContent,
+        citations: citations,
+      };
       setMessages((prev) => [...prev, assistantMessage]);
 
       setLoading(false);
     } catch (error) {
       console.error("Error sending message:", error);
-      showNotification("Failed to send the message. Please try again.", "error");
+      showNotification(
+        "Failed to send the message. Please try again.",
+        "error"
+      );
       setLoading(false);
     }
   };
@@ -77,16 +91,32 @@ function Chat() {
   return (
     <div className="chat-container">
       {/* Notification */}
-      {notification.message && <Notification message={notification.message} type={notification.type} />}
-      
+      {notification.message && (
+        <Notification message={notification.message} type={notification.type} />
+      )}
+
       {/* Chat Messages */}
       <div className="chat-messages">
         {messages.map((message, index) => (
           <div
             key={index}
-            className={`chat-message ${message.role === "user" ? "user" : "assistant"}`}
+            className={`chat-message ${
+              message.role === "user" ? "user" : "assistant"
+            }`}
           >
             {message.content}
+            {message.citations && message.citations.length > 0 && (
+              <div className="citations">
+                <strong>
+                  <br></br>Citations:
+                </strong>
+                <ul>
+                  {message.citations.map((citation, i) => (
+                    <li key={i}>{citation}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         ))}
         {loading && (
@@ -106,13 +136,21 @@ function Chat() {
           onChange={(e) => setInput(e.target.value)}
           disabled={loading}
         />
-        <button className="chat-submit" onClick={sendMessage} disabled={loading}>
+        <button
+          className="chat-submit"
+          onClick={sendMessage}
+          disabled={loading}
+        >
           {loading ? "Sending..." : "Send"}
         </button>
       </div>
 
       {/* New Chat Button */}
-      <button className="new-chat-button" onClick={createThread} disabled={loading}>
+      <button
+        className="new-chat-button"
+        onClick={createThread}
+        disabled={loading}
+      >
         New Chat
       </button>
     </div>

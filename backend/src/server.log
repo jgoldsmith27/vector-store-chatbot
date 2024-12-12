@@ -172,3 +172,7 @@ pip install python-multipart
 2024-12-11 17:39:07,799 - INFO - Question added to thread.
 2024-12-11 17:41:53,192 - INFO - Received payload: thread_id='thread_xrtrxHXMeBtmImIm4GudpjuW' question='what are skidmores all college requirements?'
 2024-12-11 17:41:53,624 - INFO - Question added to thread.
+2024-12-12 12:07:59,923 - INFO - Starting server on port 8080...
+2024-12-12 12:08:07,552 - INFO - Starting server on port 8080...
+2024-12-12 12:08:21,859 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2024-12-12 12:08:21,870 - INFO - Thread successfully created with ID: thread_LULUVzI78UY7EerA0aqxDjmb

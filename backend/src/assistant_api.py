@@ -2,6 +2,7 @@ import logging
 from openai import OpenAI
 from dotenv import load_dotenv
 import os
+from fastapi import HTTPException
 
 class AssistantAPI:
     def __init__(self, api_key, assistant_id):

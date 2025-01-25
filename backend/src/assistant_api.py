@@ -85,6 +85,7 @@ class AssistantAPI:
 
 
 if __name__ == "__main__":
+    """For testing assistant functionality through the terminal"""
     load_dotenv()
     # API key and assistant details
     API_KEY = os.getenv("API_KEY")

@@ -6,7 +6,6 @@ from fastapi import HTTPException
 
 class AssistantAPI:
     def __init__(self, api_key, assistant_id):
-        self.api_key = api_key
         self.assistant_id = assistant_id
         self.client = OpenAI(api_key=api_key)
         self.thread = None

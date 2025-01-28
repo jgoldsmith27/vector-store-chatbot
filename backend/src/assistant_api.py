@@ -1,3 +1,19 @@
+"""
+This module contains functions for interacting with the OpenAI API,
+including methods for generating responses and managing threads.
+
+Functions:
+- create_thread() -> str: Creates a new thread
+-delete_thread() -> dict: Deletes the current thread
+- ask_question(question: str) -> tuple[str, list[str]]: Sends a question to the assistant and retrieves the response and cited files.
+
+Usage:
+- The `create_thread` method manages thread creation.
+The `delete_thread` method manages thread deletion.
+- The `ask_question` method can be used to generate responses from the assistant.
+"""
+
+
 import logging
 from openai import OpenAI
 from dotenv import load_dotenv
@@ -5,7 +21,25 @@ import os
 from fastapi import HTTPException
 
 class AssistantAPI:
+    """
+    A client for interacting with the OpenAI APi to perform text generation tasks.
+
+    This class provides methods to create and delete conversation threads, as well as prompt the assistant with questions.
+
+    Attributes:
+        api_key (str): The OpenAI API key used for authentication
+        assistant_id (str): The ID of the OpenAI assistant
+        client (openai.OpenAI): The OpenAI client
+        thread: The current conversation thread
+    """
     def __init__(self, api_key, assistant_id):
+        """
+        Initializes access to the existing OpenAI assistant and configures the logging of the file.
+
+        Args:
+            api_key (str): The API key for OpenAI
+            assistant_id (str): The ID of the assistant
+        """
         self.assistant_id = assistant_id
         self.client = OpenAI(api_key=api_key)
         self.thread = None
@@ -20,7 +54,17 @@ class AssistantAPI:
             ]
         )
 
-    def create_thread(self):
+    def create_thread(self) -> str:
+        """
+        Creates the thread of the current conversation and returns its ID
+
+        Returns:
+            str: The id of the thread
+
+        Raises:
+            Exception: The thread failed to create
+
+        """
         try:
             self.thread = self.client.beta.threads.create(messages=[])
             logging.info(f"Thread successfully created with ID: {self.thread.id}")
@@ -30,7 +74,16 @@ class AssistantAPI:
             raise
 
 
-    def delete_thread(self):
+    def delete_thread(self) -> dict:
+        """
+        Deletes the current conversation thread.
+
+        Returns:
+            dict: The response of the API call
+
+        Raises:
+            Exception: The thread failed to be deleted
+        """
         try:
             if self.thread:
                 response = self.client.beta.threads.delete(self.thread.id)
@@ -42,7 +95,20 @@ class AssistantAPI:
             logging.error(f"Failed to delete thread: {e}")
             raise
 
-    def ask_question(self, question):
+    def ask_question(self, question) -> tuple[str, list[str]]:
+        """
+        Prompts the assistant with the user question and returns the generated response and cited files
+
+        Args:
+            question (str): The user prompt
+
+        Returns:
+            tuple[str, list[str]]: The generated response and cited files
+
+        Raises:
+            ValueError: The thread doesn't exist
+            Exception: Failed to process the question
+        """
         try:
             if not self.thread:
                 raise ValueError("No thread exists. Create a thread first.")

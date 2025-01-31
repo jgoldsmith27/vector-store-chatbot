@@ -16,9 +16,8 @@
   white-space: pre-wrap;
 }
 
-
 .chat-message.user {
-  text-align: right;
+  text-align: left;
   color: #ffffff;
   background-color: #007bff;
   padding: 10px 15px;
@@ -40,7 +39,6 @@
   max-width: 75%;
   align-self: flex-start;
 }
-
 
 .loading-indicator {
   display: flex;

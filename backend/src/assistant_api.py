@@ -13,7 +13,6 @@ The `delete_thread` method manages thread deletion.
 - The `ask_question` method can be used to generate responses from the assistant.
 """
 
-
 import logging
 from openai import OpenAI
 from dotenv import load_dotenv

@@ -135,8 +135,9 @@ class AssistantAPI:
                 response_content.value = response_content.value.replace(annotation.text, '')
                 if file_citation := getattr(annotation, "file_citation", None):
                     cited_file = self.client.files.retrieve(file_citation.file_id)
-                    if cited_file.filename not in citations:
-                        citations.append(cited_file.filename)
+                    file_name = cited_file.filename.replace('.pdf', '')
+                    if file_name not in citations:
+                        citations.append(file_name)
 
             return response_content.value, citations
 

@@ -22,7 +22,7 @@
   background-color: #007bff;
   padding: 10px 15px;
   border-radius: 15px 15px 0 15px;
-  margin: 8px 0;
+  margin: 16px 0;
   margin-left: 100px; /* shift right */
   max-width: 75%;
   align-self: flex-end;
@@ -34,7 +34,7 @@
   background-color: #e1e5ea;
   padding: 10px 15px;
   border-radius: 15px 15px 15px 0;
-  margin: 8px 0;
+  margin: 16px 0;
   margin-left: 100px; /* shift right */
   max-width: 75%;
   align-self: flex-start;

@@ -60,4 +60,4 @@ Next steps include:
 - **Enhanced AI capabilities**: Improve document retrieval accuracy and chatbot responses.
 - **User feedback**: Collect feedback from faculty/staff to refine usability.
 
-Check the **GitHub Issues** page to see new features planned for the application and what is currently being worked on
+Check the **GitHub Issues** page to see new features planned for the application and what is currently being worked on.

@@ -51,7 +51,7 @@ venv() {
   cd backend/src && source venv/bin/activate
 
   # Install the dependencies if necessary
-  if [ "$2" = "podium" ]; then
+  if [ "$1" = "podium" ]; then
     pip3 install --break-system-packages -r requirements.txt
     echo "Running on podium computer, using --break-system-packages"
   else
@@ -69,7 +69,7 @@ if [ "$1" = "start" ]; then
 elif [ "$1" = "stop" ]; then
   stop_app
 elif [ "$1" = "venv" ]; then
-  venv
+  venv "$2"
 else
   echo "Usage: $0 {start|stop|venv}"
 fi

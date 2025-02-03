@@ -50,8 +50,14 @@ venv() {
   # Go to the venv parent directory and activate it
   cd backend/src && source venv/bin/activate
 
-  # Install all dependencies in the venv
-  pip3 install -r requirements.txt
+  # Install the dependencies if necessary
+  if [ "$2" = "podium" ]; then
+    pip3 install --break-system-packages -r requirements.txt
+    echo "Running on podium computer, using --break-system-packages"
+  else
+    pip install -r requirements.txt
+    echo "Running on local machine, using normal pip install"
+  fi
 
   # Get back to main project directory for convenience
   cd ../..

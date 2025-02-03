@@ -45,11 +45,25 @@ stop_app() {
   echo "App terminated"
 }
 
+# Function to activate the virtual environment
+venv() {
+  # Go to the venv parent directory and activate it
+  cd backend/src && source venv/bin/activate
+
+  # Install all dependencies in the venv
+  pip3 install -r requirements.txt
+
+  # Get back to main project directory for convenience
+  cd ../..
+}
+
 # Start or stop the app based on user input
-if [ "$1" == "start" ]; then
+if [ "$1" = "start" ]; then
   start_app
-elif [ "$1" == "stop" ]; then
+elif [ "$1" = "stop" ]; then
   stop_app
+elif [ "$1" = "venv" ]; then
+  venv
 else
-  echo "Usage: $0 {start|stop}"
+  echo "Usage: $0 {start|stop|venv}"
 fi

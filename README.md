@@ -39,9 +39,16 @@ chmod +x manage_app.sh
 ```
 
 **Setup the virtual environment (venv)**
+If running on a non-externally managed system (Macbook, desktop, etc.), use this:
 
 ```bash
 source manage_app.sh venv
+```
+
+If running on an externally managed system (like a podium computer), use this:
+
+```bash
+source manage_app.sh venv podium
 ```
 
 **Start the application**

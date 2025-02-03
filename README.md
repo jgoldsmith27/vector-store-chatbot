@@ -32,10 +32,16 @@ The goal is to provide real impact by saving faculty and staff valuable time whi
 This script helps manage the chatbot application locally.
 
 **First-time setup:**  
-Convert the script into an executable by running:
+Grant execute permissions by running:
 
 ```bash
 chmod +x manage_app.sh
+```
+
+**Setup the virtual environment (venv)**
+
+```bash
+source manage_app.sh venv
 ```
 
 **Start the application**
@@ -49,6 +55,18 @@ chmod +x manage_app.sh
 ```bash
 ./manage_app.sh stop
 ```
+
+**End venv**
+
+```bash
+deactivate
+```
+
+**Notes**
+
+The `venv` function is used to activate the virtual environment, which modifies the current shell session (by adjusting environment variables like `PATH` to point to the virtual environment's Python binaries). This can only be done in the current shell, which is why it must be run using `source`.
+
+On the other hand, `start` and `stop` are functions that can be run as standalone commands (e.g., `./manage_app.sh start`) because they do not modify the shell environment and can be executed in a subshell without affecting the current shell session.
 
 ## Future Work
 

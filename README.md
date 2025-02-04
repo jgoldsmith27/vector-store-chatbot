@@ -18,7 +18,22 @@ The goal is to provide real impact by saving faculty and staff valuable time whi
 - **Backend**: Python (FastAPI for API handling)
 - **SDKs & APIs**:
   - Box (file storage and retrieval)
-  - OpenAI Assistants (chatbot processing)
+  - OpenAI Assistant (chatbot processing)
+    - (The assistant runs on gpt-4o-mini)
+
+## Workflow
+
+![Workflow Diagram](images/MSCHE_Chatbot_FlowChart_v1.png)
+
+This flowchart shows the intended workflow of the project.
+
+1. Users (members of the MSCHE review group) continuously add files to Box
+2. Box files are copied to an OpenAI vector store that is attached to an OpenAI assistant
+3. Users access the chatbot Okta tile on the Skidmore domain and login using their Skidmore credentials
+4. Users prompt the assistant via the frontend UI
+5. The assistant generates the response and sends it back to the frontend
+6. The UI updates and displays the response to the user
+7. Users are free to repeatdely prompt and receive responses from the assistant
 
 ## Usage
 

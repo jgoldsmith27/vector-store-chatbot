@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Chat from "./Chat";
 import {
   BrowserRouter as Router,
@@ -10,9 +10,12 @@ import { Security, LoginCallback, useOktaAuth } from "@okta/okta-react";
 import { OktaAuth } from "@okta/okta-auth-js";
 import oktaConfig from "../services/oktaConfig";
 
+console.log("React useRef:", useRef);
+
 const oktaAuth = new OktaAuth(oktaConfig);
 
 // Custom component to handle authentication redirect
+
 const RequireAuth = ({ children }) => {
   const { authState, oktaAuth } = useOktaAuth();
 

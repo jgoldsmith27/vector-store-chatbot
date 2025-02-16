@@ -130,3 +130,32 @@
   cursor: not-allowed;
   box-shadow: none;
 }
+
+/* Logout Button */
+.logout-button {
+  position: absolute;
+  top: 55px;
+  left: 10px;
+  padding: 5px 10px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #dc3545;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+}
+
+.logout-button:disabled {
+  background-color: #c0c0c0;
+  cursor: not-allowed;
+  box-shadow: none;
+}

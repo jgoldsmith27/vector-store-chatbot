@@ -12,7 +12,7 @@ Usage:
 - Use `delete_thread` to remove an active conversation.
 """
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from pydantic import BaseModel
 import uvicorn
 import logging
@@ -43,10 +43,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Initialize the Assistant API
+# Load environment variables
 API_KEY = os.getenv("API_KEY")
 ASSISTANT_ID = os.getenv("ASSISTANT_ID")
+OKTA_CLIENT_ID = os.getenv("REACT_APP_OKTA_CLIENT")
+OKTA_ISSUER= os.getenv("REACT_APP_OKTA_ISSUER")
 
+# Initialize the Assistant API
 assistant_api = AssistantAPI(API_KEY, ASSISTANT_ID)
 
 class QuestionRequest(BaseModel):
@@ -131,6 +134,23 @@ async def delete_thread() -> dict[str, str]:
     except Exception as e:
         logging.error(f"Error deleting thread: {e}")
         raise HTTPException(status_code=500, detail="Failed to delete thread.")
+    
+@app.get("/auth-config")
+async def get_okta_config(request:Request) -> dict[str, str]:
+    """
+    Retrieves the okta issuer and client id for configuration
+
+    Returns:
+        dict[str, str]: A dictionary containing the client id and issuer
+
+    """
+    frontend_origin = request.headers.get("Origin", "http://localhost:3000")
+    return {
+        "clientId": OKTA_CLIENT_ID,
+        "issuer": OKTA_ISSUER,
+        "redirectUri": f"{frontend_origin}/login/callback",
+    }
+
 
 if __name__ == "__main__":
     """Starts the FastAPI server on port 8080."""

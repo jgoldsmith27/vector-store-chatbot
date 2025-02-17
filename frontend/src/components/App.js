@@ -8,15 +8,13 @@ import {
 } from "react-router-dom";
 import { Security, LoginCallback, useOktaAuth } from "@okta/okta-react";
 import { OktaAuth } from "@okta/okta-auth-js";
+import "../styles/App.css";
 
 /**
  * Custom component to handle authentication redirect.
  */
 const RequireAuth = ({ children }) => {
   const { authState, oktaAuth } = useOktaAuth();
-  //console.log("AuthState:", authState);
-  //console.log("OktaAuth:", oktaAuth);
-
   useEffect(() => {
     if (authState && !authState.isAuthenticated) {
       oktaAuth.signInWithRedirect();
@@ -24,7 +22,12 @@ const RequireAuth = ({ children }) => {
   }, [authState, oktaAuth]);
 
   if (!authState) {
-    return <h2>Loading authentication...</h2>;
+    return (
+      <div className="loading-container">
+        <div className="loading-message"></div>
+        <h2>Loading authentication...</h2>
+      </div>
+    );
   }
 
   return authState.isAuthenticated ? children : null;
@@ -38,7 +41,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Fetch Okta configuration securely from FastAPI backend
+  // Fetch Okta configuration securely from backend
   useEffect(() => {
     fetch("http://127.0.0.1:8080/auth-config")
       .then((res) => {
@@ -59,8 +62,20 @@ function App() {
   }, []);
 
   // Show loading or error message before initializing authentication
-  if (loading) return <h2>Loading Okta configuration...</h2>;
-  if (error) return <h2>Error: {error}</h2>;
+  if (loading)
+    return (
+      <div className="loading-container">
+        <div className="loading-message"></div>
+        <h2>Loading Okta configuration...</h2>
+      </div>
+    );
+
+  if (error)
+    return (
+      <div className="loading-container">
+        <h2>Error: {error}</h2>
+      </div>
+    );
 
   // Initialize OktaAuth with fetched config
   const oktaAuth = new OktaAuth(oktaConfig);
@@ -73,7 +88,7 @@ function App() {
           window.location.replace(originalUri || "/");
         }}
       >
-        <div className="app-container">
+        <div>
           <Routes>
             <Route
               path="/"

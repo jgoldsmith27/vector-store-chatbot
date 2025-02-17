@@ -1,12 +1,3 @@
-/*
-import React from "react";
-
-function Chat() {
-  return <h1>Chat Component</h1>;
-}
-
-export default Chat;
-*/
 import React, { useState } from "react";
 import axios from "axios";
 import "../styles/Chat.css";
@@ -171,6 +162,7 @@ function Chat() {
       >
         New Chat
       </button>
+      {/* Log Out Button */}
       <button
         className="logout-button"
         onClick={() => oktaAuth.signOut()}

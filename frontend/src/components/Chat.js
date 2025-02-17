@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import "../styles/Chat.css";
 import Notification from "./Notification";
+import { useOktaAuth } from "@okta/okta-react";
 
 function Chat() {
+  const { oktaAuth } = useOktaAuth();
+
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [threadId, setThreadId] = useState(null);
@@ -158,6 +161,14 @@ function Chat() {
         disabled={loading}
       >
         New Chat
+      </button>
+      {/* Log Out Button */}
+      <button
+        className="logout-button"
+        onClick={() => oktaAuth.signOut()}
+        disabled={loading}
+      >
+        Log Out
       </button>
     </div>
   );

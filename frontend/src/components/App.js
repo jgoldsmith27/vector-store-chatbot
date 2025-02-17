@@ -1,28 +1,88 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import RequireAuth from "./RequireAuth";
 import Chat from "./Chat";
-import Login from "./Login";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
+import { Security, LoginCallback } from "@okta/okta-react";
+import { OktaAuth } from "@okta/okta-auth-js";
+import "../styles/App.css";
 
 /**
- * App component handles user authentication and conditional rendering.
- * 
- * @returns JSX.Element
+ * App component securely fetches Okta config before initializing authentication.
  */
 function App() {
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [oktaConfig, setOktaConfig] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-    /**
-     * Function to authenticate user by setting the authentication state.
-     * @param {boolean} authStatus - User authentication status.
-     */
-    const handleAuthentication = (authStatus) => {
-        setIsAuthenticated(authStatus);
-    };
+  // Fetch Okta configuration securely from backend
+  useEffect(() => {
+    fetch("http://127.0.0.1:8080/auth-config")
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Failed to fetch Okta config");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        console.log("Fetched Okta Config:", data);
+        setOktaConfig(data);
+      })
+      .catch((err) => {
+        console.error("Error loading Okta config:", err);
+        setError(err.message);
+      })
+      .finally(() => setLoading(false));
+  }, []);
 
+  // Show loading or error message before initializing authentication
+  if (loading)
     return (
-        <div className="app-container">
-            {isAuthenticated ? <Chat /> : <Login onAuthenticate={handleAuthentication} />}
-        </div>
+      <div className="loading-container">
+        <div className="loading-message"></div>
+        <h2>Loading Okta configuration...</h2>
+      </div>
     );
+
+  if (error)
+    return (
+      <div className="loading-container">
+        <h2>Error: {error}</h2>
+      </div>
+    );
+
+  // Initialize OktaAuth with fetched config
+  const oktaAuth = new OktaAuth(oktaConfig);
+
+  return (
+    <Router>
+      <Security
+        oktaAuth={oktaAuth}
+        restoreOriginalUri={async (_oktaAuth, originalUri) => {
+          window.location.replace(originalUri || "/");
+        }}
+      >
+        <div>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <RequireAuth>
+                  <Chat />
+                </RequireAuth>
+              }
+            />
+            <Route path="/login/callback" element={<LoginCallback />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </div>
+      </Security>
+    </Router>
+  );
 }
 
 export default App;

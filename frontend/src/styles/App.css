@@ -1,8 +1,29 @@
-.app-container {
+.loading-container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  height: 100vh;
-  background-color: #f0f2f5;
-  font-family: Arial, sans-serif;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  position: fixed; /* Ensure it stays centered */
+  top: 0;
+  left: 0;
+  text-align: center;
+  background: white; /* Optional: ensures background is consistent */
+}
+
+.loading-message {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ddd;
+  border-top-color: #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }

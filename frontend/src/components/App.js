@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import RequireAuth from "./RequireAuth";
 import Chat from "./Chat";
 import {
   BrowserRouter as Router,
@@ -6,32 +7,9 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
-import { Security, LoginCallback, useOktaAuth } from "@okta/okta-react";
+import { Security, LoginCallback } from "@okta/okta-react";
 import { OktaAuth } from "@okta/okta-auth-js";
 import "../styles/App.css";
-
-/**
- * Custom component to handle authentication redirect.
- */
-const RequireAuth = ({ children }) => {
-  const { authState, oktaAuth } = useOktaAuth();
-  useEffect(() => {
-    if (authState && !authState.isAuthenticated) {
-      oktaAuth.signInWithRedirect();
-    }
-  }, [authState, oktaAuth]);
-
-  if (!authState) {
-    return (
-      <div className="loading-container">
-        <div className="loading-message"></div>
-        <h2>Loading authentication...</h2>
-      </div>
-    );
-  }
-
-  return authState.isAuthenticated ? children : null;
-};
 
 /**
  * App component securely fetches Okta config before initializing authentication.

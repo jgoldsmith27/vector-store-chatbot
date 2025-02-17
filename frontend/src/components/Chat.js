@@ -143,7 +143,6 @@ function Chat() {
               sendMessage();
             }
           }}
-          disabled={loading}
         />
         <button
           className="chat-submit"

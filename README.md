@@ -90,6 +90,28 @@ The `venv` function is used to activate the virtual environment, which modifies 
 
 On the other hand, `start` and `stop` are functions that can be run as standalone commands (e.g., `./manage_app.sh start`) because they do not modify the shell environment and can be executed in a subshell without affecting the current shell session.
 
+## .env File
+
+The `.env` file for this project stores sensitive keys and configuration values required for integrating **Okta Authentication** and **OpenAI API**. It ensures that your application functions securely by keeping your environment variables separate from the codebase.
+
+Make sure to create a `.env` file in the root of your project with the following variables set:
+
+```env
+REACT_APP_OKTA_ISSUER=your-okta-issuer-url
+REACT_APP_OKTA_CLIENT=your-okta-client-id
+API_KEY=your-openai-api-key
+ASSISTANT_ID=your-openai-assistant-id
+```
+
+### Explanation of Variables:
+
+- **REACT_APP_OKTA_ISSUER**: This is the issuer URL for your Okta authorization server. You can find this value in the Okta Developer Console under "API" > "Authorization Servers".
+- **REACT_APP_OKTA_CLIENT**: This is your Okta client ID, which identifies your application for authentication requests. You can find this in the Okta Developer Console under "Applications" > "Your App".
+
+- **API_KEY**: This is the API key for the OpenAI service. You can obtain this key by signing up for access to the OpenAI API at [OpenAI API](https://beta.openai.com/signup/).
+
+- **ASSISTANT_ID**: This is the ID of the specific OpenAI Assistant you want to use. You can configure this ID through the OpenAI platform to link your assistant or create the assistant via the API.
+
 ## Future Work
 
 The goal is to make the chatbot accessible as a **tile on Skidmore’s Okta platform**, allowing review group members to log in through Okta authentication.
@@ -101,3 +123,7 @@ Next steps include:
 - **User feedback**: Collect feedback from faculty/staff to refine usability.
 
 Check the **GitHub Issues** page to see new features planned for the application and what is currently being worked on.
+
+```
+
+```

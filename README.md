@@ -90,6 +90,63 @@ The `venv` function is used to activate the virtual environment, which modifies 
 
 On the other hand, `start` and `stop` are functions that can be run as standalone commands (e.g., `./manage_app.sh start`) because they do not modify the shell environment and can be executed in a subshell without affecting the current shell session.
 
+### Containerizing with Docker
+
+This project includes multiple files for containerization using Docker:
+
+- **Two Dockerfiles (`Dockerfile`)**:
+  - One for containerizing the frontend
+  - One for containerizing the backend
+- **One Docker Compose file (`docker-compose.yml`)** located at the root of the project
+
+#### Running the Project in Docker
+
+To build and run the full project using Docker Compose, execute:
+
+```bash
+docker compose up --build
+```
+
+If you are using an older version of Docker or Docker Compose, use:
+
+```bash
+docker-compose up --build
+```
+
+#### Prerequisites
+
+- Ensure that [Docker](https://www.docker.com/get-started) is installed and running on your device.
+- If using Docker Compose, ensure that you have [Docker Compose](https://docs.docker.com/compose/install/) installed.
+  - Docker Compose may already be installed on your machine if you download Docker Desktop, as it is included in the .dmg
+
+#### Additional Notes
+
+- If you need to rebuild images without using the cache, add the `--no-cache` flag:
+
+  ```bash
+  docker compose up --build --no-cache
+  ```
+
+- To run the containers in detached mode (background):
+
+  ```bash
+  docker compose up --build -d
+  ```
+
+- To stop and remove the containers, run:
+
+  ```bash
+  docker compose down
+  ```
+
+  The containers can also be stopped gracefully by typing `Ctrl + C` while they are running
+
+- Logs for each container can be viewed with:
+
+  ```bash
+  docker compose logs -f
+  ```
+
 ## .env File
 
 The `.env` file for this project stores sensitive keys and configuration values required for integrating **Okta Authentication** and **OpenAI API**. It ensures that your application functions securely by keeping your environment variables separate from the codebase.

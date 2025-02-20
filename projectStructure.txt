@@ -1,16 +1,32 @@
-Project Structure Documentation for react and node web app.
+Project Structure Documentation
 
 backend/
 |
-|── server.js                  # Main server file that initializes the Express server
+|── setup/                                     
+|   ├── create_store_and_assistant.py          # Creates assistant and vector store
+|   ├── new_setup.py                           # New setup method for updating vector store functionality
+|   ├── file_setup_info.json                   # File mappings produced by new_setup.py
+|   ├── proof_authorize_Box.py                 # Helper method to authorize Box account
+|   ├── README.md                              # Explains current and new set up methods
 |
-|── routes/
-|   └── chatRoutes.js          # Defines API endpoints for chat functionality
+|── src/
+|   ├── assistant_api.py                       # API for the chatbot assistnat
+|   ├── assistant_api.log                      # Log for assistant_api.py
+|   ├── box_client_api.py                      # API for interacting with Box (not currently used)
+|   ├── box_client.log                         # Log for box_client_api.py
+|   ├── main.py                                # Starts the backend and defines API endpoints
+|   ├── server.log                             # Log for main.py
+|   ├── vector_store_api.py                    # API for the vector stores (not currently used)
+|   ├── vector_store_api.log                   # Log for vector_store_api.py
+|   ├── README.md                              # Explains using the backend locally (useless b/c of manage_app)
+|   ├── venv/                                  # Virtual environment
+|   ├── requirements.txt                       # Required dependencies for the backend
 |
-|── controllers/
-|   └── chatController.js      # Contains controller logic for handling chat requests
+|── test/                                      # Test files (needs to be updated)
 |
-|── package.json               # Backend dependencies and scripts
+|── 168895_g0v9h4sy_config.json                # Encrypted JWT token for Box
+|
+|── Dockerfile                                 # Dockerfile for the backend
 
 frontend/
 |

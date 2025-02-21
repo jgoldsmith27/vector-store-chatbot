@@ -20,34 +20,52 @@ backend/
 |   ├── vector_store_api.log                   # Log for vector_store_api.py
 |   ├── README.md                              # Explains using the backend locally (useless b/c of manage_app)
 |   ├── venv/                                  # Virtual environment
-|   ├── requirements.txt                       # Required dependencies for the backend
+|   └── requirements.txt                       # Required dependencies for the backend
 |
 |── test/                                      # Test files (needs to be updated)
 |
 |── 168895_g0v9h4sy_config.json                # Encrypted JWT token for Box
+|── Dockerfile                                 # Defines how to build and run the backend inside a Docker container
 |
-|── Dockerfile                                 # Dockerfile for the backend
-
 frontend/
+|
+|── public/
+|   ├── favicon.ico                            # Favicon of Skidmore's logo
+|   ├── index.html                             # Basic HTML to load the project
+|   └── robots.txt                             # Template file for restricting spiders
 |
 |── src/
 |   ├── components/            # Holds individual React components
 |   │   ├── App.js             # Main component managing authentication and conditional rendering
 |   │   ├── Chat.js            # Chat interface component for displaying and sending messages
-|   │   ├── Login.js           # Login form component for user authentication
+|   │   ├── RequireAuth.js     # Forces requirement of Okta authentication to access the chatbot
 |   │   └── Notification.js    # Notification component for displaying success/error messages
 |   |
 |   ├── styles/                # Stylesheets for each component to maintain modular design
 |   │   ├── App.css            # Styles for the main App component
 |   │   ├── Chat.css           # Styles for the Chat interface, including message layout and animations
-|   │   ├── Login.css          # Styles for the Login page, with card layout and hover effects
 |   │   └── Notification.css   # Styles for Notification component, including success and error styles
 |   |
-|   ├── utils/                 # Utility functions that may be reused across components
-|   │   └── auth.js            # Utility functions for managing authentication logic
-|   |
-|   ├── services/              # External service handlers for handling API calls and backend integration
-|   │   └── authService.js     # Authentication logic for verifying user password
-|   |
 |   ├── index.js               # Entry point for the React application, renders the App componentx
+|   ├── index.css              # Styles for the React entry point
+|   ├── App.test.js            # Template test for the React app
+|   ├── reportWebVitals.js     # A utility file for measuring performance metrics in the app
+|   └── setupTests.js          # Configuration file for setting up testing environment, commonly for Jest
+|
+├──.gitignore                  # Files git doesn't track in the frontend
+├── package.json               # Contains metadata about the project and its dependencies
+├── package-lock.json          # Ensures consistent installation of dependencies across environments
+├── Dockerfile                 # Defines how to build and run the frontend inside a Docker container
+├── README.md                  # Project documentation, including setup instructions and description
+|
+├── images/
+|   └── MSCHE_Chatbot_FlowChart_v1.png      # Project workflow diagram on the root README.md
+|
+├── .gitignore                 # Files git doesn't track in the whole repository
+├── docker-compose.yml         # Composes the backend and frontend containers together
+├── manage_app.sh              # Script for managing the app and venv locally
+├── projectStructure.txt       # The current file that is describing the project composition
+├── test_file.txt              # File added to repository through Chatgpt
+└── README.md                  # Overview and important information for the application
+
 

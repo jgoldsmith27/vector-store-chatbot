@@ -34,9 +34,8 @@ stop_app() {
   backend_pid=$(lsof -ti :8080)
 
   if [ "$?" -ne 0 ]; then
-    echo "Unable to get process on port 8080. Exiting..."
+    echo "Unable to get process on port 8080."
     echo
-    exit 1
   fi
 
   if [ -n "$backend_pid" ]; then
@@ -46,7 +45,6 @@ stop_app() {
     if [ "$?" -ne 0 ]; then
       echo "Unable to kill process $backend_pid. Exiting..."
       echo
-      exit 1
     fi
   
   else
@@ -62,7 +60,6 @@ stop_app() {
   if [ "$?" -ne 0 ]; then
     echo "Unable to get process(es) on port 3000. Exiting..."
     echo
-    exit 1
   fi
 
   # Check the process command for each PID to determine if it's the frontend

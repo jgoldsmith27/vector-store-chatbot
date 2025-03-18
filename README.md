@@ -12,6 +12,12 @@ With this chatbot, members can:
 
 The goal is to provide real impact by saving faculty and staff valuable time while streamlining their workflows.
 
+## Frontend Design
+
+![Frontend Picture](images/frontend.png)
+
+The frontend follows a simple, chatbot interface that users will be familiar with and can intuitively work with.
+
 ## Technologies
 
 - **Frontend**: React (user interface)

@@ -12,6 +12,44 @@ With this chatbot, members can:
 
 The goal is to provide real impact by saving faculty and staff valuable time while streamlining their workflows.
 
+## Cloud Hosting with Reclaim Cloud
+
+This project is cloud-hosted using [Reclaim Cloud](https://reclaim.cloud/), with a fully containerized setup and automatic HTTPS. Below is an overview of the deployment process:
+
+### Dockerized Architecture
+
+The application consists of:
+
+- **Frontend** (React): Built and served using the `serve` package on port 3000.
+- **Backend** (FastAPI): Handles API requests on port 8080.
+- **Caddy**: Acts as a reverse proxy and automatically manages SSL certificates via Let's Encrypt.
+
+All services are orchestrated via `docker-compose.yml`.
+
+### Domain & HTTPS
+
+- A public domain is mapped to the environment in Reclaim Cloud.
+- HTTPS is managed by **Caddy**, which automatically provisions TLS certificates via Let's Encrypt.
+- Caddy routes requests:
+  - `/api/*` → backend (FastAPI)
+  - everything else → frontend (React)
+
+### Key Caddyfile Configuration
+
+```caddyfile
+your-domain.com {
+  tls your-email@example.com
+
+  handle_path /api/* {
+    reverse_proxy backend:8080
+  }
+
+  handle {
+    reverse_proxy frontend:3000
+  }
+}
+```
+
 ## Frontend Design
 
 ![Frontend Picture](images/frontend.png)
@@ -52,7 +90,7 @@ This flowchart shows the intended workflow of the project.
 
 This script helps manage the chatbot application locally.
 
-**First-time setup:**  
+**First-time setup:**
 Grant execute permissions by running:
 
 ```bash

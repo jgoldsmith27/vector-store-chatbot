@@ -15,8 +15,6 @@ services:
       - "3000:3000" # Expose frontend on port 3000
     depends_on:
       - backend
-    volumes:
-      - ./frontend:/app
     environment:
       - REACT_APP_BACKEND_URL=http://backend:8080 # Update to match backend port
       # This might need to be changed...

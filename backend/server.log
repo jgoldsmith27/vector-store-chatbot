@@ -1,0 +1,564 @@
+2025-02-25 14:54:41,219 - INFO - Starting server on port 8080...
+2025-02-25 14:58:55,503 - INFO - Starting server on port 8080...
+2025-02-25 15:03:55,116 - INFO - Starting server on port 8080...
+2025-02-25 15:12:17,746 - INFO - Starting server on port 8080...
+2025-02-25 15:16:37,506 - INFO - Starting server on port 8080...
+2025-02-25 15:33:56,836 - INFO - Starting server on port 8080...
+2025-02-25 15:50:38,718 - INFO - Starting server on port 8080...
+2025-02-27 14:39:39,063 - INFO - Starting server on port 8080...
+2025-02-27 15:14:38,800 - INFO - Starting server on port 8080...
+2025-02-27 16:14:59,216 - INFO - Starting server on port 8080...
+2025-02-27 16:34:29,939 - INFO - Starting server on port 8080...
+2025-02-27 16:38:27,309 - INFO - Starting server on port 8080...
+2025-02-27 16:42:42,998 - INFO - Starting server on port 8080...
+2025-02-27 16:53:43,891 - INFO - Starting server on port 8080...
+2025-02-28 15:15:12,281 - INFO - Starting server on port 8080...
+2025-03-03 17:03:17,823 - INFO - Starting server on port 8080...
+2025-03-03 19:36:53,387 - INFO - Starting server on port 8080...
+2025-03-03 19:54:24,921 - INFO - Starting server on port 8080...
+2025-03-04 14:58:06,188 - INFO - Starting server on port 8080...
+2025-03-04 15:07:20,241 - INFO - Starting server on port 8080...
+2025-03-04 15:10:00,645 - INFO - Starting server on port 8080...
+2025-03-04 15:14:13,312 - INFO - Starting server on port 8080...
+2025-03-04 15:15:30,466 - INFO - Starting server on port 8080...
+2025-03-04 15:20:30,115 - INFO - Starting server on port 8080...
+2025-03-04 15:23:50,677 - INFO - Starting server on port 8080...
+2025-03-04 15:28:10,371 - INFO - Starting server on port 8080...
+2025-03-04 15:34:10,580 - INFO - Starting server on port 8080...
+2025-03-04 15:55:47,049 - INFO - Starting server on port 80...
+2025-03-04 15:59:24,660 - INFO - Starting server on port 80...
+2025-03-04 16:01:58,850 - INFO - Starting server on port 80...
+2025-03-04 16:15:19,703 - INFO - Starting server on port 8080...
+2025-03-04 16:27:30,626 - INFO - Starting server on port 8443...
+2025-03-06 14:32:10,583 - INFO - Starting server on port 8443...
+2025-03-06 14:42:32,939 - INFO - Starting server on port 8443...
+2025-03-06 15:01:29,599 - INFO - Starting server on port 8080...
+2025-03-06 15:10:36,094 - INFO - Starting server on port 8080...
+2025-03-06 15:29:24,869 - INFO - Starting server on port 8080...
+2025-03-06 15:37:07,423 - INFO - Starting server on port 8080...
+2025-03-06 15:54:27,650 - INFO - Starting server on port 8080...
+2025-03-06 15:57:34,937 - INFO - Starting server on port 8080...
+2025-03-12 20:43:14,676 - INFO - Starting server on port 8080...
+2025-03-20 14:42:41,305 - INFO - Starting server on port 8080...
+2025-03-20 14:53:29,013 - INFO - Starting server on port 8080...
+2025-03-20 14:59:12,608 - INFO - Starting server on port 8080...
+2025-03-20 15:07:10,061 - INFO - Starting server on port 8080...
+2025-03-20 15:11:31,065 - INFO - Starting server on port 8080...
+2025-03-20 15:21:18,767 - INFO - Starting server on port 8080...
+2025-03-20 15:24:08,024 - INFO - Starting server on port 8080...
+2025-03-20 15:27:29,212 - INFO - Starting server on port 8080...
+2025-03-23 16:59:01,169 - INFO - Starting server on port 8080...
+2025-03-23 17:17:14,295 - INFO - Starting server on port 8080...
+2025-03-23 17:29:47,572 - INFO - Starting server on port 8080...
+2025-03-23 18:27:17,115 - INFO - Starting server on port 8080...
+2025-03-23 18:32:17,379 - INFO - Starting server on port 8080...
+2025-03-23 18:41:31,558 - INFO - Starting server on port 8080...
+2025-03-23 18:51:45,744 - INFO - Starting server on port 8080...
+2025-03-23 19:03:34,065 - INFO - Starting server on port 8080...
+2025-03-23 19:11:18,068 - INFO - Starting server on port 8080...
+2025-03-24 15:25:33,450 - INFO - Starting server on port 8080...
+2025-03-24 16:30:58,396 - INFO - Starting server on port 8080...
+2025-03-24 16:47:27,047 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-24 16:47:27,052 - INFO - Thread successfully created with ID: thread_VOgOmI6IRPeooJ4rDSbAPDwa
+2025-03-24 16:59:10,097 - INFO - Starting server on port 8080...
+2025-03-24 17:10:59,268 - INFO - Starting server on port 8080...
+2025-03-24 17:11:20,763 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-24 17:11:20,770 - INFO - Thread successfully created with ID: thread_6HtuA8UPHO3Am6eiamLLpxdh
+2025-03-24 17:11:28,364 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-24 17:11:28,365 - INFO - Thread successfully created with ID: thread_neUjbUYeX6mxSNiwmXPgBijW
+2025-03-24 17:11:34,720 - INFO - Received payload: thread_id='thread_neUjbUYeX6mxSNiwmXPgBijW' question='hello'
+2025-03-24 17:11:35,191 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_neUjbUYeX6mxSNiwmXPgBijW/messages "HTTP/1.1 200 OK"
+2025-03-24 17:11:35,199 - INFO - Question added to thread.
+2025-03-24 17:11:35,918 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_neUjbUYeX6mxSNiwmXPgBijW/runs "HTTP/1.1 200 OK"
+2025-03-24 17:11:36,153 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_neUjbUYeX6mxSNiwmXPgBijW/runs/run_p8qvtF1x4jSs5eBOBfwPgcte "HTTP/1.1 200 OK"
+2025-03-24 17:11:37,446 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_neUjbUYeX6mxSNiwmXPgBijW/runs/run_p8qvtF1x4jSs5eBOBfwPgcte "HTTP/1.1 200 OK"
+2025-03-24 17:11:38,811 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_neUjbUYeX6mxSNiwmXPgBijW/runs/run_p8qvtF1x4jSs5eBOBfwPgcte "HTTP/1.1 200 OK"
+2025-03-24 17:11:38,986 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_neUjbUYeX6mxSNiwmXPgBijW/messages?run_id=run_p8qvtF1x4jSs5eBOBfwPgcte "HTTP/1.1 200 OK"
+2025-03-24 17:11:39,162 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_neUjbUYeX6mxSNiwmXPgBijW/messages?run_id=run_p8qvtF1x4jSs5eBOBfwPgcte&after=msg_j15VDgyanDAHhaPxzYcPQmMO "HTTP/1.1 200 OK"
+2025-03-24 17:12:00,618 - INFO - Received payload: thread_id='thread_neUjbUYeX6mxSNiwmXPgBijW' question='what is the CS major like at skidmore college?'
+2025-03-24 17:12:00,929 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_neUjbUYeX6mxSNiwmXPgBijW/messages "HTTP/1.1 200 OK"
+2025-03-24 17:12:00,931 - INFO - Question added to thread.
+2025-03-24 17:12:01,987 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_neUjbUYeX6mxSNiwmXPgBijW/runs "HTTP/1.1 200 OK"
+2025-03-24 17:12:02,255 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_neUjbUYeX6mxSNiwmXPgBijW/runs/run_DzOLzDQ4cRXzqh2ZmuXJYY1y "HTTP/1.1 200 OK"
+2025-03-24 17:12:03,656 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_neUjbUYeX6mxSNiwmXPgBijW/runs/run_DzOLzDQ4cRXzqh2ZmuXJYY1y "HTTP/1.1 200 OK"
+2025-03-24 17:12:04,908 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_neUjbUYeX6mxSNiwmXPgBijW/runs/run_DzOLzDQ4cRXzqh2ZmuXJYY1y "HTTP/1.1 200 OK"
+2025-03-24 17:12:06,250 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_neUjbUYeX6mxSNiwmXPgBijW/runs/run_DzOLzDQ4cRXzqh2ZmuXJYY1y "HTTP/1.1 200 OK"
+2025-03-24 17:12:07,534 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_neUjbUYeX6mxSNiwmXPgBijW/runs/run_DzOLzDQ4cRXzqh2ZmuXJYY1y "HTTP/1.1 200 OK"
+2025-03-24 17:12:08,790 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_neUjbUYeX6mxSNiwmXPgBijW/runs/run_DzOLzDQ4cRXzqh2ZmuXJYY1y "HTTP/1.1 200 OK"
+2025-03-24 17:12:10,032 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_neUjbUYeX6mxSNiwmXPgBijW/runs/run_DzOLzDQ4cRXzqh2ZmuXJYY1y "HTTP/1.1 200 OK"
+2025-03-24 17:12:11,261 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_neUjbUYeX6mxSNiwmXPgBijW/runs/run_DzOLzDQ4cRXzqh2ZmuXJYY1y "HTTP/1.1 200 OK"
+2025-03-24 17:12:12,533 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_neUjbUYeX6mxSNiwmXPgBijW/runs/run_DzOLzDQ4cRXzqh2ZmuXJYY1y "HTTP/1.1 200 OK"
+2025-03-24 17:12:13,788 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_neUjbUYeX6mxSNiwmXPgBijW/runs/run_DzOLzDQ4cRXzqh2ZmuXJYY1y "HTTP/1.1 200 OK"
+2025-03-24 17:12:13,913 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_neUjbUYeX6mxSNiwmXPgBijW/messages?run_id=run_DzOLzDQ4cRXzqh2ZmuXJYY1y "HTTP/1.1 200 OK"
+2025-03-24 17:12:14,041 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_neUjbUYeX6mxSNiwmXPgBijW/messages?run_id=run_DzOLzDQ4cRXzqh2ZmuXJYY1y&after=msg_If2XcILzSA2xLXTHSDUbLZcY "HTTP/1.1 200 OK"
+2025-03-24 17:12:14,333 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-F7JL04Y4CJILwVaH6MXcAQSO "HTTP/1.1 200 OK"
+2025-03-24 17:12:14,637 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-F7JL04Y4CJILwVaH6MXcAQSO "HTTP/1.1 200 OK"
+2025-03-24 17:12:14,753 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-F7JL04Y4CJILwVaH6MXcAQSO "HTTP/1.1 200 OK"
+2025-03-24 17:12:14,881 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-F7JL04Y4CJILwVaH6MXcAQSO "HTTP/1.1 200 OK"
+2025-03-24 17:12:15,043 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-F7JL04Y4CJILwVaH6MXcAQSO "HTTP/1.1 200 OK"
+2025-03-24 17:12:15,175 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-0KFuZ2DdHhJF6VKELAmYW2Ul "HTTP/1.1 200 OK"
+2025-03-24 17:23:12,971 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-24 17:23:12,972 - INFO - Thread successfully created with ID: thread_7tsodsCen7PYYrpLykr7BAqB
+2025-03-24 17:23:16,332 - INFO - Received payload: thread_id='thread_7tsodsCen7PYYrpLykr7BAqB' question='hello'
+2025-03-24 17:23:16,564 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_7tsodsCen7PYYrpLykr7BAqB/messages "HTTP/1.1 200 OK"
+2025-03-24 17:23:16,565 - INFO - Question added to thread.
+2025-03-24 17:23:17,638 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_7tsodsCen7PYYrpLykr7BAqB/runs "HTTP/1.1 200 OK"
+2025-03-24 17:23:17,955 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_7tsodsCen7PYYrpLykr7BAqB/runs/run_F8KJFsTU8kgXVZWBPQkfkiLW "HTTP/1.1 200 OK"
+2025-03-24 17:23:19,999 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_7tsodsCen7PYYrpLykr7BAqB/runs/run_F8KJFsTU8kgXVZWBPQkfkiLW "HTTP/1.1 200 OK"
+2025-03-24 17:23:21,194 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_7tsodsCen7PYYrpLykr7BAqB/runs/run_F8KJFsTU8kgXVZWBPQkfkiLW "HTTP/1.1 200 OK"
+2025-03-24 17:23:22,488 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_7tsodsCen7PYYrpLykr7BAqB/runs/run_F8KJFsTU8kgXVZWBPQkfkiLW "HTTP/1.1 200 OK"
+2025-03-24 17:23:22,628 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_7tsodsCen7PYYrpLykr7BAqB/messages?run_id=run_F8KJFsTU8kgXVZWBPQkfkiLW "HTTP/1.1 200 OK"
+2025-03-24 17:23:22,746 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_7tsodsCen7PYYrpLykr7BAqB/messages?run_id=run_F8KJFsTU8kgXVZWBPQkfkiLW&after=msg_SwkDFPR3B9R0l1DJonUCF0al "HTTP/1.1 200 OK"
+2025-03-24 17:24:28,917 - INFO - Received payload: thread_id='thread_7tsodsCen7PYYrpLykr7BAqB' question='what are the best questions we should ask on behalf of institutional effectivness to test the integration with all Box docs in the Middle States folders with  current LLM?'
+2025-03-24 17:24:29,492 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_7tsodsCen7PYYrpLykr7BAqB/messages "HTTP/1.1 200 OK"
+2025-03-24 17:24:29,494 - INFO - Question added to thread.
+2025-03-24 17:24:30,119 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_7tsodsCen7PYYrpLykr7BAqB/runs "HTTP/1.1 200 OK"
+2025-03-24 17:24:30,437 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_7tsodsCen7PYYrpLykr7BAqB/runs/run_kqpXXMOsZ47V9UHaMejERMmD "HTTP/1.1 200 OK"
+2025-03-24 17:24:31,652 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_7tsodsCen7PYYrpLykr7BAqB/runs/run_kqpXXMOsZ47V9UHaMejERMmD "HTTP/1.1 200 OK"
+2025-03-24 17:24:32,908 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_7tsodsCen7PYYrpLykr7BAqB/runs/run_kqpXXMOsZ47V9UHaMejERMmD "HTTP/1.1 200 OK"
+2025-03-24 17:24:34,159 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_7tsodsCen7PYYrpLykr7BAqB/runs/run_kqpXXMOsZ47V9UHaMejERMmD "HTTP/1.1 200 OK"
+2025-03-24 17:24:35,573 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_7tsodsCen7PYYrpLykr7BAqB/runs/run_kqpXXMOsZ47V9UHaMejERMmD "HTTP/1.1 200 OK"
+2025-03-24 17:24:36,790 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_7tsodsCen7PYYrpLykr7BAqB/runs/run_kqpXXMOsZ47V9UHaMejERMmD "HTTP/1.1 200 OK"
+2025-03-24 17:24:38,023 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_7tsodsCen7PYYrpLykr7BAqB/runs/run_kqpXXMOsZ47V9UHaMejERMmD "HTTP/1.1 200 OK"
+2025-03-24 17:24:39,262 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_7tsodsCen7PYYrpLykr7BAqB/runs/run_kqpXXMOsZ47V9UHaMejERMmD "HTTP/1.1 200 OK"
+2025-03-24 17:24:40,059 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_7tsodsCen7PYYrpLykr7BAqB/messages?run_id=run_kqpXXMOsZ47V9UHaMejERMmD "HTTP/1.1 200 OK"
+2025-03-24 17:24:40,261 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_7tsodsCen7PYYrpLykr7BAqB/messages?run_id=run_kqpXXMOsZ47V9UHaMejERMmD&after=msg_jlef5CtKWD6OmEed7vQSxrTf "HTTP/1.1 200 OK"
+2025-03-24 17:24:40,381 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-33Np8sN6wTYdwwhrgvfLCISP "HTTP/1.1 200 OK"
+2025-03-24 17:24:40,514 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-gPUb6FhrS3qqUDtgI2JXVTNp "HTTP/1.1 200 OK"
+2025-03-24 17:24:40,672 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-Nl7XrpxLNldVlp7iLXYTpQSX "HTTP/1.1 200 OK"
+2025-03-24 17:35:29,164 - INFO - Starting server on port 8080...
+2025-03-24 17:35:57,622 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-24 17:35:57,626 - INFO - Thread successfully created with ID: thread_c57hTmHAGfkJknuKAGKRLRyx
+2025-03-24 17:37:56,151 - INFO - Starting server on port 8080...
+2025-03-24 17:44:05,865 - INFO - Starting server on port 8080...
+2025-03-24 17:45:19,279 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-24 17:45:19,286 - INFO - Thread successfully created with ID: thread_8btFrK4mhaLbDEpoKRAue7IW
+2025-03-24 17:45:23,112 - INFO - Received payload: thread_id='thread_8btFrK4mhaLbDEpoKRAue7IW' question='hello'
+2025-03-24 17:45:23,494 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_8btFrK4mhaLbDEpoKRAue7IW/messages "HTTP/1.1 200 OK"
+2025-03-24 17:45:23,502 - INFO - Question added to thread.
+2025-03-24 17:45:24,772 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_8btFrK4mhaLbDEpoKRAue7IW/runs "HTTP/1.1 200 OK"
+2025-03-24 17:45:25,010 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_8btFrK4mhaLbDEpoKRAue7IW/runs/run_n46UjJLlrQBY54STDJbgkHwi "HTTP/1.1 200 OK"
+2025-03-24 17:45:26,242 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_8btFrK4mhaLbDEpoKRAue7IW/runs/run_n46UjJLlrQBY54STDJbgkHwi "HTTP/1.1 200 OK"
+2025-03-24 17:45:27,479 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_8btFrK4mhaLbDEpoKRAue7IW/runs/run_n46UjJLlrQBY54STDJbgkHwi "HTTP/1.1 200 OK"
+2025-03-24 17:45:27,599 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_8btFrK4mhaLbDEpoKRAue7IW/messages?run_id=run_n46UjJLlrQBY54STDJbgkHwi "HTTP/1.1 200 OK"
+2025-03-24 17:45:27,746 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_8btFrK4mhaLbDEpoKRAue7IW/messages?run_id=run_n46UjJLlrQBY54STDJbgkHwi&after=msg_uVoUGAeqV5uX4tftiYffidsN "HTTP/1.1 200 OK"
+2025-03-24 17:45:45,213 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-24 17:45:45,214 - INFO - Thread successfully created with ID: thread_u2Ns29O3nVK9Saqab0dio0tu
+2025-03-24 17:46:13,047 - INFO - Received payload: thread_id='thread_u2Ns29O3nVK9Saqab0dio0tu' question='hello'
+2025-03-24 17:46:13,298 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_u2Ns29O3nVK9Saqab0dio0tu/messages "HTTP/1.1 200 OK"
+2025-03-24 17:46:13,299 - INFO - Question added to thread.
+2025-03-24 17:46:14,302 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_u2Ns29O3nVK9Saqab0dio0tu/runs "HTTP/1.1 200 OK"
+2025-03-24 17:46:14,575 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_u2Ns29O3nVK9Saqab0dio0tu/runs/run_oJd3iZIaMZ2oq7qwcNDjTknJ "HTTP/1.1 200 OK"
+2025-03-24 17:46:16,237 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_u2Ns29O3nVK9Saqab0dio0tu/runs/run_oJd3iZIaMZ2oq7qwcNDjTknJ "HTTP/1.1 200 OK"
+2025-03-24 17:46:16,365 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_u2Ns29O3nVK9Saqab0dio0tu/messages?run_id=run_oJd3iZIaMZ2oq7qwcNDjTknJ "HTTP/1.1 200 OK"
+2025-03-24 17:46:16,493 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_u2Ns29O3nVK9Saqab0dio0tu/messages?run_id=run_oJd3iZIaMZ2oq7qwcNDjTknJ&after=msg_6sNwXldRYNqRE2Q6owIaN5xS "HTTP/1.1 200 OK"
+2025-03-24 17:46:32,825 - INFO - Received payload: thread_id='thread_u2Ns29O3nVK9Saqab0dio0tu' question='tell me about the cs department at skidmore'
+2025-03-24 17:46:33,118 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_u2Ns29O3nVK9Saqab0dio0tu/messages "HTTP/1.1 200 OK"
+2025-03-24 17:46:33,120 - INFO - Question added to thread.
+2025-03-24 17:46:33,768 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_u2Ns29O3nVK9Saqab0dio0tu/runs "HTTP/1.1 200 OK"
+2025-03-24 17:46:33,950 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_u2Ns29O3nVK9Saqab0dio0tu/runs/run_lf5a89SyIuXs744FqGLRmIZt "HTTP/1.1 200 OK"
+2025-03-24 17:46:35,156 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_u2Ns29O3nVK9Saqab0dio0tu/runs/run_lf5a89SyIuXs744FqGLRmIZt "HTTP/1.1 200 OK"
+2025-03-24 17:46:36,407 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_u2Ns29O3nVK9Saqab0dio0tu/runs/run_lf5a89SyIuXs744FqGLRmIZt "HTTP/1.1 200 OK"
+2025-03-24 17:46:37,927 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_u2Ns29O3nVK9Saqab0dio0tu/runs/run_lf5a89SyIuXs744FqGLRmIZt "HTTP/1.1 200 OK"
+2025-03-24 17:46:39,664 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_u2Ns29O3nVK9Saqab0dio0tu/runs/run_lf5a89SyIuXs744FqGLRmIZt "HTTP/1.1 200 OK"
+2025-03-24 17:46:40,903 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_u2Ns29O3nVK9Saqab0dio0tu/runs/run_lf5a89SyIuXs744FqGLRmIZt "HTTP/1.1 200 OK"
+2025-03-24 17:46:42,559 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_u2Ns29O3nVK9Saqab0dio0tu/runs/run_lf5a89SyIuXs744FqGLRmIZt "HTTP/1.1 200 OK"
+2025-03-24 17:46:43,795 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_u2Ns29O3nVK9Saqab0dio0tu/runs/run_lf5a89SyIuXs744FqGLRmIZt "HTTP/1.1 200 OK"
+2025-03-24 17:46:43,932 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_u2Ns29O3nVK9Saqab0dio0tu/messages?run_id=run_lf5a89SyIuXs744FqGLRmIZt "HTTP/1.1 200 OK"
+2025-03-24 17:46:44,062 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_u2Ns29O3nVK9Saqab0dio0tu/messages?run_id=run_lf5a89SyIuXs744FqGLRmIZt&after=msg_McIEbt99wrFxyQc1AfW1givC "HTTP/1.1 200 OK"
+2025-03-24 17:46:44,208 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-F7JL04Y4CJILwVaH6MXcAQSO "HTTP/1.1 200 OK"
+2025-03-24 17:46:44,357 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-0KFuZ2DdHhJF6VKELAmYW2Ul "HTTP/1.1 200 OK"
+2025-03-24 17:46:44,648 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-0KFuZ2DdHhJF6VKELAmYW2Ul "HTTP/1.1 200 OK"
+2025-03-24 17:46:44,778 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-0KFuZ2DdHhJF6VKELAmYW2Ul "HTTP/1.1 200 OK"
+2025-03-24 17:46:44,895 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-0KFuZ2DdHhJF6VKELAmYW2Ul "HTTP/1.1 200 OK"
+2025-03-24 17:46:45,056 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-0KFuZ2DdHhJF6VKELAmYW2Ul "HTTP/1.1 200 OK"
+2025-03-24 17:46:45,295 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-0KFuZ2DdHhJF6VKELAmYW2Ul "HTTP/1.1 200 OK"
+2025-03-24 17:46:45,462 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-0KFuZ2DdHhJF6VKELAmYW2Ul "HTTP/1.1 200 OK"
+2025-03-24 17:46:45,603 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-0KFuZ2DdHhJF6VKELAmYW2Ul "HTTP/1.1 200 OK"
+2025-03-24 17:46:45,712 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-0KFuZ2DdHhJF6VKELAmYW2Ul "HTTP/1.1 200 OK"
+2025-03-24 17:46:45,862 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-0KFuZ2DdHhJF6VKELAmYW2Ul "HTTP/1.1 200 OK"
+2025-03-24 18:11:13,324 - INFO - Starting server on port 8080...
+2025-03-24 18:11:45,061 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-24 18:11:45,067 - INFO - Thread successfully created with ID: thread_PuloVfpKrHYSAWovgOZSfhLz
+2025-03-24 18:12:02,554 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-24 18:12:02,555 - INFO - Thread successfully created with ID: thread_TxN6hLpqXmvy6nwWyvfixfiy
+2025-03-24 18:12:09,353 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-24 18:12:09,355 - INFO - Thread successfully created with ID: thread_lAkMj1HZGHsVPLwGm2IAchO9
+2025-03-24 18:12:19,731 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-24 18:12:19,732 - INFO - Thread successfully created with ID: thread_buRaXmEnBZMBhumU2ZmkdRRY
+2025-03-24 18:12:27,515 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-24 18:12:27,516 - INFO - Thread successfully created with ID: thread_D1HQMA2IoKyygaLTF2chzJsm
+2025-03-24 18:19:09,211 - INFO - Starting server on port 8080...
+2025-03-24 18:19:49,518 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-24 18:19:49,523 - INFO - Thread successfully created with ID: thread_SmltXzH5xtBzpZuU2OZ6K3iU
+2025-03-24 18:20:00,557 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-24 18:20:00,558 - INFO - Thread successfully created with ID: thread_aZZSyvP6Gg9uV09umi5nk320
+2025-03-24 18:25:37,470 - INFO - Starting server on port 8080...
+2025-03-24 18:26:12,539 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-24 18:26:12,543 - INFO - Thread successfully created with ID: thread_0AZsSpfI8OHu1JCeokIItGYT
+2025-03-24 18:26:16,904 - INFO - Received payload: thread_id='thread_0AZsSpfI8OHu1JCeokIItGYT' question='hello'
+2025-03-24 18:26:17,144 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_0AZsSpfI8OHu1JCeokIItGYT/messages "HTTP/1.1 200 OK"
+2025-03-24 18:26:17,152 - INFO - Question added to thread.
+2025-03-24 18:26:17,848 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_0AZsSpfI8OHu1JCeokIItGYT/runs "HTTP/1.1 200 OK"
+2025-03-24 18:26:18,325 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_0AZsSpfI8OHu1JCeokIItGYT/runs/run_hdidCc5zB7JZHooemTYOeLdX "HTTP/1.1 200 OK"
+2025-03-24 18:26:19,593 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_0AZsSpfI8OHu1JCeokIItGYT/runs/run_hdidCc5zB7JZHooemTYOeLdX "HTTP/1.1 200 OK"
+2025-03-24 18:26:19,943 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_0AZsSpfI8OHu1JCeokIItGYT/messages?run_id=run_hdidCc5zB7JZHooemTYOeLdX "HTTP/1.1 200 OK"
+2025-03-24 18:26:20,091 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_0AZsSpfI8OHu1JCeokIItGYT/messages?run_id=run_hdidCc5zB7JZHooemTYOeLdX&after=msg_46KyNm1ZEEjU4S0DuZqgDwOM "HTTP/1.1 200 OK"
+2025-03-24 18:31:31,090 - INFO - Received payload: thread_id='thread_0AZsSpfI8OHu1JCeokIItGYT' question='tell me about the CS department as Skidmore college?'
+2025-03-24 18:31:31,316 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_0AZsSpfI8OHu1JCeokIItGYT/messages "HTTP/1.1 200 OK"
+2025-03-24 18:31:31,317 - INFO - Question added to thread.
+2025-03-24 18:31:34,245 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_0AZsSpfI8OHu1JCeokIItGYT/runs "HTTP/1.1 200 OK"
+2025-03-24 18:31:34,452 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_0AZsSpfI8OHu1JCeokIItGYT/runs/run_yv5c8Q4bvt1f2JAwDrwkoWfH "HTTP/1.1 200 OK"
+2025-03-24 18:31:35,734 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_0AZsSpfI8OHu1JCeokIItGYT/runs/run_yv5c8Q4bvt1f2JAwDrwkoWfH "HTTP/1.1 200 OK"
+2025-03-24 18:31:37,169 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_0AZsSpfI8OHu1JCeokIItGYT/runs/run_yv5c8Q4bvt1f2JAwDrwkoWfH "HTTP/1.1 200 OK"
+2025-03-24 18:31:38,398 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_0AZsSpfI8OHu1JCeokIItGYT/runs/run_yv5c8Q4bvt1f2JAwDrwkoWfH "HTTP/1.1 200 OK"
+2025-03-24 18:31:39,769 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_0AZsSpfI8OHu1JCeokIItGYT/runs/run_yv5c8Q4bvt1f2JAwDrwkoWfH "HTTP/1.1 200 OK"
+2025-03-24 18:31:41,229 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_0AZsSpfI8OHu1JCeokIItGYT/runs/run_yv5c8Q4bvt1f2JAwDrwkoWfH "HTTP/1.1 200 OK"
+2025-03-24 18:31:42,458 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_0AZsSpfI8OHu1JCeokIItGYT/runs/run_yv5c8Q4bvt1f2JAwDrwkoWfH "HTTP/1.1 200 OK"
+2025-03-24 18:31:43,686 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_0AZsSpfI8OHu1JCeokIItGYT/runs/run_yv5c8Q4bvt1f2JAwDrwkoWfH "HTTP/1.1 200 OK"
+2025-03-24 18:31:45,003 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_0AZsSpfI8OHu1JCeokIItGYT/runs/run_yv5c8Q4bvt1f2JAwDrwkoWfH "HTTP/1.1 200 OK"
+2025-03-24 18:31:46,241 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_0AZsSpfI8OHu1JCeokIItGYT/runs/run_yv5c8Q4bvt1f2JAwDrwkoWfH "HTTP/1.1 200 OK"
+2025-03-24 18:31:47,472 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_0AZsSpfI8OHu1JCeokIItGYT/runs/run_yv5c8Q4bvt1f2JAwDrwkoWfH "HTTP/1.1 200 OK"
+2025-03-24 18:31:48,762 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_0AZsSpfI8OHu1JCeokIItGYT/runs/run_yv5c8Q4bvt1f2JAwDrwkoWfH "HTTP/1.1 200 OK"
+2025-03-24 18:31:50,009 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_0AZsSpfI8OHu1JCeokIItGYT/runs/run_yv5c8Q4bvt1f2JAwDrwkoWfH "HTTP/1.1 200 OK"
+2025-03-24 18:31:50,146 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_0AZsSpfI8OHu1JCeokIItGYT/messages?run_id=run_yv5c8Q4bvt1f2JAwDrwkoWfH "HTTP/1.1 200 OK"
+2025-03-24 18:31:50,417 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_0AZsSpfI8OHu1JCeokIItGYT/messages?run_id=run_yv5c8Q4bvt1f2JAwDrwkoWfH&after=msg_hqOgn3ooGJxfS4JoR8hPsDp1 "HTTP/1.1 200 OK"
+2025-03-24 18:31:50,614 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-0KFuZ2DdHhJF6VKELAmYW2Ul "HTTP/1.1 200 OK"
+2025-03-24 18:31:50,743 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-F7JL04Y4CJILwVaH6MXcAQSO "HTTP/1.1 200 OK"
+2025-03-24 18:31:50,884 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-F7JL04Y4CJILwVaH6MXcAQSO "HTTP/1.1 200 OK"
+2025-03-24 18:31:51,214 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-F7JL04Y4CJILwVaH6MXcAQSO "HTTP/1.1 200 OK"
+2025-03-24 18:31:51,344 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-0KFuZ2DdHhJF6VKELAmYW2Ul "HTTP/1.1 200 OK"
+2025-03-24 18:31:51,458 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-0KFuZ2DdHhJF6VKELAmYW2Ul "HTTP/1.1 200 OK"
+2025-03-24 18:31:51,728 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-0KFuZ2DdHhJF6VKELAmYW2Ul "HTTP/1.1 200 OK"
+2025-03-24 18:31:51,842 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-0KFuZ2DdHhJF6VKELAmYW2Ul "HTTP/1.1 200 OK"
+2025-03-24 18:31:51,976 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-0KFuZ2DdHhJF6VKELAmYW2Ul "HTTP/1.1 200 OK"
+2025-03-24 18:31:52,093 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-0KFuZ2DdHhJF6VKELAmYW2Ul "HTTP/1.1 200 OK"
+2025-03-24 18:31:52,249 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-0KFuZ2DdHhJF6VKELAmYW2Ul "HTTP/1.1 200 OK"
+2025-03-24 18:31:52,364 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-0KFuZ2DdHhJF6VKELAmYW2Ul "HTTP/1.1 200 OK"
+2025-03-24 18:31:52,473 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-0KFuZ2DdHhJF6VKELAmYW2Ul "HTTP/1.1 200 OK"
+2025-03-24 18:31:52,594 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-0KFuZ2DdHhJF6VKELAmYW2Ul "HTTP/1.1 200 OK"
+2025-03-24 18:31:52,727 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-0KFuZ2DdHhJF6VKELAmYW2Ul "HTTP/1.1 200 OK"
+2025-03-24 18:46:34,251 - INFO - Starting server on port 8080...
+2025-03-24 18:47:31,447 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-24 18:47:31,453 - INFO - Thread successfully created with ID: thread_kgIZqvPk42rfpI3YQOiSqnfF
+2025-03-24 18:47:36,083 - INFO - Received payload: thread_id='thread_kgIZqvPk42rfpI3YQOiSqnfF' question='hello'
+2025-03-24 18:47:36,516 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_kgIZqvPk42rfpI3YQOiSqnfF/messages "HTTP/1.1 200 OK"
+2025-03-24 18:47:36,528 - INFO - Question added to thread.
+2025-03-24 18:47:37,788 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_kgIZqvPk42rfpI3YQOiSqnfF/runs "HTTP/1.1 200 OK"
+2025-03-24 18:47:38,092 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_kgIZqvPk42rfpI3YQOiSqnfF/runs/run_sx8tLKUtghOonmr6KQGaWsYy "HTTP/1.1 200 OK"
+2025-03-24 18:47:39,518 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_kgIZqvPk42rfpI3YQOiSqnfF/runs/run_sx8tLKUtghOonmr6KQGaWsYy "HTTP/1.1 200 OK"
+2025-03-24 18:47:40,748 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_kgIZqvPk42rfpI3YQOiSqnfF/runs/run_sx8tLKUtghOonmr6KQGaWsYy "HTTP/1.1 200 OK"
+2025-03-24 18:47:40,931 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_kgIZqvPk42rfpI3YQOiSqnfF/messages?run_id=run_sx8tLKUtghOonmr6KQGaWsYy "HTTP/1.1 200 OK"
+2025-03-24 18:47:41,048 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_kgIZqvPk42rfpI3YQOiSqnfF/messages?run_id=run_sx8tLKUtghOonmr6KQGaWsYy&after=msg_LBLt9TXKjclmfrlpqvUxCvNE "HTTP/1.1 200 OK"
+2025-03-24 18:50:37,753 - INFO - Starting server on port 8080...
+2025-03-24 18:53:56,768 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-24 18:53:56,772 - INFO - Thread successfully created with ID: thread_2uZryjSevaerrdNV2DdBieUD
+2025-03-24 18:54:03,508 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-24 18:54:03,509 - INFO - Thread successfully created with ID: thread_wbcoy1AIYytEiPbcgRgTKzwk
+2025-03-24 18:54:12,268 - INFO - Received payload: thread_id='thread_2uZryjSevaerrdNV2DdBieUD' question='Hello'
+2025-03-24 18:54:12,269 - ERROR - Error: Invalid thread ID.
+2025-03-24 18:54:18,502 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-24 18:54:18,503 - INFO - Thread successfully created with ID: thread_C4Ju5YtwZookZeHvpW4IQ14g
+2025-03-24 18:54:25,795 - INFO - Received payload: thread_id='thread_C4Ju5YtwZookZeHvpW4IQ14g' question='Hello'
+2025-03-24 18:54:26,032 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_C4Ju5YtwZookZeHvpW4IQ14g/messages "HTTP/1.1 200 OK"
+2025-03-24 18:54:26,044 - INFO - Question added to thread.
+2025-03-24 18:54:26,689 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_C4Ju5YtwZookZeHvpW4IQ14g/runs "HTTP/1.1 200 OK"
+2025-03-24 18:54:26,933 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_C4Ju5YtwZookZeHvpW4IQ14g/runs/run_wAV6lpNQXGSYXp6VpFIRcbNL "HTTP/1.1 200 OK"
+2025-03-24 18:54:28,200 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_C4Ju5YtwZookZeHvpW4IQ14g/runs/run_wAV6lpNQXGSYXp6VpFIRcbNL "HTTP/1.1 200 OK"
+2025-03-24 18:54:28,436 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_C4Ju5YtwZookZeHvpW4IQ14g/messages?run_id=run_wAV6lpNQXGSYXp6VpFIRcbNL "HTTP/1.1 200 OK"
+2025-03-24 18:54:28,620 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_C4Ju5YtwZookZeHvpW4IQ14g/messages?run_id=run_wAV6lpNQXGSYXp6VpFIRcbNL&after=msg_9YwjZ7hTz0U1j13htYqvSeiw "HTTP/1.1 200 OK"
+2025-03-24 18:54:34,478 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-24 18:54:34,479 - INFO - Thread successfully created with ID: thread_wmFoh2ipq8LXAt9kU6A7qDSK
+2025-03-24 18:54:53,316 - INFO - Received payload: thread_id='thread_C4Ju5YtwZookZeHvpW4IQ14g' question='Can you repeat what you just sent me as a response'
+2025-03-24 18:54:53,316 - ERROR - Error: Invalid thread ID.
+2025-03-24 18:55:08,975 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-24 18:55:08,977 - INFO - Thread successfully created with ID: thread_Dw8miMVYhus4GHsT2fX5TcMH
+2025-03-24 18:55:15,146 - INFO - Received payload: thread_id='thread_wmFoh2ipq8LXAt9kU6A7qDSK' question='hello'
+2025-03-24 18:55:15,146 - ERROR - Error: Invalid thread ID.
+2025-03-24 18:55:16,886 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-24 18:55:16,887 - INFO - Thread successfully created with ID: thread_VXosvcyh6whLUAWLiggJ43m9
+2025-03-24 18:55:21,909 - INFO - Received payload: thread_id='thread_VXosvcyh6whLUAWLiggJ43m9' question='hello'
+2025-03-24 18:55:23,196 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_VXosvcyh6whLUAWLiggJ43m9/messages "HTTP/1.1 200 OK"
+2025-03-24 18:55:23,276 - INFO - Question added to thread.
+2025-03-24 18:55:24,321 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_VXosvcyh6whLUAWLiggJ43m9/runs "HTTP/1.1 200 OK"
+2025-03-24 18:55:24,957 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_VXosvcyh6whLUAWLiggJ43m9/runs/run_oK7itkBHq7OzfCgw1gGSLztS "HTTP/1.1 200 OK"
+2025-03-24 18:55:26,214 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_VXosvcyh6whLUAWLiggJ43m9/runs/run_oK7itkBHq7OzfCgw1gGSLztS "HTTP/1.1 200 OK"
+2025-03-24 18:55:26,365 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_VXosvcyh6whLUAWLiggJ43m9/messages?run_id=run_oK7itkBHq7OzfCgw1gGSLztS "HTTP/1.1 200 OK"
+2025-03-24 18:55:27,700 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_VXosvcyh6whLUAWLiggJ43m9/messages?run_id=run_oK7itkBHq7OzfCgw1gGSLztS&after=msg_DXR8nEZCZsvkcgwDyJpS5eTo "HTTP/1.1 200 OK"
+2025-03-25 14:52:21,321 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-25 14:52:21,322 - INFO - Thread successfully created with ID: thread_Q0WoI1oVAOVdA9jVcQmw6luD
+2025-03-25 14:52:24,763 - INFO - Received payload: thread_id='thread_Q0WoI1oVAOVdA9jVcQmw6luD' question='hello'
+2025-03-25 14:52:25,225 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_Q0WoI1oVAOVdA9jVcQmw6luD/messages "HTTP/1.1 200 OK"
+2025-03-25 14:52:25,226 - INFO - Question added to thread.
+2025-03-25 14:52:26,544 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_Q0WoI1oVAOVdA9jVcQmw6luD/runs "HTTP/1.1 200 OK"
+2025-03-25 14:52:26,905 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_Q0WoI1oVAOVdA9jVcQmw6luD/runs/run_XsFiJt6eEH6UYxLyDX7i6yD2 "HTTP/1.1 200 OK"
+2025-03-25 14:52:28,637 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_Q0WoI1oVAOVdA9jVcQmw6luD/runs/run_XsFiJt6eEH6UYxLyDX7i6yD2 "HTTP/1.1 200 OK"
+2025-03-25 14:52:28,763 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_Q0WoI1oVAOVdA9jVcQmw6luD/messages?run_id=run_XsFiJt6eEH6UYxLyDX7i6yD2 "HTTP/1.1 200 OK"
+2025-03-25 14:52:29,056 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_Q0WoI1oVAOVdA9jVcQmw6luD/messages?run_id=run_XsFiJt6eEH6UYxLyDX7i6yD2&after=msg_TOtA9Iy8pGIvBBUyAt21zvHC "HTTP/1.1 200 OK"
+2025-03-25 15:07:59,627 - INFO - Starting server on port 8080...
+2025-03-25 15:08:14,732 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-25 15:08:14,736 - INFO - Thread successfully created with ID: thread_4e9iFk8NnbzeabVZr4GXJ4AR
+2025-03-25 15:08:18,635 - INFO - Received payload: thread_id='thread_4e9iFk8NnbzeabVZr4GXJ4AR' question='hello'
+2025-03-25 15:08:18,635 - ERROR - Failed to process question: 'AssistantAPI' object has no attribute 'thread_id'
+2025-03-25 15:08:18,636 - ERROR - Error processing question: 'AssistantAPI' object has no attribute 'thread_id'
+2025-03-25 15:08:24,711 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-25 15:08:24,714 - INFO - Thread successfully created with ID: thread_eLDSEOYnh0TdT8TP3cR6v4N3
+2025-03-25 15:08:29,503 - INFO - Received payload: thread_id='thread_eLDSEOYnh0TdT8TP3cR6v4N3' question='hello'
+2025-03-25 15:08:29,503 - ERROR - Failed to process question: 'AssistantAPI' object has no attribute 'thread_id'
+2025-03-25 15:08:29,503 - ERROR - Error processing question: 'AssistantAPI' object has no attribute 'thread_id'
+2025-03-25 15:08:59,957 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-25 15:08:59,958 - INFO - Thread successfully created with ID: thread_drunVwfAuhVuz4fRPusNudMT
+2025-03-25 15:09:02,512 - INFO - Received payload: thread_id='thread_drunVwfAuhVuz4fRPusNudMT' question='hellllloooo'
+2025-03-25 15:09:02,512 - ERROR - Failed to process question: 'AssistantAPI' object has no attribute 'thread_id'
+2025-03-25 15:09:02,512 - ERROR - Error processing question: 'AssistantAPI' object has no attribute 'thread_id'
+2025-03-25 15:09:12,888 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-25 15:09:12,889 - INFO - Thread successfully created with ID: thread_ox5Fd2qmjuxAXSYtRtq6wc7B
+2025-03-25 15:09:18,569 - INFO - Received payload: thread_id='thread_ox5Fd2qmjuxAXSYtRtq6wc7B' question='helllooo'
+2025-03-25 15:09:18,569 - ERROR - Failed to process question: 'AssistantAPI' object has no attribute 'thread_id'
+2025-03-25 15:09:18,569 - ERROR - Error processing question: 'AssistantAPI' object has no attribute 'thread_id'
+2025-03-25 15:19:41,673 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-25 15:19:41,674 - INFO - Thread successfully created with ID: thread_wHNwJhgE6kb1OkIyCXbwl2wR
+2025-03-25 15:19:45,216 - INFO - Received payload: thread_id='thread_wHNwJhgE6kb1OkIyCXbwl2wR' question='hello'
+2025-03-25 15:19:45,216 - ERROR - Failed to process question: 'AssistantAPI' object has no attribute 'thread_id'
+2025-03-25 15:19:45,216 - ERROR - Error processing question: 'AssistantAPI' object has no attribute 'thread_id'
+2025-03-25 15:23:00,521 - INFO - Starting server on port 8080...
+2025-03-25 15:23:26,710 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-25 15:23:26,716 - INFO - Thread successfully created with ID: thread_WOmRle2h9sijfne6EaPwQpuM
+2025-03-25 15:23:30,379 - INFO - Received payload: thread_id='thread_WOmRle2h9sijfne6EaPwQpuM' question='hello'
+2025-03-25 15:23:30,379 - ERROR - Failed to process question: 'AssistantAPI' object has no attribute 'thread_id'
+2025-03-25 15:23:30,379 - ERROR - Error processing question: 'AssistantAPI' object has no attribute 'thread_id'
+2025-03-25 15:23:45,040 - INFO - Received payload: thread_id='thread_WOmRle2h9sijfne6EaPwQpuM' question='hello'
+2025-03-25 15:23:45,040 - ERROR - Failed to process question: 'AssistantAPI' object has no attribute 'thread_id'
+2025-03-25 15:23:45,041 - ERROR - Error processing question: 'AssistantAPI' object has no attribute 'thread_id'
+2025-03-25 15:28:12,557 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-25 15:28:12,558 - INFO - Thread successfully created with ID: thread_qks6OAuiYLEoBd717p9t0gjq
+2025-03-25 15:28:31,399 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-25 15:28:31,400 - INFO - Thread successfully created with ID: thread_jXoHoocwrd1zDhqunRC19Nt5
+2025-03-25 15:28:36,745 - INFO - Received payload: thread_id='thread_jXoHoocwrd1zDhqunRC19Nt5' question='hello'
+2025-03-25 15:28:36,745 - ERROR - Failed to process question: 'AssistantAPI' object has no attribute 'thread_id'
+2025-03-25 15:28:36,868 - ERROR - Error processing question: 'AssistantAPI' object has no attribute 'thread_id'
+2025-03-25 15:34:00,115 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-25 15:34:00,177 - INFO - Thread successfully created with ID: thread_TTWl7YDgJsCHC0mGuRWhJE1d
+2025-03-25 15:34:05,870 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-25 15:34:05,871 - INFO - Thread successfully created with ID: thread_fCXlEMDIJbAYTKvj0gDbzDjB
+2025-03-25 15:39:45,741 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-25 15:39:45,835 - INFO - Thread successfully created with ID: thread_uWmwFDr8tYeJx4O1O446sCXh
+2025-03-25 15:40:03,704 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-25 15:40:03,705 - INFO - Thread successfully created with ID: thread_7FC1yUhbakt06w74hL0bEE9y
+2025-03-25 15:40:27,709 - INFO - Received payload: thread_id='thread_7FC1yUhbakt06w74hL0bEE9y' question='hello'
+2025-03-25 15:40:27,709 - ERROR - Failed to process question: 'AssistantAPI' object has no attribute 'thread_id'
+2025-03-25 15:40:27,709 - ERROR - Error processing question: 'AssistantAPI' object has no attribute 'thread_id'
+2025-03-25 15:43:31,225 - INFO - Starting server on port 8080...
+2025-03-25 15:43:55,218 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-25 15:43:55,223 - INFO - Thread successfully created with ID: thread_DFM8TEsLvM0EGPmAXQ0zLRzd
+2025-03-25 15:43:58,224 - INFO - Received payload: thread_id='thread_DFM8TEsLvM0EGPmAXQ0zLRzd' question='hello'
+2025-03-25 15:43:58,797 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_DFM8TEsLvM0EGPmAXQ0zLRzd/messages "HTTP/1.1 200 OK"
+2025-03-25 15:43:58,807 - INFO - Question added to thread.
+2025-03-25 15:44:05,478 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_DFM8TEsLvM0EGPmAXQ0zLRzd/runs "HTTP/1.1 200 OK"
+2025-03-25 15:44:05,774 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_DFM8TEsLvM0EGPmAXQ0zLRzd/runs/run_exLgYZmLIn7ZfbJRLMUwPa6c "HTTP/1.1 200 OK"
+2025-03-25 15:44:07,006 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_DFM8TEsLvM0EGPmAXQ0zLRzd/runs/run_exLgYZmLIn7ZfbJRLMUwPa6c "HTTP/1.1 200 OK"
+2025-03-25 15:44:08,225 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_DFM8TEsLvM0EGPmAXQ0zLRzd/runs/run_exLgYZmLIn7ZfbJRLMUwPa6c "HTTP/1.1 200 OK"
+2025-03-25 15:44:08,365 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_DFM8TEsLvM0EGPmAXQ0zLRzd/messages?run_id=run_exLgYZmLIn7ZfbJRLMUwPa6c "HTTP/1.1 200 OK"
+2025-03-25 15:44:08,551 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_DFM8TEsLvM0EGPmAXQ0zLRzd/messages?run_id=run_exLgYZmLIn7ZfbJRLMUwPa6c&after=msg_PSXYSrjzsjnVC0guOtBfTf9B "HTTP/1.1 200 OK"
+2025-03-25 15:45:14,616 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-25 15:45:14,617 - INFO - Thread successfully created with ID: thread_9HZcesmMqjEnfo2nKjCBUPI8
+2025-03-25 15:45:23,868 - INFO - Received payload: thread_id='thread_9HZcesmMqjEnfo2nKjCBUPI8' question='Hello how are you'
+2025-03-25 15:45:24,146 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_9HZcesmMqjEnfo2nKjCBUPI8/messages "HTTP/1.1 200 OK"
+2025-03-25 15:45:24,147 - INFO - Question added to thread.
+2025-03-25 15:45:25,246 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_9HZcesmMqjEnfo2nKjCBUPI8/runs "HTTP/1.1 200 OK"
+2025-03-25 15:45:25,739 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_9HZcesmMqjEnfo2nKjCBUPI8/runs/run_W8gZmjT7Uviip22c7PBu3g3f "HTTP/1.1 200 OK"
+2025-03-25 15:45:26,969 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_9HZcesmMqjEnfo2nKjCBUPI8/runs/run_W8gZmjT7Uviip22c7PBu3g3f "HTTP/1.1 200 OK"
+2025-03-25 15:45:27,160 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_9HZcesmMqjEnfo2nKjCBUPI8/messages?run_id=run_W8gZmjT7Uviip22c7PBu3g3f "HTTP/1.1 200 OK"
+2025-03-25 15:45:27,337 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_9HZcesmMqjEnfo2nKjCBUPI8/messages?run_id=run_W8gZmjT7Uviip22c7PBu3g3f&after=msg_1zrKHGnXwZ5GWrzGab3lSSYk "HTTP/1.1 200 OK"
+2025-03-25 15:45:34,925 - INFO - Received payload: thread_id='thread_DFM8TEsLvM0EGPmAXQ0zLRzd' question='what day is it today'
+2025-03-25 15:45:35,266 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_DFM8TEsLvM0EGPmAXQ0zLRzd/messages "HTTP/1.1 200 OK"
+2025-03-25 15:45:35,267 - INFO - Question added to thread.
+2025-03-25 15:45:36,469 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_DFM8TEsLvM0EGPmAXQ0zLRzd/runs "HTTP/1.1 200 OK"
+2025-03-25 15:45:36,703 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_DFM8TEsLvM0EGPmAXQ0zLRzd/runs/run_Ehz0ztM3IBnp0EJQD3xfWU4a "HTTP/1.1 200 OK"
+2025-03-25 15:45:37,993 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_DFM8TEsLvM0EGPmAXQ0zLRzd/runs/run_Ehz0ztM3IBnp0EJQD3xfWU4a "HTTP/1.1 200 OK"
+2025-03-25 15:45:39,263 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_DFM8TEsLvM0EGPmAXQ0zLRzd/runs/run_Ehz0ztM3IBnp0EJQD3xfWU4a "HTTP/1.1 200 OK"
+2025-03-25 15:45:39,385 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_DFM8TEsLvM0EGPmAXQ0zLRzd/messages?run_id=run_Ehz0ztM3IBnp0EJQD3xfWU4a "HTTP/1.1 200 OK"
+2025-03-25 15:45:39,514 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_DFM8TEsLvM0EGPmAXQ0zLRzd/messages?run_id=run_Ehz0ztM3IBnp0EJQD3xfWU4a&after=msg_nA8fY4oFzGo6dMy3KfIPOZ9O "HTTP/1.1 200 OK"
+2025-03-25 15:45:51,902 - INFO - Received payload: thread_id='thread_9HZcesmMqjEnfo2nKjCBUPI8' question='What day is today please'
+2025-03-25 15:45:52,182 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_9HZcesmMqjEnfo2nKjCBUPI8/messages "HTTP/1.1 200 OK"
+2025-03-25 15:45:52,183 - INFO - Question added to thread.
+2025-03-25 15:45:54,532 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_9HZcesmMqjEnfo2nKjCBUPI8/runs "HTTP/1.1 200 OK"
+2025-03-25 15:45:54,776 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_9HZcesmMqjEnfo2nKjCBUPI8/runs/run_9Ualhg9DWHTm7NNF2pFgpmlr "HTTP/1.1 200 OK"
+2025-03-25 15:45:56,095 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_9HZcesmMqjEnfo2nKjCBUPI8/runs/run_9Ualhg9DWHTm7NNF2pFgpmlr "HTTP/1.1 200 OK"
+2025-03-25 15:45:56,230 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_9HZcesmMqjEnfo2nKjCBUPI8/messages?run_id=run_9Ualhg9DWHTm7NNF2pFgpmlr "HTTP/1.1 200 OK"
+2025-03-25 15:45:56,360 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_9HZcesmMqjEnfo2nKjCBUPI8/messages?run_id=run_9Ualhg9DWHTm7NNF2pFgpmlr&after=msg_f0jEeIdqzr83d4DHyVcrIQnr "HTTP/1.1 200 OK"
+2025-03-25 15:46:10,542 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-25 15:46:10,543 - INFO - Thread successfully created with ID: thread_76rW0bl1olbE8uoBPeiRZAQZ
+2025-03-25 15:46:23,173 - INFO - Received payload: thread_id='thread_DFM8TEsLvM0EGPmAXQ0zLRzd' question='what is the CS major at skidmore like?'
+2025-03-25 15:46:23,463 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_DFM8TEsLvM0EGPmAXQ0zLRzd/messages "HTTP/1.1 200 OK"
+2025-03-25 15:46:23,464 - INFO - Question added to thread.
+2025-03-25 15:46:24,143 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_DFM8TEsLvM0EGPmAXQ0zLRzd/runs "HTTP/1.1 200 OK"
+2025-03-25 15:46:24,380 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_DFM8TEsLvM0EGPmAXQ0zLRzd/runs/run_Z68loM5uuiogUDR4bMbVrq6c "HTTP/1.1 200 OK"
+2025-03-25 15:46:25,654 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_DFM8TEsLvM0EGPmAXQ0zLRzd/runs/run_Z68loM5uuiogUDR4bMbVrq6c "HTTP/1.1 200 OK"
+2025-03-25 15:46:26,936 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_DFM8TEsLvM0EGPmAXQ0zLRzd/runs/run_Z68loM5uuiogUDR4bMbVrq6c "HTTP/1.1 200 OK"
+2025-03-25 15:46:28,149 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_DFM8TEsLvM0EGPmAXQ0zLRzd/runs/run_Z68loM5uuiogUDR4bMbVrq6c "HTTP/1.1 200 OK"
+2025-03-25 15:46:29,466 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_DFM8TEsLvM0EGPmAXQ0zLRzd/runs/run_Z68loM5uuiogUDR4bMbVrq6c "HTTP/1.1 200 OK"
+2025-03-25 15:46:30,717 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_DFM8TEsLvM0EGPmAXQ0zLRzd/runs/run_Z68loM5uuiogUDR4bMbVrq6c "HTTP/1.1 200 OK"
+2025-03-25 15:46:31,968 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_DFM8TEsLvM0EGPmAXQ0zLRzd/runs/run_Z68loM5uuiogUDR4bMbVrq6c "HTTP/1.1 200 OK"
+2025-03-25 15:46:33,238 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_DFM8TEsLvM0EGPmAXQ0zLRzd/runs/run_Z68loM5uuiogUDR4bMbVrq6c "HTTP/1.1 200 OK"
+2025-03-25 15:46:33,387 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_DFM8TEsLvM0EGPmAXQ0zLRzd/messages?run_id=run_Z68loM5uuiogUDR4bMbVrq6c "HTTP/1.1 200 OK"
+2025-03-25 15:46:33,511 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_DFM8TEsLvM0EGPmAXQ0zLRzd/messages?run_id=run_Z68loM5uuiogUDR4bMbVrq6c&after=msg_kiFnANVrvYNld4MFv6bAuuM4 "HTTP/1.1 200 OK"
+2025-03-25 15:46:33,625 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-F7JL04Y4CJILwVaH6MXcAQSO "HTTP/1.1 200 OK"
+2025-03-25 15:46:33,852 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-0KFuZ2DdHhJF6VKELAmYW2Ul "HTTP/1.1 200 OK"
+2025-03-25 15:46:33,968 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-0KFuZ2DdHhJF6VKELAmYW2Ul "HTTP/1.1 200 OK"
+2025-03-25 15:46:34,068 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-F7JL04Y4CJILwVaH6MXcAQSO "HTTP/1.1 200 OK"
+2025-03-25 15:46:34,189 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-F7JL04Y4CJILwVaH6MXcAQSO "HTTP/1.1 200 OK"
+2025-03-25 15:46:34,290 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-0KFuZ2DdHhJF6VKELAmYW2Ul "HTTP/1.1 200 OK"
+2025-03-25 15:46:34,396 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-0KFuZ2DdHhJF6VKELAmYW2Ul "HTTP/1.1 200 OK"
+2025-03-25 15:46:34,521 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-0KFuZ2DdHhJF6VKELAmYW2Ul "HTTP/1.1 200 OK"
+2025-03-25 15:46:34,623 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-F7JL04Y4CJILwVaH6MXcAQSO "HTTP/1.1 200 OK"
+2025-03-25 18:43:08,489 - INFO - Starting server on port 8080...
+2025-03-25 18:51:02,037 - INFO - Starting server on port 8080...
+2025-03-25 18:53:03,291 - INFO - Starting server on port 8080...
+2025-03-25 19:07:37,993 - INFO - Starting server on port 8080...
+2025-03-26 13:12:00,523 - INFO - Starting server on port 8080...
+2025-03-26 13:26:11,965 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-26 13:26:11,970 - INFO - Thread successfully created with ID: thread_8PJuj4cKnrFUXXxcl5xUdajO
+2025-03-26 13:26:12,945 - INFO - Received payload: thread_id='thread_8PJuj4cKnrFUXXxcl5xUdajO' question='hello'
+2025-03-26 13:26:13,220 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_8PJuj4cKnrFUXXxcl5xUdajO/messages "HTTP/1.1 200 OK"
+2025-03-26 13:26:13,232 - INFO - Question added to thread.
+2025-03-26 13:26:14,727 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_8PJuj4cKnrFUXXxcl5xUdajO/runs "HTTP/1.1 200 OK"
+2025-03-26 13:26:15,088 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_8PJuj4cKnrFUXXxcl5xUdajO/runs/run_eBlDbfpAgHOYCXDwdSW0fQmD "HTTP/1.1 200 OK"
+2025-03-26 13:26:16,448 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_8PJuj4cKnrFUXXxcl5xUdajO/runs/run_eBlDbfpAgHOYCXDwdSW0fQmD "HTTP/1.1 200 OK"
+2025-03-26 13:26:16,608 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_8PJuj4cKnrFUXXxcl5xUdajO/messages?run_id=run_eBlDbfpAgHOYCXDwdSW0fQmD "HTTP/1.1 200 OK"
+2025-03-26 13:26:16,756 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_8PJuj4cKnrFUXXxcl5xUdajO/messages?run_id=run_eBlDbfpAgHOYCXDwdSW0fQmD&after=msg_L7yBczGEbrPmraxFQierLlPp "HTTP/1.1 200 OK"
+2025-03-26 15:33:58,901 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-26 15:33:58,902 - INFO - Thread successfully created with ID: thread_KimNeTx9DaHEfd0902N7HFoU
+2025-03-26 15:34:18,080 - INFO - Received payload: thread_id='thread_KimNeTx9DaHEfd0902N7HFoU' question='Tell me about the LEDs department'
+2025-03-26 15:34:18,500 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_KimNeTx9DaHEfd0902N7HFoU/messages "HTTP/1.1 200 OK"
+2025-03-26 15:34:18,501 - INFO - Question added to thread.
+2025-03-26 15:34:19,201 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_KimNeTx9DaHEfd0902N7HFoU/runs "HTTP/1.1 200 OK"
+2025-03-26 15:34:19,744 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_KimNeTx9DaHEfd0902N7HFoU/runs/run_5eNnrDT6R0fbtl82dardIWMp "HTTP/1.1 200 OK"
+2025-03-26 15:34:21,013 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_KimNeTx9DaHEfd0902N7HFoU/runs/run_5eNnrDT6R0fbtl82dardIWMp "HTTP/1.1 200 OK"
+2025-03-26 15:34:22,277 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_KimNeTx9DaHEfd0902N7HFoU/runs/run_5eNnrDT6R0fbtl82dardIWMp "HTTP/1.1 200 OK"
+2025-03-26 15:34:23,568 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_KimNeTx9DaHEfd0902N7HFoU/runs/run_5eNnrDT6R0fbtl82dardIWMp "HTTP/1.1 200 OK"
+2025-03-26 15:34:24,922 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_KimNeTx9DaHEfd0902N7HFoU/runs/run_5eNnrDT6R0fbtl82dardIWMp "HTTP/1.1 200 OK"
+2025-03-26 15:34:26,173 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_KimNeTx9DaHEfd0902N7HFoU/runs/run_5eNnrDT6R0fbtl82dardIWMp "HTTP/1.1 200 OK"
+2025-03-26 15:34:27,456 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_KimNeTx9DaHEfd0902N7HFoU/runs/run_5eNnrDT6R0fbtl82dardIWMp "HTTP/1.1 200 OK"
+2025-03-26 15:34:27,577 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_KimNeTx9DaHEfd0902N7HFoU/messages?run_id=run_5eNnrDT6R0fbtl82dardIWMp "HTTP/1.1 200 OK"
+2025-03-26 15:34:28,233 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_KimNeTx9DaHEfd0902N7HFoU/messages?run_id=run_5eNnrDT6R0fbtl82dardIWMp&after=msg_hsj4cV2ABmDYYPi9OvD5LcJB "HTTP/1.1 200 OK"
+2025-03-26 15:34:28,566 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-QIY3iXkaaDDyGMDNJ5G2oLiq "HTTP/1.1 200 OK"
+2025-03-26 15:34:28,824 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-QIY3iXkaaDDyGMDNJ5G2oLiq "HTTP/1.1 200 OK"
+2025-03-26 15:34:29,076 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-QIY3iXkaaDDyGMDNJ5G2oLiq "HTTP/1.1 200 OK"
+2025-03-26 15:34:29,224 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-QIY3iXkaaDDyGMDNJ5G2oLiq "HTTP/1.1 200 OK"
+2025-03-26 15:34:29,357 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-QIY3iXkaaDDyGMDNJ5G2oLiq "HTTP/1.1 200 OK"
+2025-03-26 15:34:29,502 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-QIY3iXkaaDDyGMDNJ5G2oLiq "HTTP/1.1 200 OK"
+2025-03-26 15:34:29,795 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-QIY3iXkaaDDyGMDNJ5G2oLiq "HTTP/1.1 200 OK"
+2025-03-26 15:34:29,950 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-QIY3iXkaaDDyGMDNJ5G2oLiq "HTTP/1.1 200 OK"
+2025-03-26 15:34:30,096 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-QIY3iXkaaDDyGMDNJ5G2oLiq "HTTP/1.1 200 OK"
+2025-03-26 17:06:05,549 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-26 17:06:05,550 - INFO - Thread successfully created with ID: thread_4iVeUO77XtIM3Xmz1hFRqnC6
+2025-03-26 17:06:25,203 - INFO - Received payload: thread_id='thread_4iVeUO77XtIM3Xmz1hFRqnC6' question='How can you assist us in Middle States Preparation?'
+2025-03-26 17:06:25,777 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/messages "HTTP/1.1 200 OK"
+2025-03-26 17:06:25,778 - INFO - Question added to thread.
+2025-03-26 17:06:26,844 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs "HTTP/1.1 200 OK"
+2025-03-26 17:06:27,084 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_VOhIjxcLJ4S2KmtBQX5msFER "HTTP/1.1 200 OK"
+2025-03-26 17:06:28,330 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_VOhIjxcLJ4S2KmtBQX5msFER "HTTP/1.1 200 OK"
+2025-03-26 17:06:29,555 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_VOhIjxcLJ4S2KmtBQX5msFER "HTTP/1.1 200 OK"
+2025-03-26 17:06:30,791 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_VOhIjxcLJ4S2KmtBQX5msFER "HTTP/1.1 200 OK"
+2025-03-26 17:06:32,070 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_VOhIjxcLJ4S2KmtBQX5msFER "HTTP/1.1 200 OK"
+2025-03-26 17:06:33,385 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_VOhIjxcLJ4S2KmtBQX5msFER "HTTP/1.1 200 OK"
+2025-03-26 17:06:34,722 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_VOhIjxcLJ4S2KmtBQX5msFER "HTTP/1.1 200 OK"
+2025-03-26 17:06:35,998 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_VOhIjxcLJ4S2KmtBQX5msFER "HTTP/1.1 200 OK"
+2025-03-26 17:06:37,292 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_VOhIjxcLJ4S2KmtBQX5msFER "HTTP/1.1 200 OK"
+2025-03-26 17:06:38,514 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_VOhIjxcLJ4S2KmtBQX5msFER "HTTP/1.1 200 OK"
+2025-03-26 17:06:39,794 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_VOhIjxcLJ4S2KmtBQX5msFER "HTTP/1.1 200 OK"
+2025-03-26 17:06:40,076 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/messages?run_id=run_VOhIjxcLJ4S2KmtBQX5msFER "HTTP/1.1 200 OK"
+2025-03-26 17:06:40,196 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/messages?run_id=run_VOhIjxcLJ4S2KmtBQX5msFER&after=msg_YHB4YUCikVwhcGy5pnjY9zLq "HTTP/1.1 200 OK"
+2025-03-26 17:06:40,490 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-gPUb6FhrS3qqUDtgI2JXVTNp "HTTP/1.1 200 OK"
+2025-03-26 17:06:40,604 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-33Np8sN6wTYdwwhrgvfLCISP "HTTP/1.1 200 OK"
+2025-03-26 17:06:40,744 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-VZwigeH0GxK5nbxBvbsHvq3c "HTTP/1.1 200 OK"
+2025-03-26 17:06:40,971 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-VZwigeH0GxK5nbxBvbsHvq3c "HTTP/1.1 200 OK"
+2025-03-26 17:06:41,089 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-VZwigeH0GxK5nbxBvbsHvq3c "HTTP/1.1 200 OK"
+2025-03-26 17:06:41,197 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-VZwigeH0GxK5nbxBvbsHvq3c "HTTP/1.1 200 OK"
+2025-03-26 17:06:41,414 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-33Np8sN6wTYdwwhrgvfLCISP "HTTP/1.1 200 OK"
+2025-03-26 17:06:41,539 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-VUMCPGOUvM10thQeMqqlwv6d "HTTP/1.1 200 OK"
+2025-03-26 17:06:41,661 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-gPUb6FhrS3qqUDtgI2JXVTNp "HTTP/1.1 200 OK"
+2025-03-26 17:06:41,775 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-33Np8sN6wTYdwwhrgvfLCISP "HTTP/1.1 200 OK"
+2025-03-26 17:06:41,904 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-VUMCPGOUvM10thQeMqqlwv6d "HTTP/1.1 200 OK"
+2025-03-26 17:06:42,050 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-gPUb6FhrS3qqUDtgI2JXVTNp "HTTP/1.1 200 OK"
+2025-03-26 17:06:42,190 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-Mf2uvyFQFO7jIv6waI8pI9zF "HTTP/1.1 200 OK"
+2025-03-26 17:06:42,294 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-gPUb6FhrS3qqUDtgI2JXVTNp "HTTP/1.1 200 OK"
+2025-03-26 17:08:25,781 - INFO - Received payload: thread_id='thread_4iVeUO77XtIM3Xmz1hFRqnC6' question='Given Skidmore’s current general education curriculum, assessment strategies, and student learning goals, how well does our mapped curricular and co-curricular learning experience align with MSCHE’s expectations for Standards III and V? Where are the most critical gaps, and what specific evidence should we prioritize collecting to demonstrate compliance and excellence?'
+2025-03-26 17:08:26,170 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/messages "HTTP/1.1 200 OK"
+2025-03-26 17:08:26,171 - INFO - Question added to thread.
+2025-03-26 17:08:26,833 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs "HTTP/1.1 200 OK"
+2025-03-26 17:08:27,655 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_pa48JUGiVaNG8HucNsSld5kt "HTTP/1.1 200 OK"
+2025-03-26 17:08:28,954 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_pa48JUGiVaNG8HucNsSld5kt "HTTP/1.1 200 OK"
+2025-03-26 17:08:30,190 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_pa48JUGiVaNG8HucNsSld5kt "HTTP/1.1 200 OK"
+2025-03-26 17:08:31,397 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_pa48JUGiVaNG8HucNsSld5kt "HTTP/1.1 200 OK"
+2025-03-26 17:08:32,645 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_pa48JUGiVaNG8HucNsSld5kt "HTTP/1.1 200 OK"
+2025-03-26 17:08:33,992 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_pa48JUGiVaNG8HucNsSld5kt "HTTP/1.1 200 OK"
+2025-03-26 17:08:35,260 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_pa48JUGiVaNG8HucNsSld5kt "HTTP/1.1 200 OK"
+2025-03-26 17:08:36,467 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_pa48JUGiVaNG8HucNsSld5kt "HTTP/1.1 200 OK"
+2025-03-26 17:08:37,679 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_pa48JUGiVaNG8HucNsSld5kt "HTTP/1.1 200 OK"
+2025-03-26 17:08:38,903 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_pa48JUGiVaNG8HucNsSld5kt "HTTP/1.1 200 OK"
+2025-03-26 17:08:40,131 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_pa48JUGiVaNG8HucNsSld5kt "HTTP/1.1 200 OK"
+2025-03-26 17:08:41,388 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_pa48JUGiVaNG8HucNsSld5kt "HTTP/1.1 200 OK"
+2025-03-26 17:08:41,715 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/messages?run_id=run_pa48JUGiVaNG8HucNsSld5kt "HTTP/1.1 200 OK"
+2025-03-26 17:08:41,851 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/messages?run_id=run_pa48JUGiVaNG8HucNsSld5kt&after=msg_0NORFLJ0Lc7uW0Mqr2fSTycI "HTTP/1.1 200 OK"
+2025-03-26 17:08:41,963 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-29yFzrQ6WiXQneKXD4lnGULM "HTTP/1.1 200 OK"
+2025-03-26 17:08:42,104 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-gPUb6FhrS3qqUDtgI2JXVTNp "HTTP/1.1 200 OK"
+2025-03-26 17:08:42,232 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-gPUb6FhrS3qqUDtgI2JXVTNp "HTTP/1.1 200 OK"
+2025-03-26 17:08:42,373 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-29yFzrQ6WiXQneKXD4lnGULM "HTTP/1.1 200 OK"
+2025-03-26 17:08:42,491 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-gPUb6FhrS3qqUDtgI2JXVTNp "HTTP/1.1 200 OK"
+2025-03-26 17:08:42,623 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-29yFzrQ6WiXQneKXD4lnGULM "HTTP/1.1 200 OK"
+2025-03-26 17:08:42,788 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-29yFzrQ6WiXQneKXD4lnGULM "HTTP/1.1 200 OK"
+2025-03-26 17:08:42,916 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-29yFzrQ6WiXQneKXD4lnGULM "HTTP/1.1 200 OK"
+2025-03-26 17:13:38,084 - INFO - Received payload: thread_id='thread_4iVeUO77XtIM3Xmz1hFRqnC6' question='I drafted my answer with a different tool. Here is the response.'
+2025-03-26 17:13:38,752 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/messages "HTTP/1.1 200 OK"
+2025-03-26 17:13:38,753 - INFO - Question added to thread.
+2025-03-26 17:13:39,537 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs "HTTP/1.1 200 OK"
+2025-03-26 17:13:39,724 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_z7kOzawmuky7jFaYao4QrchB "HTTP/1.1 200 OK"
+2025-03-26 17:13:40,989 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_z7kOzawmuky7jFaYao4QrchB "HTTP/1.1 200 OK"
+2025-03-26 17:13:42,337 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_z7kOzawmuky7jFaYao4QrchB "HTTP/1.1 200 OK"
+2025-03-26 17:13:42,500 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/messages?run_id=run_z7kOzawmuky7jFaYao4QrchB "HTTP/1.1 200 OK"
+2025-03-26 17:13:42,603 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/messages?run_id=run_z7kOzawmuky7jFaYao4QrchB&after=msg_heYcmrE1QrkLTD6amZ8dEygN "HTTP/1.1 200 OK"
+2025-03-26 17:13:48,123 - INFO - Received payload: thread_id='thread_4iVeUO77XtIM3Xmz1hFRqnC6' question='Alignment of Skidmore’s General Education Curriculum, Assessment Strategies, and Student Learning Goals with MSCHE Standards III and V Based on a review of Skidmore’s general education curriculum, assessment strategies, and student learning goals in relation to MSCHE Standards III (Design and Delivery of the Student Learning Experience) and V (Educational Effectiveness Assessment), the institution demonstrates strong alignment in several key areas, while a few critical gaps should be addressed to ensure full compliance and highlight excellence.  1. Alignment with MSCHE Standard III (Design and Delivery of the Student Learning Experience) Strengths: ✅ Coherent General Education Framework  Skidmore’s curriculum integrates broad-based learning through Integrations, Foundations, Inquiries, and In-the-Major requirements\u200b.  The Bridge Experience (Power and Justice) and Senior Coda reflect an intentional scaffolded learning approach\u200b.  The Applied Quantitative Reasoning (AQR) requirement strengthens numeracy and critical reasoning\u200b.  ✅ Clear Connections to Institutional Mission  The curriculum supports the liberal arts mission by requiring students to engage in interdisciplinary learning, global perspectives, and applied learning\u200b.  ✅ Comprehensive Co-Curricular Integration  The Mapping Goals for Student Learning to Curricular and Co-Curricular Activities document illustrates how student learning extends beyond the classroom (e.g., Career Development, Residential Life, Civic Engagement)\u200b.  Potential Gaps & Recommended Evidence Collection: 🔴 Credit Hour & Learning Modality Consistency  Gap: MSCHE requires documented policy and consistent application of credit hour assignments across modalities (online, hybrid, experiential learning)\u200b.  Evidence Needed:  Updated Credit Hour Policies & Course Review Procedures (to ensure adherence to MSCHE credit hour regulations).  Faculty Handbook & Workload Policies (showing alignment with institutional expectations).  🔴 Program-Level Learning Outcomes & Course Sequencing Clarity  Gap: While the curriculum map exists, explicit program-level learning outcomes and their connection to specific course sequences could be strengthened.  Evidence Needed:  Updated Curriculum Maps with Explicit Learning Pathways (showing progression from introductory to advanced coursework).  Assessment of Course Syllabi Consistency (ensuring all syllabi outline clear learning outcomes and assessment strategies).  2. Alignment with MSCHE Standard V (Educational Effectiveness Assessment) Strengths: ✅ Institution-Wide Assessment Strategy  Skidmore systematically assesses student learning outcomes at institutional and programmatic levels, as evidenced in:  The General Education Assessment Plan\u200b.  Assessment of key experiences like the Bridge Experience and Senior Coda\u200b.  Use of NSSE, HEDS, and HHMI High-Impact Practices assessments\u200b.  ✅ Use of Direct and Indirect Assessment Measures  Student learning is assessed using both quantitative (rubric-based evaluations, student work samples) and qualitative (focus groups, self-reflections) measures\u200b.  Career Development Center data is integrated into post-graduate assessment\u200b.  Potential Gaps & Recommended Evidence Collection: 🔴 Systematic Use of Disaggregated Data for Equity and Improvement  Gap: MSCHE expects institutions to use assessment data to improve learning outcomes, particularly for underserved student populations.  Evidence Needed:  Disaggregated Student Achievement Data (analyzing retention and graduation rates by demographic factors)\u200b.  Equity Analysis of Learning Outcomes (ensuring diverse student groups achieve at comparable rates).  🔴 Closing the Assessment Loop for General Education & Co-Curricular Learning  Gap: While Skidmore conducts strong assessments, evidence of how results are used to make improvements should be clearer.  Evidence Needed:  General Education Assessment Reports with Actionable Follow-Ups (e.g., adjustments made based on Bridge Experience or Senior Coda assessments).  Documentation of Faculty Engagement in Assessment (e.g., assessment retreats, professional development).  3. Next Steps & Prioritized Evidence Collection To strengthen compliance and demonstrate excellence, the following high-priority evidence should be collected and/or updated:  ✅ Credit Hour & Modality Consistency:  Updated credit hour assignment policies and syllabi review documentation.  ✅ Curriculum Mapping & Learning Pathways:  Clear program-level learning outcome maps showing progression from introductory to capstone courses.  ✅ Disaggregated Student Achievement Data:  Breakdown of retention and graduation rates by race/ethnicity, financial aid status, and first-generation status\u200b.  ✅ Closing the Assessment Loop:  Reports showing how assessment results led to programmatic improvements.'
+2025-03-26 17:13:48,408 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/messages "HTTP/1.1 200 OK"
+2025-03-26 17:13:48,409 - INFO - Question added to thread.
+2025-03-26 17:13:50,160 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs "HTTP/1.1 200 OK"
+2025-03-26 17:13:50,524 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_7FNVnXUxSxDv2FDSL8siftBy "HTTP/1.1 200 OK"
+2025-03-26 17:13:51,760 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_7FNVnXUxSxDv2FDSL8siftBy "HTTP/1.1 200 OK"
+2025-03-26 17:13:52,995 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_7FNVnXUxSxDv2FDSL8siftBy "HTTP/1.1 200 OK"
+2025-03-26 17:13:54,299 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_7FNVnXUxSxDv2FDSL8siftBy "HTTP/1.1 200 OK"
+2025-03-26 17:13:55,507 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_7FNVnXUxSxDv2FDSL8siftBy "HTTP/1.1 200 OK"
+2025-03-26 17:13:56,739 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_7FNVnXUxSxDv2FDSL8siftBy "HTTP/1.1 200 OK"
+2025-03-26 17:13:57,952 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_7FNVnXUxSxDv2FDSL8siftBy "HTTP/1.1 200 OK"
+2025-03-26 17:13:59,220 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_7FNVnXUxSxDv2FDSL8siftBy "HTTP/1.1 200 OK"
+2025-03-26 17:14:00,473 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_7FNVnXUxSxDv2FDSL8siftBy "HTTP/1.1 200 OK"
+2025-03-26 17:14:01,827 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_7FNVnXUxSxDv2FDSL8siftBy "HTTP/1.1 200 OK"
+2025-03-26 17:14:04,477 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_7FNVnXUxSxDv2FDSL8siftBy "HTTP/1.1 200 OK"
+2025-03-26 17:14:05,753 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_7FNVnXUxSxDv2FDSL8siftBy "HTTP/1.1 200 OK"
+2025-03-26 17:14:07,125 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/runs/run_7FNVnXUxSxDv2FDSL8siftBy "HTTP/1.1 200 OK"
+2025-03-26 17:14:07,332 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/messages?run_id=run_7FNVnXUxSxDv2FDSL8siftBy "HTTP/1.1 200 OK"
+2025-03-26 17:14:07,561 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_4iVeUO77XtIM3Xmz1hFRqnC6/messages?run_id=run_7FNVnXUxSxDv2FDSL8siftBy&after=msg_ekinQGp0urKzXOgfHRfqY2mL "HTTP/1.1 200 OK"
+2025-03-26 18:14:34,733 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-26 18:14:34,734 - INFO - Thread successfully created with ID: thread_nQPRtkCkGzekHiGnxTtIY3te
+2025-03-26 18:14:54,927 - INFO - Received payload: thread_id='thread_nQPRtkCkGzekHiGnxTtIY3te' question='what is the maximum length response you are allowed to output'
+2025-03-26 18:14:55,528 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_nQPRtkCkGzekHiGnxTtIY3te/messages "HTTP/1.1 200 OK"
+2025-03-26 18:14:55,529 - INFO - Question added to thread.
+2025-03-26 18:14:56,843 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_nQPRtkCkGzekHiGnxTtIY3te/runs "HTTP/1.1 200 OK"
+2025-03-26 18:14:57,322 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_nQPRtkCkGzekHiGnxTtIY3te/runs/run_7AgA2nK0MYIjCUbXV8yYVqrl "HTTP/1.1 200 OK"
+2025-03-26 18:14:58,597 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_nQPRtkCkGzekHiGnxTtIY3te/runs/run_7AgA2nK0MYIjCUbXV8yYVqrl "HTTP/1.1 200 OK"
+2025-03-26 18:14:59,954 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_nQPRtkCkGzekHiGnxTtIY3te/runs/run_7AgA2nK0MYIjCUbXV8yYVqrl "HTTP/1.1 200 OK"
+2025-03-26 18:15:01,169 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_nQPRtkCkGzekHiGnxTtIY3te/runs/run_7AgA2nK0MYIjCUbXV8yYVqrl "HTTP/1.1 200 OK"
+2025-03-26 18:15:01,354 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_nQPRtkCkGzekHiGnxTtIY3te/messages?run_id=run_7AgA2nK0MYIjCUbXV8yYVqrl "HTTP/1.1 200 OK"
+2025-03-26 18:15:01,490 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_nQPRtkCkGzekHiGnxTtIY3te/messages?run_id=run_7AgA2nK0MYIjCUbXV8yYVqrl&after=msg_UfFfPCunOrsy0VoKEyZKEqBw "HTTP/1.1 200 OK"
+2025-03-26 18:15:40,374 - INFO - Received payload: thread_id='thread_nQPRtkCkGzekHiGnxTtIY3te' question="is this number consistent with a response from a custom GPT created with OpenAI's GUI?"
+2025-03-26 18:15:40,607 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_nQPRtkCkGzekHiGnxTtIY3te/messages "HTTP/1.1 200 OK"
+2025-03-26 18:15:40,608 - INFO - Question added to thread.
+2025-03-26 18:15:41,568 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_nQPRtkCkGzekHiGnxTtIY3te/runs "HTTP/1.1 200 OK"
+2025-03-26 18:15:41,790 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_nQPRtkCkGzekHiGnxTtIY3te/runs/run_bD0xyshlvY0iR1HhiaRIAPl6 "HTTP/1.1 200 OK"
+2025-03-26 18:15:43,039 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_nQPRtkCkGzekHiGnxTtIY3te/runs/run_bD0xyshlvY0iR1HhiaRIAPl6 "HTTP/1.1 200 OK"
+2025-03-26 18:15:44,280 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_nQPRtkCkGzekHiGnxTtIY3te/runs/run_bD0xyshlvY0iR1HhiaRIAPl6 "HTTP/1.1 200 OK"
+2025-03-26 18:15:45,598 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_nQPRtkCkGzekHiGnxTtIY3te/runs/run_bD0xyshlvY0iR1HhiaRIAPl6 "HTTP/1.1 200 OK"
+2025-03-26 18:15:45,726 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_nQPRtkCkGzekHiGnxTtIY3te/messages?run_id=run_bD0xyshlvY0iR1HhiaRIAPl6 "HTTP/1.1 200 OK"
+2025-03-26 18:15:45,954 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_nQPRtkCkGzekHiGnxTtIY3te/messages?run_id=run_bD0xyshlvY0iR1HhiaRIAPl6&after=msg_byzpEMydw6bYlw4PK8ArBXRr "HTTP/1.1 200 OK"
+2025-03-26 19:33:27,964 - INFO - HTTP Request: POST https://api.openai.com/v1/threads "HTTP/1.1 200 OK"
+2025-03-26 19:33:27,965 - INFO - Thread successfully created with ID: thread_SqvU7eDMwmbqutTx2J1HbjQN

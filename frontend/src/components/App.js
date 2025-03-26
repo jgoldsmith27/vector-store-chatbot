@@ -21,7 +21,7 @@ function App() {
 
   // Fetch Okta configuration securely from backend
   useEffect(() => {
-    fetch("http://127.0.0.1:8080/auth-config")
+    fetch("https://skid-msche-chatbot.us.reclaim.cloud/api/auth-config")
       .then((res) => {
         if (!res.ok) {
           throw new Error("Failed to fetch Okta config");
@@ -29,7 +29,6 @@ function App() {
         return res.json();
       })
       .then((data) => {
-        console.log("Fetched Okta Config:", data);
         setOktaConfig(data);
       })
       .catch((err) => {
@@ -59,7 +58,7 @@ function App() {
   const oktaAuth = new OktaAuth(oktaConfig);
 
   return (
-    <Router>
+    <Router basename="/">
       <Security
         oktaAuth={oktaAuth}
         restoreOriginalUri={async (_oktaAuth, originalUri) => {
@@ -86,3 +85,13 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+

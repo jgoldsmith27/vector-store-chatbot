@@ -1,20 +1,50 @@
 services:
+  caddy:
+    image: caddy:latest
+    ports:
+      - "80:80"     # HTTP for Let's Encrypt challenge
+      - "443:443"   # HTTPS traffic served by Caddy
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - frontend
+      - backend
+    networks:
+      - app-network
+    restart: unless-stopped
+
   backend:
     build: ./backend
-    ports:
-      - "8080:8080" # Expose backend on port 8080
+    expose:
+      - "8080"
     volumes:
       - ./backend:/app
-      - ./.env:/app/.env # Mount .env file from the root directory into the container
+      - ./.env:/app/.env
     environment:
-      - FASTAPI_ENV=development # You can change this to suit your backend environment
+      - FASTAPI_ENV=development
+    networks:
+      - app-network
+    restart: unless-stopped
 
   frontend:
     build: ./frontend
-    ports:
-      - "3000:3000" # Expose frontend on port 3000
+    expose:
+      - "3000"
     depends_on:
       - backend
     environment:
-      - REACT_APP_BACKEND_URL=http://backend:8080 # Update to match backend port
-      # This might need to be changed...
+      - REACT_APP_BACKEND_URL=https://skid-msche-chatbot.us.reclaim.cloud/api
+      - HOST=0.0.0.0
+    networks:
+      - app-network
+    restart: unless-stopped
+
+volumes:
+  caddy_data:
+  caddy_config:
+
+networks:
+  app-network:
+

@@ -37,7 +37,8 @@ app = FastAPI()
 # CORS Middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allow all origins (use specific domains in production)
+    #allow_origins=["*"],  # Allow all origins (use specific domains in production)
+    allow_origins=["https://skid-msche-chatbot.us.reclaim.cloud"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -64,6 +65,7 @@ class QuestionRequest(BaseModel):
     question: str
 
 @app.post("/create-thread")
+@app.post("/create-thread/")
 async def create_thread() -> dict[str, str]:
     """
     Creates a new thread for conversation.
@@ -82,6 +84,7 @@ async def create_thread() -> dict[str, str]:
         raise HTTPException(status_code=500, detail="Failed to create thread.")
 
 @app.post("/ask-question")
+@app.post("/ask-question/")
 async def ask_question(payload: QuestionRequest) -> dict[str, str | list[str]]:
     """
     Prompts the assistant with the user question and returns the generated response and cited files.
@@ -100,12 +103,8 @@ async def ask_question(payload: QuestionRequest) -> dict[str, str | list[str]]:
         # Log the incoming request
         logging.info(f"Received payload: {payload}")
 
-        # Ensure the thread ID matches the existing session
-        if payload.thread_id != assistant_api.thread.id:
-            raise HTTPException(status_code=400, detail="Invalid thread ID.")
-
         # Process the question
-        response, citations = assistant_api.ask_question(payload.question)
+        response, citations = assistant_api.ask_question(payload.thread_id, payload.question)
         return {
             "response": response,
             "citations": citations,
@@ -144,7 +143,7 @@ async def get_okta_config(request:Request) -> dict[str, str]:
         dict[str, str]: A dictionary containing the client id and issuer
 
     """
-    frontend_origin = request.headers.get("Origin", "http://localhost:3000")
+    frontend_origin = request.headers.get("Origin", "https://skid-msche-chatbot.us.reclaim.cloud")
     return {
         "clientId": OKTA_CLIENT_ID,
         "issuer": OKTA_ISSUER,
@@ -155,4 +154,18 @@ async def get_okta_config(request:Request) -> dict[str, str]:
 if __name__ == "__main__":
     """Starts the FastAPI server on port 8080."""
     logging.info("Starting server on port 8080...")
-    uvicorn.run("main:app", host="0.0.0.0", port=8080, reload=True)
+    #uvicorn.run("main:app", host="0.0.0.0", port=8080, reload=True)
+    uvicorn.run(
+        "main:app",
+        host="0.0.0.0",
+        port=8080,
+        reload=True,
+        proxy_headers=True,             
+        forwarded_allow_ips="*"     
+    )
+
+
+
+
+
+

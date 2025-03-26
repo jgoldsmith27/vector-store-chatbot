@@ -17,7 +17,9 @@ function Chat() {
     //TODO: Implement logic to delete old thread if there was one
     try {
       setLoading(true);
-      const response = await axios.post("http://127.0.0.1:8080/create-thread/");
+	  const response = await axios.post("https://skid-msche-chatbot.us.reclaim.cloud/api/create-thread");
+      console.log("Response: ")
+      console.log(response)
       setThreadId(response.data.thread_id);
       setMessages([]);
       showNotification("New chat thread created!", "success");
@@ -50,11 +52,11 @@ function Chat() {
 
       setLoading(true);
 
-      const response = await axios.post("http://127.0.0.1:8080/ask-question/", {
+	  const response = await axios.post("https://skid-msche-chatbot.us.reclaim.cloud/api/ask-question", {
         thread_id: threadId,
         question: input,
       });
-
+      
       let assistantContent = response.data.response;
 
       if (typeof assistantContent === "object" && assistantContent.value) {
@@ -174,3 +176,12 @@ function Chat() {
 }
 
 export default Chat;
+
+
+
+
+
+
+
+
+

@@ -41,7 +41,7 @@ class AssistantAPI:
         """
         self.assistant_id = assistant_id
         self.client = OpenAI(api_key=api_key)
-        self.thread = None
+        #self.thread = None
 
         # Configure logging
         logging.basicConfig(
@@ -65,17 +65,20 @@ class AssistantAPI:
 
         """
         try:
-            self.thread = self.client.beta.threads.create(messages=[])
-            logging.info(f"Thread successfully created with ID: {self.thread.id}")
-            return self.thread.id
+            thread = self.client.beta.threads.create(messages=[])
+            logging.info(f"Thread successfully created with ID: {thread.id}")
+            return thread.id
         except Exception as e:
             logging.error(f"Failed to create thread: {e}")
             raise
 
 
-    def delete_thread(self) -> dict:
+    def delete_thread(thread_id:str) -> dict:
         """
         Deletes the current conversation thread.
+        
+        Args:
+        	thread_id (str): The id of the current thread
 
         Returns:
             dict: The response of the API call
@@ -84,8 +87,8 @@ class AssistantAPI:
             Exception: The thread failed to be deleted
         """
         try:
-            if self.thread:
-                response = self.client.beta.threads.delete(self.thread.id)
+            if thread_id:
+                response = self.client.beta.threads.delete(thread_id)
                 logging.info("Thread successfully deleted.")
                 return response
             else:
@@ -94,11 +97,12 @@ class AssistantAPI:
             logging.error(f"Failed to delete thread: {e}")
             raise
 
-    def ask_question(self, question) -> tuple[str, list[str]]:
+    def ask_question(self, thread_id, question) -> tuple[str, list[str]]:
         """
         Prompts the assistant with the user question and returns the generated response and cited files
 
         Args:
+        	thread_id (str): The id of the current thread
             question (str): The user prompt
 
         Returns:
@@ -109,12 +113,12 @@ class AssistantAPI:
             Exception: Failed to process the question
         """
         try:
-            if not self.thread:
+            if not thread_id:
                 raise ValueError("No thread exists. Create a thread first.")
 
             # Add message to thread
             self.client.beta.threads.messages.create(
-                thread_id=self.thread.id,
+                thread_id=thread_id,
                 role="user",
                 content=question,
             )
@@ -122,9 +126,9 @@ class AssistantAPI:
 
             # Process the response
             run = self.client.beta.threads.runs.create_and_poll(
-                thread_id=self.thread.id, assistant_id=self.assistant_id
+                thread_id=thread_id, assistant_id=self.assistant_id
             )
-            message_list = list(self.client.beta.threads.messages.list(thread_id=self.thread.id, run_id=run.id))
+            message_list = list(self.client.beta.threads.messages.list(thread_id=thread_id, run_id=run.id))
             message = message_list[-1]
             response_content = message.content[0].text
 
@@ -185,3 +189,4 @@ if __name__ == "__main__":
 
     except Exception as e:
         logging.error(f"An error occurred: {e}")
+

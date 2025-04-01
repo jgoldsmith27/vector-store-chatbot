@@ -12,14 +12,17 @@ function Chat() {
   const [threadId, setThreadId] = useState(null);
   const [loading, setLoading] = useState(false);
   const [notification, setNotification] = useState({ message: "", type: "" });
+  const [modelType, setModelType] = useState("4o");
 
   const createThread = async () => {
     //TODO: Implement logic to delete old thread if there was one
     try {
       setLoading(true);
-	  const response = await axios.post("https://skid-msche-chatbot.us.reclaim.cloud/api/create-thread");
-      console.log("Response: ")
-      console.log(response)
+      const response = await axios.post(
+        "https://skid-msche-chatbot.us.reclaim.cloud/api/create-thread"
+      );
+      console.log("Response: ");
+      console.log(response);
       setThreadId(response.data.thread_id);
       setMessages([]);
       showNotification("New chat thread created!", "success");
@@ -31,6 +34,24 @@ function Chat() {
         "error"
       );
       setLoading(false);
+    }
+  };
+
+  const handleModelChange = async (e) => {
+    const selectedModel = e.target.value;
+    setModelType(selectedModel);
+
+    try {
+      // 1. Update the active model on the backend
+      await axios.post("http://127.0.0.1:8080/set-model", {
+        model_type: selectedModel,
+      });
+
+      // 2. Create a new thread tied to that model
+      await createThread();
+    } catch (error) {
+      console.error("Error switching model and creating thread:", error);
+      showNotification("Failed to switch model or create new thread.", "error");
     }
   };
 
@@ -52,11 +73,14 @@ function Chat() {
 
       setLoading(true);
 
-	  const response = await axios.post("https://skid-msche-chatbot.us.reclaim.cloud/api/ask-question", {
-        thread_id: threadId,
-        question: input,
-      });
-      
+      const response = await axios.post(
+        "https://skid-msche-chatbot.us.reclaim.cloud/api/ask-question",
+        {
+          thread_id: threadId,
+          question: input,
+        }
+      );
+
       let assistantContent = response.data.response;
 
       if (typeof assistantContent === "object" && assistantContent.value) {
@@ -133,6 +157,20 @@ function Chat() {
 
       {/* Chat Form */}
       <div className="chat-form">
+        {/* Model Select */}
+        <div className="model-select-container">
+          <select
+            className="model-select"
+            value={modelType}
+            onChange={handleModelChange}
+            disabled={loading}
+          >
+            <option value="4o">4o Model</option>
+            <option value="4o-mini">4o-mini Model</option>
+          </select>
+        </div>
+
+        {/* Text Input */}
         <input
           type="text"
           className="chat-input"
@@ -146,6 +184,8 @@ function Chat() {
             }
           }}
         />
+
+        {/* Chat Submit Button */}
         <button
           className="chat-submit"
           onClick={sendMessage}
@@ -176,12 +216,3 @@ function Chat() {
 }
 
 export default Chat;
-
-
-
-
-
-
-
-
-

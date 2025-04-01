@@ -2,11 +2,13 @@
 This module provides an API for interacting with an assistant, allowing users to create threads, ask questions, and delete threads.
 
 Functions:
+- set_model(payload: ModelSelectRequest) -> dict[str, str]: Sets the active assistant based on the string alias
 - create_thread() -> dict[str, str]: Creates a new conversation thread.
 - ask_question(payload: QuestionRequest) -> dict[str, str | list[str]]: Sends a question to the assistant and retrieves the response and cited files.
 - delete_thread() -> dict[str, str]: Deletes the current conversation thread.
 
 Usage:
+- Use `set_model` to change the model.
 - Use `create_thread` to initialize a conversation.
 - Use `ask_question` to send queries and receive responses.
 - Use `delete_thread` to remove an active conversation.
@@ -46,12 +48,18 @@ app.add_middleware(
 
 # Load environment variables
 API_KEY = os.getenv("API_KEY")
-ASSISTANT_ID = os.getenv("ASSISTANT_ID")
+ASSISTANT_ID_4O = os.getenv("ASSISTANT_ID_4O")
+ASSISTANT_ID_4O_MINI = os.getenv("ASSISTANT_ID_4O_MINI")
 OKTA_CLIENT_ID = os.getenv("REACT_APP_OKTA_CLIENT")
 OKTA_ISSUER= os.getenv("REACT_APP_OKTA_ISSUER")
 
 # Initialize the Assistant API
-assistant_api = AssistantAPI(API_KEY, ASSISTANT_ID)
+assistant_api_4o = AssistantAPI(API_KEY, ASSISTANT_ID_4O)
+assistant_api_4o_mini = AssistantAPI(API_KEY, ASSISTANT_ID_4O_MINI)
+
+# Set default Assistant to 4o
+#assistant_api = assistant_api_4o
+app.state.active_assistant = assistant_api_4o
 
 class QuestionRequest(BaseModel):
     """
@@ -63,6 +71,40 @@ class QuestionRequest(BaseModel):
     """
     thread_id: str
     question: str
+
+class ModelSelectRequest(BaseModel):
+    """
+    Request model for changing the active assistant
+
+    Attributes:
+        model_type (str): The string identifier for the model type
+    """
+    model_type: str
+
+@app.post("/set-model")
+@app.post("/set-model/")
+async def set_model(payload: ModelSelectRequest) -> dict[str, str]:
+    """
+    Changes the active assistant based on the model type
+
+    Args:
+        payload (ModelSelectRequest): The request payload containing the model identifier.
+
+    Returns:
+        dict[str, str]: A dictionary containing a success message and the active model type
+
+    Raises:
+        HTTPException
+    """
+    if payload.model_type == "4o":
+        app.state.active_assistant = assistant_api_4o
+    elif payload.model_type == "4o-mini":
+        app.state.active_assistant = assistant_api_4o_mini
+    else:
+        logging.error(f"Error changing assistant to unknown model {payload.model_type}")
+        raise HTTPException(status_code=500, detail=f"Failed to change the assistant to unknown model {payload.model_type}.")
+    
+    return {"status": "successfully changed the model", "active_model": payload.model_type}
 
 @app.post("/create-thread")
 @app.post("/create-thread/")
@@ -77,7 +119,7 @@ async def create_thread() -> dict[str, str]:
         HTTPException: Failed to create the thread.
     """
     try:
-        thread_id = assistant_api.create_thread()
+        thread_id = app.state.active_assistant.create_thread()
         return {"message": "Thread created successfully.", "thread_id": thread_id}
     except Exception as e:
         logging.error(f"Error creating thread: {e}")
@@ -104,7 +146,7 @@ async def ask_question(payload: QuestionRequest) -> dict[str, str | list[str]]:
         logging.info(f"Received payload: {payload}")
 
         # Process the question
-        response, citations = assistant_api.ask_question(payload.thread_id, payload.question)
+        response, citations = app.state.active_assistant.ask_question(payload.thread_id, payload.question)
         return {
             "response": response,
             "citations": citations,
@@ -128,7 +170,7 @@ async def delete_thread() -> dict[str, str]:
         HTTPException: Failed to delete the thread.
     """
     try:
-        response = assistant_api.delete_thread()
+        response = app.state.active_assistant.delete_thread()
         return {"message": "Thread deleted successfully.", "response": response}
     except Exception as e:
         logging.error(f"Error deleting thread: {e}")

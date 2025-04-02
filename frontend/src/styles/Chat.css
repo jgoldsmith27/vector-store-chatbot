@@ -40,6 +40,47 @@
   align-self: flex-start;
 }
 
+.chat-message.assistant .markdown-body {
+  background-color: transparent;
+  color: inherit !important;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-family: inherit;
+  padding: 0;
+  margin: 0;
+  white-space: normal;
+}
+
+/* Apply top and bottom margins to all block elements */
+.chat-message.assistant .markdown-body p,
+.chat-message.assistant .markdown-body ul,
+.chat-message.assistant .markdown-body ol,
+.chat-message.assistant .markdown-body li,
+.chat-message.assistant .markdown-body blockquote,
+.chat-message.assistant .markdown-body h1,
+.chat-message.assistant .markdown-body h2,
+.chat-message.assistant .markdown-body h3,
+.chat-message.assistant .markdown-body h4,
+.chat-message.assistant .markdown-body h5,
+.chat-message.assistant .markdown-body h6,
+.chat-message.assistant .markdown-body pre,
+.chat-message.assistant .markdown-body table {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  padding: 0;
+}
+
+/* Control list padding */
+.chat-message.assistant .markdown-body ul,
+.chat-message.assistant .markdown-body ol {
+  padding-left: 1.2rem;
+}
+
+.chat-message.assistant .markdown-body ::selection {
+  background: #cce4ff; /* light blue */
+  color: #000;         /* readable text */
+}
+
 .loading-indicator {
   display: flex;
   justify-content: center;
@@ -189,3 +230,4 @@
   color: #999;
   cursor: not-allowed;
 }
+

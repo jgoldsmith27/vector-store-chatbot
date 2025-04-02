@@ -43,9 +43,12 @@ function Chat() {
 
     try {
       // 1. Update the active model on the backend
-      await axios.post("http://127.0.0.1:8080/set-model", {
-        model_type: selectedModel,
-      });
+      await axios.post(
+        "https://skid-msche-chatbot.us.reclaim.cloud/api/set-model",
+        {
+          model_type: selectedModel,
+        }
+      );
 
       // 2. Create a new thread tied to that model
       await createThread();

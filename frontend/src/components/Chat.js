@@ -3,6 +3,8 @@ import axios from "axios";
 import "../styles/Chat.css";
 import Notification from "./Notification";
 import { useOktaAuth } from "@okta/okta-react";
+import ReactMarkdown from "react-markdown";
+import "github-markdown-css/github-markdown.css";
 
 function Chat() {
   const { oktaAuth } = useOktaAuth();
@@ -127,7 +129,7 @@ function Chat() {
         <Notification message={notification.message} type={notification.type} />
       )}
 
-      {/* Chat Messages */}
+      {/* Chat Message */}
       <div className="chat-messages">
         {messages.map((message, index) => (
           <div
@@ -136,11 +138,19 @@ function Chat() {
               message.role === "user" ? "user" : "assistant"
             }`}
           >
-            {message.content}
+            {message.role === "assistant" ? (
+              <div className="markdown-body">
+                <ReactMarkdown>{message.content}</ReactMarkdown>
+              </div>
+            ) : (
+              message.content
+            )}
+
             {message.citations && message.citations.length > 0 && (
               <div className="citations">
                 <strong>
-                  <br></br>Citations:
+                  <br />
+                  Citations:
                 </strong>
                 <ul>
                   {message.citations.map((citation, i) => (
@@ -151,6 +161,7 @@ function Chat() {
             )}
           </div>
         ))}
+
         {loading && (
           <div className="loading-indicator">
             <div className="loading-message"></div>

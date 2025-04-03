@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "../styles/Chat.css";
 import Notification from "./Notification";
+import ModelSwitchModal from "./ModelSwitchModal";
 import { useOktaAuth } from "@okta/okta-react";
 import ReactMarkdown from "react-markdown";
 import "github-markdown-css/github-markdown.css";
@@ -15,6 +16,11 @@ function Chat() {
   const [loading, setLoading] = useState(false);
   const [notification, setNotification] = useState({ message: "", type: "" });
   const [modelType, setModelType] = useState("4o");
+  const [showModelWarning, setShowModelWarning] = useState(false);
+  const [dontShowAgain, setDontShowAgain] = useState(
+    localStorage.getItem("hideModelWarning") === "true"
+  );
+  const [pendingModelType, setPendingModelType] = useState(null);
 
   const createThread = async () => {
     //TODO: Implement logic to delete old thread if there was one
@@ -39,24 +45,30 @@ function Chat() {
     }
   };
 
-  const handleModelChange = async (e) => {
-    const selectedModel = e.target.value;
-    setModelType(selectedModel);
+  const handleModelChange = (e) => {
+    const selected = e.target.value;
 
+    if (dontShowAgain) {
+      switchModel(selected);
+    } else {
+      setPendingModelType(selected);
+      setShowModelWarning(true);
+    }
+  };
+
+  const switchModel = async (model) => {
+    setModelType(model);
     try {
-      // 1. Update the active model on the backend
       await axios.post(
         "https://skid-msche-chatbot.us.reclaim.cloud/api/set-model",
         {
-          model_type: selectedModel,
+          model_type: model,
         }
       );
-
-      // 2. Create a new thread tied to that model
-      await createThread();
-    } catch (error) {
-      console.error("Error switching model and creating thread:", error);
-      showNotification("Failed to switch model or create new thread.", "error");
+      await createThread(); // reset thread
+    } catch (err) {
+      console.error("Model switch error:", err);
+      showNotification("Failed to switch model.", "error");
     }
   };
 
@@ -225,6 +237,22 @@ function Chat() {
       >
         Log Out
       </button>
+
+      {/* Model Switch Modal */}
+      <ModelSwitchModal
+        visible={showModelWarning}
+        onConfirm={() => {
+          setShowModelWarning(false);
+          switchModel(pendingModelType);
+          setPendingModelType(null);
+        }}
+        onCancel={() => {
+          setShowModelWarning(false);
+          setPendingModelType(null);
+        }}
+        dontShowAgain={dontShowAgain}
+        setDontShowAgain={setDontShowAgain}
+      />
     </div>
   );
 }

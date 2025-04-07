@@ -14,7 +14,7 @@ Usage:
 - Use `delete_thread` to remove an active conversation.
 """
 
-from fastapi import FastAPI, HTTPException, Request
+from fastapi import FastAPI, HTTPException, Request, File, UploadFile
 from pydantic import BaseModel
 import uvicorn
 import logging
@@ -39,7 +39,6 @@ app = FastAPI()
 # CORS Middleware
 app.add_middleware(
     CORSMiddleware,
-    #allow_origins=["*"],  # Allow all origins (use specific domains in production)
     allow_origins=["https://skid-msche-chatbot.us.reclaim.cloud"],
     allow_credentials=True,
     allow_methods=["*"],
@@ -80,6 +79,71 @@ class ModelSelectRequest(BaseModel):
         model_type (str): The string identifier for the model type
     """
     model_type: str
+
+class AttachFileRequest(BaseModel):
+    """
+    Request model for attaching a file to a thread
+
+    Attributes:
+        thread_id (str): The ID of the thread to attach the file to.
+        file_id (str): The ID of the file object to attach
+    """
+    thread_id: str
+    file_id: str
+
+@app.post("/attach-file")
+@app.post("/attach-file/")
+async def attach_file(payload: AttachFileRequest) -> dict[str, str]:
+    """
+    Attaches an uploaded file to an existing thread as a user message.
+
+    This endpoint takes an OpenAI file ID and a thread ID, 
+    and creates a new message within that thread that includes the file. 
+    This makes the file accessible to the assistant in future runs.
+
+    Args:
+        payload (AttachFileRequest): An object containing `thread_id` and `file_id`.
+
+    Returns:
+        dict[str, str]: A dictionary indicating success.
+
+    Raises:
+        HTTPException: If the attachment fails due to invalid thread or file.
+    """
+    try:
+        return app.state.active_assistant.attach_file_to_thread(
+            thread_id=payload.thread_id,
+            file_id=payload.file_id
+        )
+    except Exception as e:
+        logging.error(f"Attach failed: {e}")
+        raise HTTPException(status_code=500, detail="Failed to attach file.")
+    
+@app.post("/upload")
+@app.post("/upload/")
+async def upload(file: UploadFile = File(...)) -> dict[str, str]:
+    """
+    Uploads a file to OpenAI and returns its unique file ID.
+
+    This endpoint receives a file from the user, uploads it to OpenAI 
+    using the Assistants API, and returns the corresponding file ID. 
+    The file must be uploaded before it can be attached to a thread.
+
+    Args:
+        file (UploadFile): The file uploaded by the client.
+
+    Returns:
+        dict[str, str]: A dictionary containing the generated file ID.
+
+    Raises:
+        HTTPException: If the file upload fails.
+    """
+    try:
+        file_id = app.state.active_assistant.upload_file(file)
+        return {"file_id": file_id}
+    except Exception as e:
+        logging.error(f"Upload failed: {e}")
+        raise HTTPException(status_code=500, detail="File upload failed.")
 
 @app.post("/set-model")
 @app.post("/set-model/")

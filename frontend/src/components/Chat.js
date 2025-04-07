@@ -3,6 +3,7 @@ import axios from "axios";
 import "../styles/Chat.css";
 import Notification from "./Notification";
 import ModelSwitchModal from "./ModelSwitchModal";
+import FileUpload from "./FileUpload";
 import { useOktaAuth } from "@okta/okta-react";
 import ReactMarkdown from "react-markdown";
 import "github-markdown-css/github-markdown.css";
@@ -21,6 +22,7 @@ function Chat() {
     localStorage.getItem("hideModelWarning") === "true"
   );
   const [pendingModelType, setPendingModelType] = useState(null);
+  const [fileName, setFileName] = useState("");
 
   const createThread = async () => {
     //TODO: Implement logic to delete old thread if there was one
@@ -33,6 +35,7 @@ function Chat() {
       console.log(response);
       setThreadId(response.data.thread_id);
       setMessages([]);
+      setFileName("");
       showNotification("New chat thread created!", "success");
       setLoading(false);
     } catch (error) {
@@ -125,6 +128,45 @@ function Chat() {
     }
   };
 
+  const handleFileUpload = async (file) => {
+    if (!threadId) {
+      showNotification(
+        "Please create a chat thread before uploading files.",
+        "error"
+      );
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const formData = new FormData();
+      formData.append("file", file);
+
+      const res = await axios.post(
+        "https://skid-msche-chatbot.us.reclaim.cloud/api/upload",
+        formData
+      );
+      const fileId = res.data.file_id;
+
+      await axios.post(
+        "https://skid-msche-chatbot.us.reclaim.cloud/api/attach-file",
+        {
+          thread_id: threadId,
+          file_id: fileId,
+        }
+      );
+
+      showNotification("File uploaded and attached successfully!", "success");
+      setFileName(file.name);
+    } catch (err) {
+      console.error("File upload error:", err);
+      showNotification("File upload failed. Please try again.", "error");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const showNotification = (message, type) => {
     setNotification({ message, type });
 
@@ -195,6 +237,13 @@ function Chat() {
             <option value="4o-mini">4o-mini Model</option>
           </select>
         </div>
+
+        {/* File Upload */}
+        <FileUpload
+          fileName={fileName}
+          onFileUpload={handleFileUpload}
+          disabled={loading || !threadId}
+        />
 
         {/* Text Input */}
         <input

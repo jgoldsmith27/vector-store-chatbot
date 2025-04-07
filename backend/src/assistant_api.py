@@ -18,6 +18,8 @@ from openai import OpenAI
 from dotenv import load_dotenv
 import os
 from fastapi import HTTPException
+import tempfile
+from fastapi import UploadFile
 
 class AssistantAPI:
     """
@@ -29,7 +31,6 @@ class AssistantAPI:
         api_key (str): The OpenAI API key used for authentication
         assistant_id (str): The ID of the OpenAI assistant
         client (openai.OpenAI): The OpenAI client
-        thread: The current conversation thread
     """
     def __init__(self, api_key, assistant_id):
         """
@@ -41,7 +42,6 @@ class AssistantAPI:
         """
         self.assistant_id = assistant_id
         self.client = OpenAI(api_key=api_key)
-        #self.thread = None
 
         # Configure logging
         logging.basicConfig(
@@ -151,6 +151,65 @@ class AssistantAPI:
         except Exception as e:
             logging.error(f"Failed to process question: {e}")
             raise
+
+    def upload_file(self, file: UploadFile) -> str:
+        """
+        Uploads a file to OpenAI and returns the file ID.
+
+        Args:
+            file (UploadFile): The file to upload.
+
+        Returns:
+            str: The OpenAI file ID.
+        """
+        try:
+            with tempfile.NamedTemporaryFile(delete=False) as temp_file:
+                temp_file.write(file.file.read())
+                temp_file_path = temp_file.name
+
+            with open(temp_file_path, "rb") as f:
+                file_tuple = (file.filename, f)
+                uploaded_file = self.client.files.create(file=file_tuple, purpose="assistants")
+
+            logging.info(f"File uploaded successfully with ID: {uploaded_file.id}")
+            return uploaded_file.id
+        except Exception as e:
+            logging.error(f"Failed to upload file: {e}")
+            raise HTTPException(status_code=500, detail="File upload failed.")
+        finally:
+            os.remove(temp_file_path)
+
+    def attach_file_to_thread(self, thread_id: str, file_id: str) -> dict:
+        """
+        Attaches a file to a thread using the new 'attachments' field.
+
+        Args:
+            thread_id (str): The thread to attach the file to.
+            file_id (str): The OpenAI file ID.
+
+        Returns:
+            dict: Status message.
+        """
+        try:
+            if not thread_id:
+                raise ValueError("No thread ID provided.")
+
+            self.client.beta.threads.messages.create(
+                thread_id=thread_id,
+                role="user",
+                content="Uploading a file for context.",
+                attachments=[
+                    {
+                        "file_id": file_id,
+                        "tools": [{"type": "file_search"}]
+                    }
+                ]
+            )
+            logging.info(f"File {file_id} attached to thread {thread_id}")
+            return {"status": "file attached to thread"}
+        except Exception as e:
+            logging.error(f"Failed to attach file to thread: {e}")
+            raise HTTPException(status_code=500, detail="Failed to attach file to thread.")
 
 
 if __name__ == "__main__":

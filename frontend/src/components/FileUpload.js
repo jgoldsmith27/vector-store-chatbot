@@ -7,6 +7,8 @@ const FileUpload = ({ fileName, onFileUpload, disabled }) => {
     const file = event.target.files[0];
     if (file) {
       onFileUpload(file);
+      // Reset file name so same file can be uploaded again
+      event.target.value = "";
     }
   };
 

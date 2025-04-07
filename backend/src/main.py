@@ -1,13 +1,17 @@
 """
-This module provides an API for interacting with an assistant, allowing users to create threads, ask questions, and delete threads.
+This module provides an API for interacting with an assistant, allowing users handle thread logic, prompt the assistant, and upload and attach files.
 
 Functions:
-- set_model(payload: ModelSelectRequest) -> dict[str, str]: Sets the active assistant based on the string alias
+- attach_file (payload: AttachFileRequest) -> dict[str, str]: Attaches a OpenAI file object to a thread given the ID of both.
+- upload (file: UploadFile = File(...)) -> -> dict[str, str]: Creates an OpenAI file object given a file.
+- set_model(payload: ModelSelectRequest) -> dict[str, str]: Sets the active assistant based on the string alias.
 - create_thread() -> dict[str, str]: Creates a new conversation thread.
 - ask_question(payload: QuestionRequest) -> dict[str, str | list[str]]: Sends a question to the assistant and retrieves the response and cited files.
 - delete_thread() -> dict[str, str]: Deletes the current conversation thread.
 
 Usage:
+- Use `upload` to create an OpenAI file object.
+- Use `attach_file` to attach a file to a thread.
 - Use `set_model` to change the model.
 - Use `create_thread` to initialize a conversation.
 - Use `ask_question` to send queries and receive responses.

@@ -6,11 +6,15 @@ Functions:
 - create_thread() -> str: Creates a new thread
 -delete_thread() -> dict: Deletes the current thread
 - ask_question(question: str) -> tuple[str, list[str]]: Sends a question to the assistant and retrieves the response and cited files.
+- upload_file(self, file: UploadFile) -> str: Creates an OpenAI file object and returns the ID.
+- attach_file_to_thread(self, thread_id: str, file_id: str) -> dict: Attaches a file object to a thread.
 
 Usage:
-- The `create_thread` method manages thread creation.
-The `delete_thread` method manages thread deletion.
-- The `ask_question` method can be used to generate responses from the assistant.
+- Use `create_thread` to create a new thread.
+- Use `delete_thread` to delete a thread,
+- Use `ask_question` to generate responses from the assistant.
+- Use `upload_file` to create an OpenAI file object.
+- Use `attach_file_to_thread` to attach a file object to a thread
 """
 
 import logging

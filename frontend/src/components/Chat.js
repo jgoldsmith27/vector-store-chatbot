@@ -264,14 +264,13 @@ function Chat() {
         />
 
         {/* Text Input */}
-        <input
-          type="text"
+        <textarea
           className="chat-input"
-          placeholder="Type a message..."
+          placeholder="Type a message... (Shift + Enter for a newline)"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => {
-            if (e.key === "Enter" && !loading) {
+            if (e.key === "Enter" && !e.shiftKey && !loading) {
               e.preventDefault();
               sendMessage();
             }

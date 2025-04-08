@@ -2,11 +2,11 @@ import React from "react";
 import { Paperclip } from "lucide-react";
 import "../styles/FileUpload.css";
 
-const FileUpload = ({ fileName, onFileUpload, disabled }) => {
+const FileUpload = ({ fileNames, onFileUpload, disabled }) => {
   const handleFileChange = (event) => {
-    const file = event.target.files[0];
-    if (file) {
-      onFileUpload(file);
+    const files = Array.from(event.target.files);
+    if (files.length > 0) {
+      onFileUpload(files);
       // Reset file name so same file can be uploaded again
       event.target.value = "";
     }
@@ -25,16 +25,19 @@ const FileUpload = ({ fileName, onFileUpload, disabled }) => {
       <input
         id="file-upload"
         type="file"
+        multiple
         onChange={handleFileChange}
         disabled={disabled}
         className="file-upload-input"
       />
 
-      {fileName && (
-        <span className="file-upload-tag" title={fileName}>
-          📄 {fileName.length > 20 ? fileName.slice(0, 20) + "…" : fileName}
-        </span>
-      )}
+      <div className="file-upload-tag-list">
+        {fileNames.map((name, index) => (
+          <span key={index} className="file-upload-tag" title={name}>
+            📄 {name.length > 20 ? name.slice(0, 20) + "…" : name}
+          </span>
+        ))}
+      </div>
     </div>
   );
 };

@@ -74,3 +74,22 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.file-upload-tag-list {
+  display: flex;
+  gap: 6px;
+  max-width: 240px;
+  overflow-x: auto;
+  padding-top: 6px;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+.file-upload-tag-list::-webkit-scrollbar {
+  height: 6px;
+}
+
+.file-upload-tag-list::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}

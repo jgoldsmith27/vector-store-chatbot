@@ -22,7 +22,7 @@ function Chat() {
     localStorage.getItem("hideModelWarning") === "true"
   );
   const [pendingModelType, setPendingModelType] = useState(null);
-  const [fileName, setFileName] = useState("");
+  const [fileNames, setFileNames] = useState([]);
 
   const createThread = async () => {
     //TODO: Implement logic to delete old thread if there was one
@@ -35,7 +35,7 @@ function Chat() {
       console.log(response);
       setThreadId(response.data.thread_id);
       setMessages([]);
-      setFileName("");
+      setFileNames([]);
       showNotification("New chat thread created!", "success");
       setLoading(false);
     } catch (error) {
@@ -128,7 +128,7 @@ function Chat() {
     }
   };
 
-  const handleFileUpload = async (file) => {
+  const handleFileUpload = async (files) => {
     if (!threadId) {
       showNotification(
         "Please create a chat thread before uploading files.",
@@ -137,31 +137,49 @@ function Chat() {
       return;
     }
 
+    const newFiles = files.filter((file) => {
+      if (fileNames.includes(file.name)) {
+        showNotification(`"${file.name}" has already been uploaded.`, "error");
+        return false;
+      }
+      return true;
+    });
+
+    if (newFiles.length === 0) return;
+
     setLoading(true);
+    const uploaded = [];
 
     try {
-      const formData = new FormData();
-      formData.append("file", file);
+      for (const file of newFiles) {
+        const formData = new FormData();
+        formData.append("file", file);
 
-      const res = await axios.post(
-        "https://skid-msche-chatbot.us.reclaim.cloud/api/upload",
-        formData
+        const res = await axios.post(
+          "https://skid-msche-chatbot.us.reclaim.cloud/api/upload",
+          formData
+        );
+        const fileId = res.data.file_id;
+
+        await axios.post(
+          "https://skid-msche-chatbot.us.reclaim.cloud/api/attach-file",
+          {
+            thread_id: threadId,
+            file_id: fileId,
+          }
+        );
+
+        uploaded.push(file.name);
+      }
+
+      setFileNames((prev) => [...prev, ...uploaded]);
+      showNotification(
+        "File(s) uploaded and attached successfully!",
+        "success"
       );
-      const fileId = res.data.file_id;
-
-      await axios.post(
-        "https://skid-msche-chatbot.us.reclaim.cloud/api/attach-file",
-        {
-          thread_id: threadId,
-          file_id: fileId,
-        }
-      );
-
-      showNotification("File uploaded and attached successfully!", "success");
-      setFileName(file.name);
     } catch (err) {
       console.error("File upload error:", err);
-      showNotification("File upload failed. Please try again.", "error");
+      showNotification("One or more file uploads failed.", "error");
     } finally {
       setLoading(false);
     }
@@ -240,7 +258,7 @@ function Chat() {
 
         {/* File Upload */}
         <FileUpload
-          fileName={fileName}
+          fileNames={fileNames}
           onFileUpload={handleFileUpload}
           disabled={loading || !threadId}
         />

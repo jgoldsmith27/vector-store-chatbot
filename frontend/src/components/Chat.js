@@ -7,6 +7,7 @@ import FileUpload from "./FileUpload";
 import { useOktaAuth } from "@okta/okta-react";
 import ReactMarkdown from "react-markdown";
 import "github-markdown-css/github-markdown.css";
+import rehypeRaw from "rehype-raw";
 
 function Chat() {
   const { oktaAuth } = useOktaAuth();
@@ -75,6 +76,44 @@ function Chat() {
     }
   };
 
+  const convertMarkdownTablesToHTML = (text) => {
+    return text.replace(
+      /((?:\|.*\|\n?)+)/g, // detect table blocks
+      (tableBlock) => {
+        const lines = tableBlock
+          .split("\n")
+          .map((line) => line.trim())
+          .filter((line) => line.length > 0);
+
+        if (lines.length < 2) return tableBlock; // Not a real table
+
+        const headerCells = lines[0]
+          .split("|")
+          .filter((cell) => cell.trim() !== "")
+          .map((cell) => cell.trim());
+        const dataLines = lines.slice(2); // Skip header & separator line
+
+        const thead = `<thead><tr>${headerCells
+          .map((cell) => `<th>${cell}</th>`)
+          .join("")}</tr></thead>`;
+
+        const tbody = `<tbody>${dataLines
+          .map((line) => {
+            const cells = line
+              .split("|")
+              .filter((cell) => cell.trim() !== "")
+              .map((cell) => cell.trim());
+            return `<tr>${cells
+              .map((cell) => `<td>${cell}</td>`)
+              .join("")}</tr>`;
+          })
+          .join("")}</tbody>`;
+
+        return `<div class="table-container"><table>${thead}${tbody}</table></div>`;
+      }
+    );
+  };
+
   const sendMessage = async () => {
     if (!threadId) {
       showNotification("Please create a new chat thread first!", "error");
@@ -106,6 +145,8 @@ function Chat() {
       if (typeof assistantContent === "object" && assistantContent.value) {
         assistantContent = assistantContent.value;
       }
+
+      assistantContent = convertMarkdownTablesToHTML(assistantContent);
 
       // Get citations if available
       const citations = response.data.citations || [];
@@ -212,7 +253,9 @@ function Chat() {
           >
             {message.role === "assistant" ? (
               <div className="markdown-body">
-                <ReactMarkdown>{message.content}</ReactMarkdown>
+                <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+                  {message.content}
+                </ReactMarkdown>
               </div>
             ) : (
               message.content

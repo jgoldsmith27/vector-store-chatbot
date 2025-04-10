@@ -81,6 +81,59 @@
   color: #000; /* readable text */
 }
 
+.chat-message.assistant .markdown-body table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.25rem 0;
+  background-color: inherit !important;
+  color: inherit !important;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  overflow: hidden;
+  min-width: max-content;
+}
+
+.chat-message.assistant .markdown-body tr {
+  background-color: inherit !important;
+}
+
+.chat-message.assistant .markdown-body tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.04) !important; /* light gray striping */
+}
+
+.chat-message.assistant .markdown-body th,
+.chat-message.assistant .markdown-body td {
+  border: 1px solid rgba(0, 0, 0, 0.1); /* soft border for light background */
+  padding: 10px 14px;
+  text-align: left;
+  color: inherit !important;
+  vertical-align: middle;
+}
+
+.chat-message.assistant .markdown-body th {
+  background-color: rgba(0, 0, 0, 0.06) !important; /* gentle header bg */
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+/* Optional: Remove outer borders for cleaner look */
+.chat-message.assistant .markdown-body tr:first-child th:first-child,
+.chat-message.assistant .markdown-body tr td:first-child {
+  border-left: none;
+}
+
+.chat-message.assistant .markdown-body tr:first-child th:last-child,
+.chat-message.assistant .markdown-body tr td:last-child {
+  border-right: none;
+}
+
+.chat-message.assistant .markdown-body .table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 .loading-indicator {
   display: flex;
   justify-content: center;

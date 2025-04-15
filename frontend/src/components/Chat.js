@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../styles/Chat.css";
 import Notification from "./Notification";
@@ -10,7 +10,7 @@ import "github-markdown-css/github-markdown.css";
 import rehypeRaw from "rehype-raw";
 
 function Chat() {
-  const { oktaAuth } = useOktaAuth();
+  const { oktaAuth, authState } = useOktaAuth();
 
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
@@ -24,6 +24,26 @@ function Chat() {
   );
   const [pendingModelType, setPendingModelType] = useState(null);
   const [fileNames, setFileNames] = useState([]);
+  const [userEmail, setUserEmail] = useState(null);
+
+  // Retrieves user email to use as user id
+  useEffect(() => {
+    const fetchUserEmail = async () => {
+      if (authState?.isAuthenticated) {
+        const idToken = await oktaAuth.tokenManager.get("idToken");
+        const email = idToken?.claims?.email;
+
+        if (email) {
+          //console.log("User Email from Token:", email);
+          setUserEmail(email);
+        } else {
+          console.error("Email not found in idToken claims.");
+        }
+      }
+    };
+
+    fetchUserEmail();
+  }, [authState, oktaAuth]);
 
   const createThread = async () => {
     //TODO: Implement logic to delete old thread if there was one
@@ -32,8 +52,6 @@ function Chat() {
       const response = await axios.post(
         "https://skid-msche-chatbot.us.reclaim.cloud/api/create-thread"
       );
-      console.log("Response: ");
-      console.log(response);
       setThreadId(response.data.thread_id);
       setMessages([]);
       setFileNames([]);
@@ -67,6 +85,7 @@ function Chat() {
         "https://skid-msche-chatbot.us.reclaim.cloud/api/set-model",
         {
           model_type: model,
+          user_id: userEmail, // Pass email as user_id
         }
       );
       await createThread(); // reset thread
@@ -137,6 +156,7 @@ function Chat() {
         {
           thread_id: threadId,
           question: input,
+          user_id: userEmail, // Pass email as user_id
         }
       );
 
@@ -195,10 +215,16 @@ function Chat() {
       for (const file of newFiles) {
         const formData = new FormData();
         formData.append("file", file);
+        formData.append("user_id", userEmail); // email in form data
 
         const res = await axios.post(
           "https://skid-msche-chatbot.us.reclaim.cloud/api/upload",
-          formData
+          formData,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          }
         );
         const fileId = res.data.file_id;
 
@@ -207,6 +233,7 @@ function Chat() {
           {
             thread_id: threadId,
             file_id: fileId,
+            user_id: userEmail, // email
           }
         );
 
@@ -234,6 +261,25 @@ function Chat() {
       setNotification({ message: "", type: "" });
     }, 5000);
   };
+
+  // Retrieves the active model of the user
+  useEffect(() => {
+    const fetchActiveModel = async () => {
+      if (!userEmail) return;
+
+      try {
+        const res = await axios.get("http://127.0.0.1:8080/get-active-model", {
+          params: { user_id: userEmail },
+        });
+
+        setModelType(res.data.active_model);
+      } catch (err) {
+        console.error("Failed to fetch active model:", err);
+      }
+    };
+
+    fetchActiveModel();
+  }, [userEmail]);
 
   return (
     <div className="chat-container">
@@ -290,7 +336,7 @@ function Chat() {
         <div className="model-select-container">
           <select
             className="model-select"
-            value={modelType}
+            value={modelType || ""}
             onChange={handleModelChange}
             disabled={loading}
           >

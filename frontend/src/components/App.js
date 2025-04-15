@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import RequireAuth from "./RequireAuth";
 import Chat from "./Chat";
 import {
@@ -18,6 +18,16 @@ function App() {
   const [oktaConfig, setOktaConfig] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  // Initialize OktaAuth with fetched config
+  const oktaAuth = useMemo(() => {
+    if (!oktaConfig) return null;
+
+    return new OktaAuth({
+      ...oktaConfig,
+      pkce: true, // explicitly enforce PKCE
+    });
+  }, [oktaConfig]);
 
   // Fetch Okta configuration securely from backend
   useEffect(() => {
@@ -54,9 +64,6 @@ function App() {
       </div>
     );
 
-  // Initialize OktaAuth with fetched config
-  const oktaAuth = new OktaAuth(oktaConfig);
-
   return (
     <Router basename="/">
       <Security
@@ -85,13 +92,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-
-
-
-
-

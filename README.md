@@ -52,7 +52,10 @@ your-domain.com {
 
 ## Frontend Design
 
-![Frontend Picture](images/frontend.png)
+<div style="display: flex; gap: 10px; justify-content: start;">
+  <img src="images/frontend-main-page.png" alt="Frontend Main Picture" style="width: 48%;">
+  <img src="images/frontend-modal.png" alt="Frontend Modal Picture" style="width: 48%;">
+</div>
 
 The frontend follows a simple, chatbot interface that users will be familiar with and can intuitively work with.
 

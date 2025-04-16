@@ -268,9 +268,12 @@ function Chat() {
       if (!userEmail) return;
 
       try {
-        const res = await axios.get("http://127.0.0.1:8080/get-active-model", {
-          params: { user_id: userEmail },
-        });
+        const res = await axios.get(
+          "https://skid-msche-chatbot.us.reclaim.cloud/api/get-active-model",
+          {
+            params: { user_id: userEmail },
+          }
+        );
 
         setModelType(res.data.active_model);
       } catch (err) {

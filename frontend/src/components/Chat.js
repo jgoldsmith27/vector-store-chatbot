@@ -50,7 +50,10 @@ function Chat() {
     try {
       setLoading(true);
       const response = await axios.post(
-        "https://skid-msche-chatbot.us.reclaim.cloud/api/create-thread"
+        "https://skid-msche-chatbot.us.reclaim.cloud/api/create-thread",
+        {
+          user_id: userEmail, // Pass email as user_id
+        }
       );
       setThreadId(response.data.thread_id);
       setMessages([]);

@@ -7,6 +7,7 @@ This chatbot application is designed to assist Skidmore College staff and facult
 With this chatbot, members can:
 
 - Search for files containing specific information
+- Upload their own files for better context
 - Receive quick clarifications on accreditation-related topics
 - Gain new insights to drive the review process
 
@@ -66,7 +67,7 @@ The frontend follows a simple, chatbot interface that users will be familiar wit
 - **SDKs & APIs**:
   - Box (file storage and retrieval)
   - OpenAI Assistant (chatbot processing)
-    - (The assistant runs on gpt-4o-mini)
+    - The app currently supports a 4o and 4o-mini assistant
 
 ## Workflow
 
@@ -204,7 +205,8 @@ Make sure to create a `.env` file in the root of your project with the following
 REACT_APP_OKTA_ISSUER=your-okta-issuer-url
 REACT_APP_OKTA_CLIENT=your-okta-client-id
 API_KEY=your-openai-api-key
-ASSISTANT_ID=your-openai-assistant-id
+ASSISTANT_ID_4O_MINI=your-openai-assistant-4o-mini-id
+ASSISTANT_ID_4O=our-openai-assistant-4o-id
 ```
 
 ### Explanation of Variables:
@@ -214,7 +216,7 @@ ASSISTANT_ID=your-openai-assistant-id
 
 - **API_KEY**: This is the API key for the OpenAI service. You can obtain this key by signing up for access to the OpenAI API at [OpenAI API](https://beta.openai.com/signup/).
 
-- **ASSISTANT_ID**: This is the ID of the specific OpenAI Assistant you want to use. You can configure this ID through the OpenAI platform to link your assistant or create the assistant via the API.
+- **ASSISTANT_ID_4O/4O_MINI**: These are the IDs of the specific OpenAI Assistants you want to use. You can configure these through the OpenAI platform to link your assistant or create the assistant via the API.
 
 ## Future Work
 
@@ -222,8 +224,8 @@ The goal is to make the chatbot accessible as a **tile on Skidmore’s Okta plat
 
 Next steps include:
 
-- **Okta integration**: Implement single sign-on (SSO) for user authentication.
 - **Enhanced AI capabilities**: Improve document retrieval accuracy and chatbot responses.
 - **User feedback**: Collect feedback from faculty/staff to refine usability.
+- **Improve UX**: Enhance the design and functionality of the chatbot to maximize the user experience
 
 Check the **GitHub Issues** page to see new features planned for the application and what is currently being worked on.

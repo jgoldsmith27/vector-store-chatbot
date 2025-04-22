@@ -195,28 +195,45 @@ docker-compose up --build
   docker compose logs -f
   ```
 
-## .env File
+## Environment Configuration (.env Files)
 
-The `.env` file for this project stores sensitive keys and configuration values required for integrating **Okta Authentication** and **OpenAI API**. It ensures that your application functions securely by keeping your environment variables separate from the codebase.
+The `.env` files for this project store sensitive keys and configuration values required for integrating **Okta Authentication**, the **OpenAI API**, and the **Backend URL** that specifies whether you are working locally or in production. Keeping these environment variables separate from the codebase ensures secure and proper functioning of your application.
 
-Make sure to create a `.env` file in the root of your project with the following variables set:
+### Root File
+
+Create a `.env` file in the **root directory of your project** with the following variables:
 
 ```env
 REACT_APP_OKTA_ISSUER=your-okta-issuer-url
 REACT_APP_OKTA_CLIENT=your-okta-client-id
+REACT_APP_BACKEND_URL=your-local-or-production-backend-url
 API_KEY=your-openai-api-key
 ASSISTANT_ID_4O_MINI=your-openai-assistant-4o-mini-id
-ASSISTANT_ID_4O=our-openai-assistant-4o-id
+ASSISTANT_ID_4O=your-openai-assistant-4o-id
+ORIGIN=your-allowed-origin
 ```
 
-### Explanation of Variables:
+#### Explanation of Variables
 
-- **REACT_APP_OKTA_ISSUER**: This is the issuer URL for your Okta authorization server. You can find this value in the Okta Developer Console under "API" > "Authorization Servers".
-- **REACT_APP_OKTA_CLIENT**: This is your Okta client ID, which identifies your application for authentication requests. You can find this in the Okta Developer Console under "Applications" > "Your App".
+- **REACT_APP_OKTA_ISSUER**: The issuer URL for your Okta authorization server. Find this in the Okta Developer Console under **API** > **Authorization Servers**.
+- **REACT_APP_OKTA_CLIENT**: Your Okta client ID, identifying your application for authentication requests. Locate this under **Applications** > **Your App** in the Okta Developer Console.
+- **REACT_APP_BACKEND_URL**: The backend URL, provided in the `/auth-config` endpoint response. Set this to reflect your local or production environment.
+- **API_KEY**: Your OpenAI API key. Obtain this key by signing up at [OpenAI API](https://beta.openai.com/signup/).
+- **ASSISTANT_ID_4O_MINI** / **ASSISTANT_ID_4O**: The IDs of your OpenAI Assistants. Configure these via the OpenAI platform or API.
+- **ORIGIN**: The allowed origin used for configuring `CORSMiddleware`. This should match your environment (local or production).
 
-- **API_KEY**: This is the API key for the OpenAI service. You can obtain this key by signing up for access to the OpenAI API at [OpenAI API](https://beta.openai.com/signup/).
+### React Frontend Files
 
-- **ASSISTANT_ID_4O/4O_MINI**: These are the IDs of the specific OpenAI Assistants you want to use. You can configure these through the OpenAI platform to link your assistant or create the assistant via the API.
+Use `.env.production` and `.env.deployment` files in the React frontend directory to **set the Backend URL for production and deployment environments**. Example content:
+
+```env
+REACT_APP_BACKEND_URL=your-local-or-production-backend-url
+```
+
+### Purpose of Environment Files
+
+- **.env**: Used for your local development environment.
+- **.env.production** / **.env.deployment**: Specify backend URLs for production and deployment builds. The application will automatically select the correct environment file based on whether you use the `manage_app.sh` script (`npm start`) or build with Docker (`npm run build`).
 
 ## Future Work
 

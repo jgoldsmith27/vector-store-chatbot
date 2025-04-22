@@ -2,8 +2,8 @@ services:
   caddy:
     image: caddy:latest
     ports:
-      - "80:80"     # HTTP for Let's Encrypt challenge
-      - "443:443"   # HTTPS traffic served by Caddy
+      - "80:80" # HTTP for Let's Encrypt challenge
+      - "443:443" # HTTPS traffic served by Caddy
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
       - caddy_data:/data
@@ -34,9 +34,6 @@ services:
       - "3000"
     depends_on:
       - backend
-    environment:
-      - REACT_APP_BACKEND_URL=https://skid-msche-chatbot.us.reclaim.cloud/api
-      - HOST=0.0.0.0
     networks:
       - app-network
     restart: unless-stopped
@@ -47,4 +44,3 @@ volumes:
 
 networks:
   app-network:
-

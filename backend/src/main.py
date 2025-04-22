@@ -44,21 +44,23 @@ logging.basicConfig(
 # Initialize FastAPI app
 app = FastAPI()
 
-# CORS Middleware
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["https://skid-msche-chatbot.us.reclaim.cloud"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
 # Load environment variables
 API_KEY = os.getenv("API_KEY")
 ASSISTANT_ID_4O = os.getenv("ASSISTANT_ID_4O")
 ASSISTANT_ID_4O_MINI = os.getenv("ASSISTANT_ID_4O_MINI")
 OKTA_CLIENT_ID = os.getenv("REACT_APP_OKTA_CLIENT")
-OKTA_ISSUER= os.getenv("REACT_APP_OKTA_ISSUER")
+OKTA_ISSUER = os.getenv("REACT_APP_OKTA_ISSUER")
+BACKEND_URL = os.getenv("REACT_APP_BACKEND_URL")
+ORIGIN = os.getenv("ORIGIN")
+
+# CORS Middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[f"{ORIGIN}"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Initialize the Assistant API
 assistant_api_4o = AssistantAPI(API_KEY, ASSISTANT_ID_4O)
@@ -279,7 +281,7 @@ async def get_okta_config(request:Request) -> dict[str, str | list[str]]:
         dict[str, str | list[str]]: A dictionary containing the client id and issuer
 
     """
-    frontend_origin = request.headers.get("Origin", "https://skid-msche-chatbot.us.reclaim.cloud")
+    frontend_origin = request.headers.get("Origin", BACKEND_URL)
     return {
         "clientId": OKTA_CLIENT_ID,
         "issuer": OKTA_ISSUER,

@@ -11,6 +11,9 @@ import { Security, LoginCallback } from "@okta/okta-react";
 import { OktaAuth } from "@okta/okta-auth-js";
 import "../styles/App.css";
 
+// Get correct backend URL
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
 /**
  * App component securely fetches Okta config before initializing authentication.
  */
@@ -31,7 +34,7 @@ function App() {
 
   // Fetch Okta configuration securely from backend
   useEffect(() => {
-    fetch("https://skid-msche-chatbot.us.reclaim.cloud/api/auth-config")
+    fetch(`${backendUrl}/auth-config`)
       .then((res) => {
         if (!res.ok) {
           throw new Error("Failed to fetch Okta config");

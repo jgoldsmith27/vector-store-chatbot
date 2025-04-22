@@ -9,6 +9,9 @@ import ReactMarkdown from "react-markdown";
 import "github-markdown-css/github-markdown.css";
 import rehypeRaw from "rehype-raw";
 
+// Get correct backend URL
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
 function Chat() {
   const { oktaAuth, authState } = useOktaAuth();
 
@@ -49,12 +52,9 @@ function Chat() {
     //TODO: Implement logic to delete old thread if there was one
     try {
       setLoading(true);
-      const response = await axios.post(
-        "https://skid-msche-chatbot.us.reclaim.cloud/api/create-thread",
-        {
-          user_id: userEmail, // Pass email as user_id
-        }
-      );
+      const response = await axios.post(`${backendUrl}/create-thread`, {
+        user_id: userEmail, // Pass email as user_id
+      });
       setThreadId(response.data.thread_id);
       setMessages([]);
       setFileNames([]);
@@ -84,13 +84,10 @@ function Chat() {
   const switchModel = async (model) => {
     setModelType(model);
     try {
-      await axios.post(
-        "https://skid-msche-chatbot.us.reclaim.cloud/api/set-model",
-        {
-          model_type: model,
-          user_id: userEmail, // Pass email as user_id
-        }
-      );
+      await axios.post(`${backendUrl}/set-model`, {
+        model_type: model,
+        user_id: userEmail, // Pass email as user_id
+      });
       await createThread(); // reset thread
     } catch (err) {
       console.error("Model switch error:", err);
@@ -154,14 +151,11 @@ function Chat() {
 
       setLoading(true);
 
-      const response = await axios.post(
-        "https://skid-msche-chatbot.us.reclaim.cloud/api/ask-question",
-        {
-          thread_id: threadId,
-          question: input,
-          user_id: userEmail, // Pass email as user_id
-        }
-      );
+      const response = await axios.post(`${backendUrl}/ask-question`, {
+        thread_id: threadId,
+        question: input,
+        user_id: userEmail, // Pass email as user_id
+      });
 
       let assistantContent = response.data.response;
 
@@ -220,25 +214,18 @@ function Chat() {
         formData.append("file", file);
         formData.append("user_id", userEmail); // email in form data
 
-        const res = await axios.post(
-          "https://skid-msche-chatbot.us.reclaim.cloud/api/upload",
-          formData,
-          {
-            headers: {
-              "Content-Type": "multipart/form-data",
-            },
-          }
-        );
+        const res = await axios.post(`${backendUrl}/upload`, formData, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        });
         const fileId = res.data.file_id;
 
-        await axios.post(
-          "https://skid-msche-chatbot.us.reclaim.cloud/api/attach-file",
-          {
-            thread_id: threadId,
-            file_id: fileId,
-            user_id: userEmail, // email
-          }
-        );
+        await axios.post(`${backendUrl}/attach-file`, {
+          thread_id: threadId,
+          file_id: fileId,
+          user_id: userEmail, // email
+        });
 
         uploaded.push(file.name);
       }
@@ -271,12 +258,9 @@ function Chat() {
       if (!userEmail) return;
 
       try {
-        const res = await axios.get(
-          "https://skid-msche-chatbot.us.reclaim.cloud/api/get-active-model",
-          {
-            params: { user_id: userEmail },
-          }
-        );
+        const res = await axios.get(`${backendUrl}/get-active-model`, {
+          params: { user_id: userEmail },
+        });
 
         setModelType(res.data.active_model);
       } catch (err) {

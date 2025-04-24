@@ -4,6 +4,7 @@ import "../styles/Chat.css";
 import Notification from "./Notification";
 import ModelSwitchModal from "./ModelSwitchModal";
 import FileUpload from "./FileUpload";
+import CopyButton from "./CopyButton";
 import { useOktaAuth } from "@okta/okta-react";
 import ReactMarkdown from "react-markdown";
 import "github-markdown-css/github-markdown.css";
@@ -271,6 +272,15 @@ function Chat() {
     fetchActiveModel();
   }, [userEmail]);
 
+  const generateCopyText = (message) => {
+    let base = message.content.replace(/<[^>]*>?/gm, ""); // strip HTML
+    if (message.role === "assistant" && message.citations?.length > 0) {
+      const citationsText = "\n\nCitations:\n" + message.citations.join("\n");
+      base += citationsText;
+    }
+    return base;
+  };
+
   return (
     <div className="chat-container">
       {/* Notification */}
@@ -287,16 +297,19 @@ function Chat() {
               message.role === "user" ? "user" : "assistant"
             }`}
           >
-            {message.role === "assistant" ? (
-              <div className="markdown-body">
-                <ReactMarkdown rehypePlugins={[rehypeRaw]}>
-                  {message.content}
-                </ReactMarkdown>
-              </div>
-            ) : (
-              message.content
-            )}
+            <div className="message-content">
+              {message.role === "assistant" ? (
+                <div className="markdown-body">
+                  <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+                    {message.content}
+                  </ReactMarkdown>
+                </div>
+              ) : (
+                message.content
+              )}
+            </div>
 
+            {/* Citations (if any) */}
             {message.citations && message.citations.length > 0 && (
               <div className="citations">
                 <strong>
@@ -310,6 +323,12 @@ function Chat() {
                 </ul>
               </div>
             )}
+
+            {/* Copy Button */}
+            <CopyButton
+              textToCopy={generateCopyText(message)}
+              isUser={message.role === "user"}
+            />
           </div>
         ))}
 

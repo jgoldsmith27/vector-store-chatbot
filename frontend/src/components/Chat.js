@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../styles/Chat.css";
 import Notification from "./Notification";
-import ModelSwitchModal from "./ModelSwitchModal";
+import Modal from "./Modal";
+import Header from "./Header";
 import FileUpload from "./FileUpload";
 import CopyButton from "./CopyButton";
 import { useOktaAuth } from "@okta/okta-react";
@@ -283,62 +284,82 @@ function Chat() {
 
   return (
     <div className="chat-container">
-      {/* Notification */}
-      {notification.message && (
-        <Notification message={notification.message} type={notification.type} />
-      )}
+      {/* Header */}
+      <Header />
 
-      {/* Chat Message */}
-      <div className="chat-messages">
-        {messages.map((message, index) => (
-          <div
-            key={index}
-            className={`chat-message ${
-              message.role === "user" ? "user" : "assistant"
-            }`}
+      <div className="chat-body">
+        <div className="sidebar">
+          {/* New Chat Button */}
+          <button
+            className="new-chat-button"
+            onClick={createThread}
+            disabled={loading}
           >
-            <div className="message-content">
-              {message.role === "assistant" ? (
-                <div className="markdown-body">
-                  <ReactMarkdown rehypePlugins={[rehypeRaw]}>
-                    {message.content}
-                  </ReactMarkdown>
-                </div>
-              ) : (
-                message.content
-              )}
-            </div>
+            New Chat
+          </button>
+        </div>
 
-            {/* Citations (if any) */}
-            {message.citations && message.citations.length > 0 && (
-              <div className="citations">
-                <strong>
-                  <br />
-                  Citations:
-                </strong>
-                <ul>
-                  {message.citations.map((citation, i) => (
-                    <li key={i}>{citation}</li>
-                  ))}
-                </ul>
+        {/* Notification */}
+        {notification.message && (
+          <Notification
+            message={notification.message}
+            type={notification.type}
+          />
+        )}
+
+        <div className="chat-content">
+          {/* Chat Message */}
+          <div className="chat-messages">
+            {messages.map((message, index) => (
+              <div
+                key={index}
+                className={`chat-message ${
+                  message.role === "user" ? "user" : "assistant"
+                }`}
+              >
+                <div className="message-content">
+                  {message.role === "assistant" ? (
+                    <div className="markdown-body">
+                      <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+                        {message.content}
+                      </ReactMarkdown>
+                    </div>
+                  ) : (
+                    message.content
+                  )}
+                </div>
+
+                {/* Citations (if any) */}
+                {message.citations && message.citations.length > 0 && (
+                  <div className="citations">
+                    <strong>
+                      <br />
+                      Citations:
+                    </strong>
+                    <ul>
+                      {message.citations.map((citation, i) => (
+                        <li key={i}>{citation}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Copy Button */}
+                <CopyButton
+                  textToCopy={generateCopyText(message)}
+                  isUser={message.role === "user"}
+                />
+              </div>
+            ))}
+
+            {loading && (
+              <div className="loading-indicator">
+                <div className="loading-message"></div>
               </div>
             )}
-
-            {/* Copy Button */}
-            <CopyButton
-              textToCopy={generateCopyText(message)}
-              isUser={message.role === "user"}
-            />
           </div>
-        ))}
-
-        {loading && (
-          <div className="loading-indicator">
-            <div className="loading-message"></div>
-          </div>
-        )}
+        </div>
       </div>
-
       {/* Chat Form */}
       <div className="chat-form">
         {/* Model Select */}
@@ -385,38 +406,28 @@ function Chat() {
         </button>
       </div>
 
-      {/* New Chat Button */}
-      <button
-        className="new-chat-button"
-        onClick={createThread}
-        disabled={loading}
-      >
-        New Chat
-      </button>
-      {/* Log Out Button */}
-      <button
-        className="logout-button"
-        onClick={() => oktaAuth.signOut()}
-        disabled={loading}
-      >
-        Log Out
-      </button>
-
       {/* Model Switch Modal */}
-      <ModelSwitchModal
+      <Modal
         visible={showModelWarning}
         onConfirm={() => {
           setShowModelWarning(false);
           switchModel(pendingModelType);
           setPendingModelType(null);
         }}
-        onCancel={() => {
+        onClose={() => {
           setShowModelWarning(false);
           setPendingModelType(null);
         }}
+        title="Switch Model?"
+        showConfirmButtons={true}
         dontShowAgain={dontShowAgain}
         setDontShowAgain={setDontShowAgain}
-      />
+      >
+        <p>
+          Switching models will end your current conversation thread and start a
+          new one.
+        </p>
+      </Modal>
     </div>
   );
 }

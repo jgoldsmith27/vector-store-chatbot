@@ -206,7 +206,6 @@ Create a `.env` file in the **root directory of your project** with the followin
 ```env
 REACT_APP_OKTA_ISSUER=your-okta-issuer-url
 REACT_APP_OKTA_CLIENT=your-okta-client-id
-REACT_APP_BACKEND_URL=your-local-or-production-backend-url
 API_KEY=your-openai-api-key
 ASSISTANT_ID_4O_MINI=your-openai-assistant-4o-mini-id
 ASSISTANT_ID_4O=your-openai-assistant-4o-id
@@ -217,7 +216,6 @@ ORIGIN=your-allowed-origin
 
 - **REACT_APP_OKTA_ISSUER**: The issuer URL for your Okta authorization server. Find this in the Okta Developer Console under **API** > **Authorization Servers**.
 - **REACT_APP_OKTA_CLIENT**: Your Okta client ID, identifying your application for authentication requests. Locate this under **Applications** > **Your App** in the Okta Developer Console.
-- **REACT_APP_BACKEND_URL**: The backend URL, provided in the `/auth-config` endpoint response. Set this to reflect your local or production environment.
 - **API_KEY**: Your OpenAI API key. Obtain this key by signing up at [OpenAI API](https://beta.openai.com/signup/).
 - **ASSISTANT_ID_4O_MINI** / **ASSISTANT_ID_4O**: The IDs of your OpenAI Assistants. Configure these via the OpenAI platform or API.
 - **ORIGIN**: The allowed origin used for configuring `CORSMiddleware`. This should match your environment (local or production).

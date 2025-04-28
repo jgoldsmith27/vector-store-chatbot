@@ -50,7 +50,6 @@ ASSISTANT_ID_4O = os.getenv("ASSISTANT_ID_4O")
 ASSISTANT_ID_4O_MINI = os.getenv("ASSISTANT_ID_4O_MINI")
 OKTA_CLIENT_ID = os.getenv("REACT_APP_OKTA_CLIENT")
 OKTA_ISSUER = os.getenv("REACT_APP_OKTA_ISSUER")
-BACKEND_URL = os.getenv("REACT_APP_BACKEND_URL")
 ORIGIN = os.getenv("ORIGIN")
 
 # CORS Middleware
@@ -281,7 +280,7 @@ async def get_okta_config(request:Request) -> dict[str, str | list[str]]:
         dict[str, str | list[str]]: A dictionary containing the client id and issuer
 
     """
-    frontend_origin = request.headers.get("Origin", BACKEND_URL)
+    frontend_origin = request.headers.get("Origin", ORIGIN)
     return {
         "clientId": OKTA_CLIENT_ID,
         "issuer": OKTA_ISSUER,

@@ -133,7 +133,7 @@ def main():
     """
     file_streams = get_pdf_file_streams()
     models = ["gpt-4o", "gpt-4o-mini"]
-    assistants = create_assistants(models, 'MSCHE_Chatbot_Instructions.txt')
+    assistants = create_assistants(models, 'MSCHE_Chatbot_Instructions.md')
 
     for assistant in assistants:
         vector_store = upload_files_in_batches(file_streams)

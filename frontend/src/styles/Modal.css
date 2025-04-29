@@ -126,7 +126,7 @@
 .modal-content ul li::marker,
 .modal-content ol li::marker {
   font-size: 1.1em;
-  color: #007bff; /* Skidmore blue accent or whatever you prefer */
+  color: #006a52;
 }
 
 .modal-content label {

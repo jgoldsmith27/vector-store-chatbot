@@ -128,6 +128,8 @@ def main():
       3. Uploads the files in batches to a new vector store.
       4. Associates each assistant with the uploaded vector store.
 
+    Note: The file `MSCHE_Chatbot_Instructions.md` used as the instructions for the assistant, is not tracked by Git.
+
     Returns:
         None
     """

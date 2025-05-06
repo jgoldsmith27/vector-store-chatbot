@@ -233,6 +233,117 @@ REACT_APP_BACKEND_URL=your-local-or-production-backend-url
 - **.env**: Used for your local development environment.
 - **.env.production** / **.env.deployment**: Specify backend URLs for production and deployment builds. The application will automatically select the correct environment file based on whether you use the `manage_app.sh` script (`npm start`) or build with Docker (`npm run build`).
 
+## Setting the Chatbot Up For Yourself
+
+Follow these steps as necessary for setting up the application for yourself.
+
+### Setting up the repository
+
+1. Clone the repo
+
+   ```bash
+   https://github.com/jgoldsmith27/vector-store-chatbot.git
+   ```
+
+2. Set up React / install dependencies as needed
+
+3. Create the `.env` files as described in the [.env section](#environment-configuration-env-files). Most likely, you can only add `API_KEY` for now in the root `.env` file and the `REACT_APP_BACKEND_URL` in the `.env.development` in the `frontend` directory. Additionally, you can set `ORIGIN` to `http://localhost:3000` on your local version of the repository if you want to eventually run the application there (for testing and development purposes).
+
+4. If you don't already have the assistants created, you will need to setup a few things before you can get the script to create them fully functional.
+
+#### Setting up Box
+
+1. Navigate to your Box account and click the **(</>)** button on the bottom left corner of the screen—this directs you to the Developer Console. If this button doesn't exist for you, you will need to login to this externally.
+
+2. If your **Box App** doesn't exist already, hit **Create Platform App** to create one.
+
+3. Select **Custom App**.
+
+4. Fill in the fields (Name, Description, etc.) as desired/needed and continue to the next page.
+
+5. Any authentication method should work, but we selected **OAuth2.0**. Create the app.
+
+6. Navigate to the configuration tab and scroll down to the **Developer Token** section. Hit the **Generate Developer Token** button. This token will be used to access your Box account programatically.
+
+7. Next, go back to your regular Box profile. Navigate to the folder you wish to read from. Look at the URL and copy the number after `folder/` and before `?` (if there is a query parameter). This is the ID number of the folder
+
+### Setting up the repository (continued)
+
+5. Open `create_store_and_assistant.py` and pass the folder ID as the parameter into the `get_pdf_file_streams` function.
+
+6. Additionally, you will need to add your own assistant instructions file (currently listed as `MSCHE_Chatbot_Instructions.md` in the script) in this subdirectory (you may also change the name of the file if you like for clarity).
+
+7. Run `create_store_and_assistant.py` and paste your **Developer Token** into the terminal when prompted.
+
+8. Wait for the program to finsih execution. Depending on the number of files you read and the number of assistants you create this can take anywhere from a few minutes to longer. For our purposes, reading roughly 250 files and creating 2 assistants with the vector stores attached took around 15 minutes. Increasing the size of each batch uploaded to the vector stores can speed this up, but if this gets too large, you run the risk of more file failing to upload (this statistic is presented to you in the terminal, and to our knowledge, we are not sure exactly why a file would fail to be uploaded).
+
+9. Copy the assistant IDs logged to the terminal upon the script's execution to the `ASSISTANT_ID_4O_MINI` and `ASSISTANT_ID_4O` variables of the root `env.` file.
+
+### Setting up Docker
+
+Ensure you **Docker** and **Docker Compose** installed—they are crucial for containerizing the application. See the links and info [here](#prerequisites) for help.
+
+### Setting up Okta Authentication
+
+If you don't already have your **Okta Authentication App** set up with your `OKTA_ISSUER` and `OKTA_CLIENT` variables initialized:
+
+1. Navigate to **Okta Developer** Home and either log-in with your email (if you think/know your email has a **Okta Developer Account** associated with it) or sign-up.
+
+2. If signing up, click the button that says **Sign up free for Developer Edition** and fill in your information.
+
+3. Once your on the page of your **Okta Organization**, navigate to **Applications > Applications** and hit **Create App Integration**.
+
+4. Select **OIDC - OpenID Connect** as your sign-in method and **Single-Page Application** as your application type.
+
+5. Fill in the **App integration name** field.
+
+6. In the **Sign-in redirect URIs** and the **Sign-out redirect URIs** sections click **+Add URI** and add `http://localhost:3000/login/callback` and `http://localhost:3000` respectively. This is necessary if you wish to view the application locally and/or want to make your local machine your development environment.
+
+7. In the **Assignments** section, select **Allow everyone in your organization to access** and then in the **Enable immediate access** section that pops down, make sure **Federation Broker Mode** is enabled. Save your changes.
+
+8. Fill in your `OKTA_ISSUER` and `OKTA_CLIENT` variables in the root `.env` (see the [.env section](#environment-configuration-env-files) for help).
+
+At this point, if you wish to run the app locally to ensure everything is working, see the section on [running the app locally](#manageappsh-script-for-local-use) to do so.
+
+### Setting Up Reclaim Cloud
+
+If you are using **Reclaim Cloud** as your hosting provider, follow these steps:
+
+1. Navigate to **Reclaim Cloud** and log-in to your dashboard.
+
+2. Click the **+New Environment** button at the top.
+
+3. Click the **Custom** option at the top of the modal and select **Docker Engine**.
+
+4. Select **Deploy containers from `compose.yml`** and include the link to the repo.
+
+5. Change the **Environment**, **Display Name**, and **Region** as desired and create the new environment.
+
+6. Select the drop down arrow on your new environment in the dashboard and navigate to the 🔧 **Config** option.
+
+7. Navigate to `root/application` (the repository) and fill in the remaining environment variables. This includes:
+
+- `REACT_APP_BACKEND_URL` in the `.env.production` in the `frontend` directory. This is your new domain + `/api` (the path to the backend).
+- `ORIGIN` in the root `.env`. This is your new domain.
+
+8. In the dashboard, select the drop down arrow on your new environment in the dashboard and navigate to the 🔧 **Web SSH** option.
+
+9. Run:
+
+   ```bash
+   cd application
+   ```
+
+   and then:
+
+   ```bash
+   docker compose up --build -d
+   ```
+
+   to build the containers. The more "changes" that aren't cached from previous builds, the longer this will take—since this is the first time, everything needs to be built from scratch and it will take a long time. For us, this can take up to 15 minutes. If it seems this process is snagged (especially when running `npm run build` or the step right after), terminate the process (`Ctrl + C`) and run it again. See the [docker additional notes section](#additional-notes) for more info on **Docker** and **Docker Compose** commands.
+
+10. You will see success messages indicating that the **frontend**, **backend**, and **caddy** containers were successfully built. When you access the URL of your application, the log-in page/chatbot should display properly!
+
 ## Future Work
 
 The goal is to make the chatbot accessible as a **tile on Skidmore’s Okta platform**, allowing review group members to log in through Okta authentication.
@@ -244,3 +355,7 @@ Next steps include:
 - **Improve UX**: Enhance the design and functionality of the chatbot to maximize the user experience
 
 Check the **GitHub Issues** page to see new features planned for the application and what is currently being worked on.
+
+```
+
+```

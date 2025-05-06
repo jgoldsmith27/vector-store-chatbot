@@ -355,7 +355,3 @@ Next steps include:
 - **Improve UX**: Enhance the design and functionality of the chatbot to maximize the user experience
 
 Check the **GitHub Issues** page to see new features planned for the application and what is currently being worked on.
-
-```
-
-```

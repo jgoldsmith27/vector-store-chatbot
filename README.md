@@ -275,7 +275,7 @@ Follow these steps as necessary for setting up the application for yourself.
 
 7. Run `create_store_and_assistant.py` and paste your **Developer Token** into the terminal when prompted.
 
-8. Wait for the program to finsih execution. Depending on the number of files you read and the number of assistants you create this can take anywhere from a few minutes to longer. For our purposes, reading roughly 250 files and creating 2 assistants with the vector stores attached took around 15 minutes. Increasing the size of each batch uploaded to the vector stores can speed this up, but if this gets too large, you run the risk of more file failing to upload (this statistic is presented to you in the terminal, and to our knowledge, we are not sure exactly why a file would fail to be uploaded).
+8. Wait for the program to finsih execution. Depending on the number of files you read and the number of assistants you create this can take anywhere from a few minutes to longer. For our purposes, reading roughly 250 files and creating 2 assistants with the vector stores attached took around 15 minutes. Increasing the size of each batch uploaded to the vector stores can speed this up, but if this gets too large, you run the risk of more files failing to upload (this statistic is presented to you in the terminal, and we are not sure exactly why a file would fail to be uploaded).
 
 9. Copy the assistant IDs logged to the terminal upon the script's execution to the `ASSISTANT_ID_4O_MINI` and `ASSISTANT_ID_4O` variables of the root `env.` file.
 
@@ -326,23 +326,25 @@ If you are using **Reclaim Cloud** as your hosting provider, follow these steps:
 - `REACT_APP_BACKEND_URL` in the `.env.production` in the `frontend` directory. This is your new domain + `/api` (the path to the backend).
 - `ORIGIN` in the root `.env`. This is your new domain.
 
-8. In the dashboard, select the drop down arrow on your new environment in the dashboard and navigate to the 🔧 **Web SSH** option.
+8. Add in the `Caddyfile` (Caddy is our reverse proxy) according to the template provided [here](#key-caddyfile-configuration).
 
-9. Run:
+9. In the dashboard, select the drop down arrow on your new environment in the dashboard and navigate to the 🔧 **Web SSH** option.
 
-   ```bash
-   cd application
-   ```
+10. Run:
 
-   and then:
+```bash
+cd application
+```
 
-   ```bash
-   docker compose up --build -d
-   ```
+and then:
 
-   to build the containers. The more "changes" that aren't cached from previous builds, the longer this will take—since this is the first time, everything needs to be built from scratch and it will take a long time. For us, this can take up to 15 minutes. If it seems this process is snagged (especially when running `npm run build` or the step right after), terminate the process (`Ctrl + C`) and run it again. See the [docker additional notes section](#additional-notes) for more info on **Docker** and **Docker Compose** commands.
+```bash
+docker compose up --build -d
+```
 
-10. You will see success messages indicating that the **frontend**, **backend**, and **caddy** containers were successfully built. When you access the URL of your application, the log-in page/chatbot should display properly!
+to build the containers. The more "changes" that aren't cached from previous builds, the longer this will take—since this is the first time, everything needs to be built from scratch and it will take a long time. For us, this can take up to 15 minutes. If it seems this process is snagged (especially when running `npm run build` or the step right after), terminate the process (`Ctrl + C`) and run it again. See the [docker additional notes section](#additional-notes) for more info on **Docker** and **Docker Compose** commands.
+
+11. You will see success messages indicating that the **frontend**, **backend**, and **caddy** containers were successfully built. When you access the URL of your application, the log-in page/chatbot should display properly!
 
 ## Future Work
 
